@@ -18,8 +18,8 @@ export const Route = createFileRoute("/")({
 });
 
 const BLOQUES = [
-  { to: "/corporativo", img: gMesa, label: "Eventos Corporativos", text: "Cenas de fin de año, reuniones de despachos y networking." },
-  { to: "/corporativo", img: gEquipo, label: "Producciones y Cines", text: "Catering premium para cierres de rodaje, directores e invitados internacionales." },
+  { to: "/eventos-empresas", img: gMesa, label: "Eventos Corporativos", text: "Cenas de fin de año, reuniones de despachos y networking." },
+  { to: "/eventos-empresas", img: gEquipo, label: "Producciones y Cines", text: "Catering premium para cierres de rodaje, directores e invitados internacionales." },
   { to: "/bodas", img: gJardin, label: "Eventos Sociales", text: "Bodas, tornabodas, cumpleaños y celebraciones de vida alrededor del fuego." },
 ] as const;
 

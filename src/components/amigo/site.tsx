@@ -6,7 +6,7 @@ export const WA = "https://wa.me/520000000000"; // placeholder: número real pen
 
 export const NAV = [
   { to: "/", label: "Inicio" },
-  { to: "/corporativo", label: "Empresas y Producciones" },
+  { to: "/eventos-empresas", label: "Eventos para Empresas" },
   { to: "/bodas", label: "Eventos Sociales" },
   { to: "/menu", label: "Menú" },
   { to: "/historia", label: "Historia" },
@@ -134,8 +134,8 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow text-tierra">Servicios</p>
           <ul className="mt-4 space-y-2 text-sm text-crema/80">
-            <li><Link to="/corporativo" className="hover:text-crema">Eventos para Empresas</Link></li>
-            <li><Link to="/corporativo" className="hover:text-crema">Producciones y Cines</Link></li>
+            <li><Link to="/eventos-empresas" className="hover:text-crema">Eventos para Empresas</Link></li>
+            <li><Link to="/eventos-empresas" className="hover:text-crema">Producciones y Cines</Link></li>
             <li><Link to="/bodas" className="hover:text-crema">Eventos Sociales y Bodas</Link></li>
           </ul>
         </div>
