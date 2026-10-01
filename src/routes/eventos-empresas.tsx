@@ -58,8 +58,8 @@ function EventosEmpresas() {
         </p>
        </Section>
       </section>
-      <section className="border-t border-crema/15 bg-carbon text-crema">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
+      <section className="bg-carbon text-crema">
+        <div className="mx-auto max-w-7xl px-5 pb-20 md:px-10 md:pb-28">
           <p className="eyebrow text-tierra">Formatos flexibles</p>
           <h2 className="mt-4 text-4xl md:text-5xl">Desde juntas íntimas de 10 personas hasta eventos masivos</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
