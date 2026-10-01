@@ -23,8 +23,8 @@ export function CtaLink({
 }) {
   const cls = {
     crema: "bg-crema text-carbon hover:bg-tierra",
-    oliva: "bg-oliva text-carbon hover:bg-crema",
-    ghost: "border border-crema/40 text-crema hover:bg-crema/10",
+    oliva: "bg-fuego text-carbon hover:bg-crema",
+    ghost: "border border-crema/40 text-crema hover:bg-crema hover:text-carbon/10",
   }[variant];
   const base = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors ${cls}`;
   if (to.startsWith("#")) return <a href={to} className={base}>{children}</a>;
@@ -55,7 +55,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <a
             href="#cotizar"
-            className="rounded-full bg-oliva px-5 py-2.5 text-sm font-bold text-carbon transition-colors hover:bg-crema"
+            className="rounded-full bg-fuego px-5 py-2.5 text-sm font-bold text-carbon transition-colors hover:bg-crema hover:text-carbon"
           >
             Cotizar
           </a>
@@ -94,7 +94,7 @@ export function WhatsAppFab() {
       target="_blank"
       rel="noreferrer"
       aria-label="Escríbenos por WhatsApp"
-      className="animate-soft-pulse fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-oliva text-carbon shadow-xl transition-transform hover:scale-105"
+      className="animate-soft-pulse fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-fuego text-carbon shadow-xl transition-transform hover:scale-105"
     >
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor" aria-hidden="true">
         <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z" />
@@ -194,7 +194,7 @@ export function TrustStrip() {
   return (
     <section className="border-y border-border bg-brasa py-12">
       <p className="px-5 text-center font-display text-lg italic text-tierra md:text-xl">
-        La opción elegida por productoras, agencias y despachos corporativos
+        La opción de confianza para productoras, agencias y despachos corporativos.
       </p>
       <div className="mt-7 overflow-hidden">
         <div className="flex w-max animate-marquee gap-14">

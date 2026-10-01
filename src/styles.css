@@ -56,11 +56,11 @@
 
   --crema: #fcf3e7;
   --fuego: #ff4713;
-  --carbon: #121212;
-  --brasa: #1c1814;
+  --carbon: #1d1912;
+  --brasa: #26211a;
   --tierra: #c7893e;
   --cielo: #3f96b4;
-  --oliva: #b5c43a;
+  --oliva: #999a32;
   --terracota: #c8613f;
   --oxido: #a4471f;
   --burdeos: #6b1f2a;
@@ -118,7 +118,7 @@
 }
 
 @keyframes soft-pulse {
-  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--oliva) 60%, transparent); }
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--fuego) 60%, transparent); }
   70% { box-shadow: 0 0 0 16px transparent; }
   100% { box-shadow: 0 0 0 0 transparent; }
 }
