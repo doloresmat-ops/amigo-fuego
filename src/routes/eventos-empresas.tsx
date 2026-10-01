@@ -163,31 +163,55 @@ function EventosEmpresas() {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex justify-center">
-            <CtaLink variant="crema" size="lg">Cotizar evento corporativo</CtaLink>
+          <div className="mb-16 mt-12 flex justify-center">
+            <CtaLink variant="fuego" size="lg">Cotizar evento corporativo</CtaLink>
           </div>
-          <aside className="mt-16 flex flex-col gap-8 rounded-2xl bg-crema p-8 text-carbon md:flex-row md:items-center md:justify-between md:p-12">
-            <div className="max-w-2xl">
-              <p className="eyebrow text-oxido">También te puede interesar</p>
-              <h3 className="mt-3 text-2xl md:text-3xl">¿Quieres conocer los cortes que llevaremos a tu mesa?</h3>
-              <p className="mt-3 text-carbon/75">
-                Descubre nuestro ritual de 5 pasos. Desde las empanadas de apertura hasta los cortes Angus y las mini pizzas de masa madre a la parrilla.
-              </p>
-            </div>
-            <Link to="/menu" className="inline-flex shrink-0 items-center justify-center rounded-full bg-carbon px-8 py-4 font-bold text-crema transition hover:brightness-125">
-              Ver el Menú Completo
-            </Link>
-          </aside>
         </Section>
       </section>
 
-      {/* Confianza B2B */}
-      <section className="bg-crema py-14 text-carbon">
-        <div className="mx-auto max-w-7xl px-5 md:px-10">
-          <ul className="flex flex-col items-center justify-center gap-4 text-center md:flex-row md:gap-10">
+      {/* Interlink al menú */}
+      <section className="bg-crema text-carbon">
+        <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
+          <aside className="flex flex-col gap-8 rounded-2xl bg-carbon p-8 text-crema shadow-xl md:flex-row md:items-center md:justify-between md:p-12">
+            <div className="max-w-2xl">
+              <p className="eyebrow text-tierra">También te puede interesar</p>
+              <h3 className="mt-3 text-2xl md:text-3xl">¿Quieres conocer los cortes que llevaremos a tu mesa?</h3>
+              <p className="mt-3 text-crema/80">
+                Descubre nuestro ritual de 5 pasos. Desde las empanadas de apertura hasta los cortes Angus y las mini pizzas de masa madre a la parrilla.
+              </p>
+            </div>
+            <Link
+              to="/menu"
+              className="inline-flex shrink-0 items-center justify-center rounded-full bg-crema px-8 py-4 font-bold text-carbon transition hover:brightness-95"
+            >
+              Ver el Menú Completo
+            </Link>
+          </aside>
+        </div>
+      </section>
+
+      {/* Cintillo de confianza B2B */}
+      <section className="border-y border-crema/15 bg-carbon text-crema">
+        <div className="mx-auto max-w-7xl px-5 py-10 md:px-10">
+          <ul className="flex flex-col items-center justify-center gap-5 text-center md:flex-row md:gap-12">
             {CONFIANZA.map((c) => (
               <li key={c} className="flex items-center gap-3 font-semibold">
-                <span aria-hidden="true" className="h-2 w-2 rounded-full bg-oxido" />
+                <span
+                  aria-hidden="true"
+                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-tierra/60 text-tierra"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </span>
                 {c}
               </li>
             ))}

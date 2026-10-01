@@ -26,6 +26,7 @@ export function CtaLink({
   const cls = {
     crema: "bg-crema text-carbon hover:brightness-90",
     oliva: "bg-crema text-carbon hover:brightness-90",
+    fuego: "bg-fuego text-blanco hover:brightness-110",
     ghost: "border border-crema/40 text-crema hover:bg-crema hover:text-carbon",
     dark: "bg-carbon text-crema hover:brightness-125",
     "dark-outline": "border border-carbon text-carbon hover:bg-carbon hover:text-crema",
