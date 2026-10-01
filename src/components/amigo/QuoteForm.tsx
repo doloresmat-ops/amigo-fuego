@@ -54,34 +54,34 @@ export function QuoteForm({
           ) : (
             <form onSubmit={onSubmit} className="grid gap-4 sm:grid-cols-2">
               <label className="sm:col-span-2">
-                <span className="mb-1.5 block text-sm text-carbon">Nombre completo</span>
+                <span className="mb-1.5 block text-sm text-crema">Nombre completo</span>
                 <input required name="nombre" className={field} maxLength={100} />
               </label>
               <label>
-                <span className="mb-1.5 block text-sm text-carbon">Correo electrónico</span>
+                <span className="mb-1.5 block text-sm text-crema">Correo electrónico</span>
                 <input required type="email" name="email" className={field} maxLength={255} />
               </label>
               <label>
-                <span className="mb-1.5 block text-sm text-carbon">Teléfono / WhatsApp</span>
+                <span className="mb-1.5 block text-sm text-crema">Teléfono / WhatsApp</span>
                 <input required type="tel" name="telefono" className={field} maxLength={20} />
               </label>
               <label className="sm:col-span-2">
-                <span className="mb-1.5 block text-sm text-carbon">Empresa (opcional)</span>
+                <span className="mb-1.5 block text-sm text-crema">Empresa (opcional)</span>
                 <input name="empresa" className={field} maxLength={100} />
               </label>
               <label className="sm:col-span-2">
-                <span className="mb-1.5 block text-sm text-carbon">Tipo de evento</span>
+                <span className="mb-1.5 block text-sm text-crema">Tipo de evento</span>
                 <select required name="tipo" defaultValue={defaultTipo} className={field}>
                   <option value="" disabled>Selecciona una opción</option>
                   {TIPOS_EVENTO.map((t) => <option key={t}>{t}</option>)}
                 </select>
               </label>
               <label>
-                <span className="mb-1.5 block text-sm text-carbon">Número estimado de personas</span>
+                <span className="mb-1.5 block text-sm text-crema">Número estimado de personas</span>
                 <input required type="number" min={10} name="personas" className={field} />
               </label>
               <label>
-                <span className="mb-1.5 block text-sm text-carbon">Fecha estimada</span>
+                <span className="mb-1.5 block text-sm text-crema">Fecha estimada</span>
                 <input required type="date" name="fecha" className={field} />
               </label>
               <button
