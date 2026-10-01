@@ -47,7 +47,7 @@ function Bodas() {
           <img src={gChoripan} alt="Choripanes en la parrilla de madrugada" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
           <div>
             <p className="eyebrow text-oliva">Sección estelar</p>
-            <h2 className="mt-4 text-4xl md:text-6xl">La Tornaboda Amigo Fuego</h2>
+            <h2 className="mt-4 text-4xl md:text-6xl">La Tornafiesta Amigo Fuego</h2>
             <p className="mt-6 text-lg text-crema/80">
               Cuando la pista sigue llena y el hambre aparece, la parrilla se enciende de
               madrugada. Choripanes recién hechos, chimichurri y pan para que la fiesta
