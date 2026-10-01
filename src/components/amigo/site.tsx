@@ -20,7 +20,7 @@ export function CtaLink({
 }: {
   children: ReactNode;
   size?: "md" | "lg";
-  variant?: "crema" | "oliva" | "ghost" | "dark" | "dark-outline";
+  variant?: "crema" | "oliva" | "fuego" | "ghost" | "dark" | "dark-outline";
   to?: string;
 }) {
   const cls = {
