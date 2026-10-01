@@ -66,7 +66,7 @@ function Home() {
           ))}
         </div>
       </Section>
-      <section className="border-t border-crema/20 bg-carbon text-crema">
+      <section className="bg-carbon text-crema">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 py-14 md:flex-row md:items-center md:px-10 md:py-20">
           <h2 className="max-w-2xl text-3xl md:text-4xl">El Ritual: Conoce lo que llevamos a tu mesa</h2>
           <CtaLink to="/menu">Ver el Menú Completo</CtaLink>

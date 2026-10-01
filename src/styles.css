@@ -26,7 +26,6 @@
   --color-burdeos: var(--burdeos);
   --color-blanco: var(--blanco);
   --color-wa: var(--wa);
-  --color-brasa: var(--brasa);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -61,7 +60,6 @@
   --carbon: #1d1912;
   --blanco: #ffffff;
   --wa: #25d366;
-  --brasa: #26211a;
   --tierra: #c7893e;
   --cielo: #3f96b4;
   --oliva: #999a32;
