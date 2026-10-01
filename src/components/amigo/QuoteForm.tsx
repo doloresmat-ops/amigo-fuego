@@ -9,7 +9,7 @@ export const TIPOS_EVENTO = [
 ] as const;
 
 const field =
-  "w-full rounded-md border border-carbon/40 bg-crema px-4 py-3 text-carbon placeholder:text-carbon/50 focus:border-carbon focus:outline-none focus:ring-2 focus:ring-carbon/20";
+  "w-full rounded-md border-2 border-carbon/25 bg-crema px-4 py-3 text-carbon placeholder:text-carbon/50 focus:border-oxido focus:outline-none focus:ring-2 focus:ring-oxido/25";
 
 export function QuoteForm({
   defaultTipo = "",
@@ -36,7 +36,7 @@ export function QuoteForm({
           <h2 className="mt-4 text-4xl text-carbon md:text-5xl">{title}</h2>
           <p className="mt-5 text-carbon/75">{intro}</p>
         </div>
-        <div className="rounded-lg border border-carbon/25 bg-crema p-6 md:col-span-3 md:p-8">
+        <div className="rounded-xl border-t-4 border-oxido bg-blanco p-6 shadow-[0_18px_40px_-20px_rgba(29,25,18,0.45)] md:col-span-3 md:p-8">
           {sent ? (
             <div className="py-10 text-center" role="status">
               <p className="font-display text-3xl text-carbon">¡Gracias! El fuego ya está encendido.</p>
@@ -77,7 +77,7 @@ export function QuoteForm({
               </label>
               <button
                 type="submit"
-                className="mt-2 rounded-full bg-carbon px-6 py-4 text-base font-bold text-crema transition hover:brightness-125 sm:col-span-2"
+                className="mt-2 rounded-full bg-oxido px-6 py-4 text-base font-bold text-crema transition hover:brightness-110 sm:col-span-2"
               >
                 Quiero mi cotización
               </button>
