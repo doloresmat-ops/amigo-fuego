@@ -36,6 +36,19 @@ function Home() {
         <CtaLink variant="ghost" to="/menu">Ver el menú</CtaLink>
       </PageHero>
       <TrustStrip />
+      <section className="border-b border-border bg-brasa">
+        <div className="mx-auto max-w-7xl px-5 py-16 text-center md:px-10 md:py-20">
+          <p className="eyebrow text-tierra">Precio</p>
+          <p className="mt-4 font-display text-4xl md:text-6xl">
+            Paquetes desde <span className="text-oliva">$550 MXN</span>
+          </p>
+          <p className="mt-3 text-crema/70">por persona</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <CtaLink>Cotizar ahora</CtaLink>
+            <CtaLink variant="ghost" to="/menu">Ver el menú</CtaLink>
+          </div>
+        </div>
+      </section>
       <Section>
         <p className="eyebrow text-tierra">¿Qué estás organizando?</p>
         <h2 className="mt-4 max-w-2xl text-4xl md:text-5xl">Elige tu ocasión</h2>
