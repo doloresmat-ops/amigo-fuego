@@ -49,8 +49,8 @@
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
 
-  --font-display: "Fraunces", Georgia, serif;
-  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Young Serif", Georgia, serif;
+  --font-sans: "Averia Serif Libre", Georgia, serif;
 }
 
 :root {
@@ -99,7 +99,7 @@
 @utility eyebrow {
   font-family: var(--font-sans);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
 }
@@ -141,7 +141,7 @@
   }
   h1, h2, h3 {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-weight: 400;
+    letter-spacing: -0.015em;
   }
 }
