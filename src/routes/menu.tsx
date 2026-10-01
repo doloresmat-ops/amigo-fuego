@@ -26,7 +26,7 @@ const PASOS = [
 
 function Menu() {
   const [active, setActive] = useState(0);
-  const p = PASOS[active];
+  const p = PASOS[active] ?? PASOS[0]!;
   return (
     <>
       <PageHero
