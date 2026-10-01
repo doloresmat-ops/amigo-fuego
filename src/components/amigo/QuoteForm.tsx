@@ -10,7 +10,7 @@ export const TIPOS_EVENTO = [
 ] as const;
 
 const field =
-  "w-full rounded-md border border-carbon bg-blanco px-4 py-3 text-carbon placeholder:text-carbon/50 focus:outline-none focus:ring-2 focus:ring-carbon/30";
+  "w-full rounded-md border-0 bg-blanco px-4 py-3 text-carbon placeholder:text-carbon/50 focus:outline-none focus:ring-2 focus:ring-fuego/40";
 
 export function QuoteForm({
   defaultTipo = "",
@@ -24,7 +24,7 @@ export function QuoteForm({
   tone?: "crema" | "carbon";
 }) {
   const [sent, setSent] = useState(false);
-  const dark = false; void tone;
+  const dark = tone === "carbon";
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -44,12 +44,12 @@ export function QuoteForm({
           <p className={`mt-5 ${dark ? "text-crema/75" : "text-carbon/75"}`}>{intro}</p>
         </div>
         <div
-          className="text-carbon md:col-span-3"
+          className={`rounded-lg bg-carbon p-6 text-crema shadow-xl sm:p-10 md:col-span-3 ${dark ? "border border-crema/20" : ""}`}
         >
           {sent ? (
             <div className="py-10 text-center" role="status">
-              <p className="font-display text-3xl text-carbon">¡Gracias! El fuego ya está encendido.</p>
-              <p className="mt-3 text-carbon/70">Te escribimos muy pronto para armar tu evento.</p>
+              <p className="font-display text-3xl text-crema">¡Gracias! El fuego ya está encendido.</p>
+              <p className="mt-3 text-crema/70">Te escribimos muy pronto para armar tu evento.</p>
             </div>
           ) : (
             <form onSubmit={onSubmit} className="grid gap-4 sm:grid-cols-2">
@@ -86,7 +86,7 @@ export function QuoteForm({
               </label>
               <button
                 type="submit"
-                className="mt-2 rounded-full bg-carbon px-6 py-4 text-base font-bold text-crema transition hover:opacity-85 sm:col-span-2"
+                className="mt-2 rounded-full bg-fuego px-6 py-4 text-base font-bold text-blanco transition hover:brightness-110 sm:col-span-2"
               >
                 Quiero mi cotización
               </button>
