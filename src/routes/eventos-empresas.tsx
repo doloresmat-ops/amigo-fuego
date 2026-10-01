@@ -4,7 +4,7 @@ import { QuoteForm } from "@/components/amigo/QuoteForm";
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
 
 
-export const Route = createFileRoute("/corporativo")({
+export const Route = createFileRoute("/eventos-empresas")({
   head: () =>
     pageHead(
       "/corporativo",
@@ -27,11 +27,11 @@ const FORMATOS = [
   { n: "120+", t: "Masivo", d: "Varias parrillas y equipo completo." },
 ];
 
-function Corporativo() {
+function EventosEmpresas() {
   return (
     <>
       <PageHero
-        crumb="Corporativo"
+        crumb="Eventos para Empresas"
         eyebrow="Empresas · Productoras · Agencias"
         title="Catering Corporativo y Asados para Producciones y Cines"
         subtitle="La carne es festiva, la carne habla de negocios y de poder. Llevamos la parrilla a tu oficina, foro o terraza."

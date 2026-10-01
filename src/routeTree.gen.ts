@@ -12,7 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AvisoDePrivacidadRouteImport } from './routes/aviso-de-privacidad'
 import { Route as BodasRouteImport } from './routes/bodas'
-import { Route as CorporativoRouteImport } from './routes/corporativo'
+import { Route as EventosEmpresasRouteImport } from './routes/eventos-empresas'
 import { Route as HistoriaRouteImport } from './routes/historia'
 import { Route as MenuRouteImport } from './routes/menu'
 
@@ -31,9 +31,9 @@ const BodasRoute = BodasRouteImport.update({
   path: '/bodas',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CorporativoRoute = CorporativoRouteImport.update({
-  id: '/corporativo',
-  path: '/corporativo',
+const EventosEmpresasRoute = EventosEmpresasRouteImport.update({
+  id: '/eventos-empresas',
+  path: '/eventos-empresas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HistoriaRoute = HistoriaRouteImport.update({
@@ -51,7 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
   '/bodas': typeof BodasRoute
-  '/corporativo': typeof CorporativoRoute
+  '/eventos-empresas': typeof EventosEmpresasRoute
   '/historia': typeof HistoriaRoute
   '/menu': typeof MenuRoute
 }
@@ -59,7 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
   '/bodas': typeof BodasRoute
-  '/corporativo': typeof CorporativoRoute
+  '/eventos-empresas': typeof EventosEmpresasRoute
   '/historia': typeof HistoriaRoute
   '/menu': typeof MenuRoute
 }
@@ -68,7 +68,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
   '/bodas': typeof BodasRoute
-  '/corporativo': typeof CorporativoRoute
+  '/eventos-empresas': typeof EventosEmpresasRoute
   '/historia': typeof HistoriaRoute
   '/menu': typeof MenuRoute
 }
@@ -78,7 +78,7 @@ export interface FileRouteTypes {
     | '/'
     | '/aviso-de-privacidad'
     | '/bodas'
-    | '/corporativo'
+    | '/eventos-empresas'
     | '/historia'
     | '/menu'
   fileRoutesByTo: FileRoutesByTo
@@ -86,7 +86,7 @@ export interface FileRouteTypes {
     | '/'
     | '/aviso-de-privacidad'
     | '/bodas'
-    | '/corporativo'
+    | '/eventos-empresas'
     | '/historia'
     | '/menu'
   id:
@@ -94,7 +94,7 @@ export interface FileRouteTypes {
     | '/'
     | '/aviso-de-privacidad'
     | '/bodas'
-    | '/corporativo'
+    | '/eventos-empresas'
     | '/historia'
     | '/menu'
   fileRoutesById: FileRoutesById
@@ -103,7 +103,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AvisoDePrivacidadRoute: typeof AvisoDePrivacidadRoute
   BodasRoute: typeof BodasRoute
-  CorporativoRoute: typeof CorporativoRoute
+  EventosEmpresasRoute: typeof EventosEmpresasRoute
   HistoriaRoute: typeof HistoriaRoute
   MenuRoute: typeof MenuRoute
 }
@@ -131,11 +131,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BodasRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/corporativo': {
-      id: '/corporativo'
-      path: '/corporativo'
-      fullPath: '/corporativo'
-      preLoaderRoute: typeof CorporativoRouteImport
+    '/eventos-empresas': {
+      id: '/eventos-empresas'
+      path: '/eventos-empresas'
+      fullPath: '/eventos-empresas'
+      preLoaderRoute: typeof EventosEmpresasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/historia': {
@@ -159,7 +159,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AvisoDePrivacidadRoute: AvisoDePrivacidadRoute,
   BodasRoute: BodasRoute,
-  CorporativoRoute: CorporativoRoute,
+  EventosEmpresasRoute: EventosEmpresasRoute,
   HistoriaRoute: HistoriaRoute,
   MenuRoute: MenuRoute,
 }
