@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AvisoDePrivacidadRouteImport } from './routes/aviso-de-privacidad'
+import { Route as BodasRouteImport } from './routes/bodas'
+import { Route as CorporativoRouteImport } from './routes/corporativo'
+import { Route as HistoriaRouteImport } from './routes/historia'
+import { Route as MenuRouteImport } from './routes/menu'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AvisoDePrivacidadRoute = AvisoDePrivacidadRouteImport.update({
+  id: '/aviso-de-privacidad',
+  path: '/aviso-de-privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BodasRoute = BodasRouteImport.update({
+  id: '/bodas',
+  path: '/bodas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CorporativoRoute = CorporativoRouteImport.update({
+  id: '/corporativo',
+  path: '/corporativo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoriaRoute = HistoriaRouteImport.update({
+  id: '/historia',
+  path: '/historia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MenuRoute = MenuRouteImport.update({
+  id: '/menu',
+  path: '/menu',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
+  '/bodas': typeof BodasRoute
+  '/corporativo': typeof CorporativoRoute
+  '/historia': typeof HistoriaRoute
+  '/menu': typeof MenuRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
+  '/bodas': typeof BodasRoute
+  '/corporativo': typeof CorporativoRoute
+  '/historia': typeof HistoriaRoute
+  '/menu': typeof MenuRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
+  '/bodas': typeof BodasRoute
+  '/corporativo': typeof CorporativoRoute
+  '/historia': typeof HistoriaRoute
+  '/menu': typeof MenuRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aviso-de-privacidad'
+    | '/bodas'
+    | '/corporativo'
+    | '/historia'
+    | '/menu'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aviso-de-privacidad'
+    | '/bodas'
+    | '/corporativo'
+    | '/historia'
+    | '/menu'
+  id:
+    | '__root__'
+    | '/'
+    | '/aviso-de-privacidad'
+    | '/bodas'
+    | '/corporativo'
+    | '/historia'
+    | '/menu'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AvisoDePrivacidadRoute: typeof AvisoDePrivacidadRoute
+  BodasRoute: typeof BodasRoute
+  CorporativoRoute: typeof CorporativoRoute
+  HistoriaRoute: typeof HistoriaRoute
+  MenuRoute: typeof MenuRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +117,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aviso-de-privacidad': {
+      id: '/aviso-de-privacidad'
+      path: '/aviso-de-privacidad'
+      fullPath: '/aviso-de-privacidad'
+      preLoaderRoute: typeof AvisoDePrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bodas': {
+      id: '/bodas'
+      path: '/bodas'
+      fullPath: '/bodas'
+      preLoaderRoute: typeof BodasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corporativo': {
+      id: '/corporativo'
+      path: '/corporativo'
+      fullPath: '/corporativo'
+      preLoaderRoute: typeof CorporativoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/historia': {
+      id: '/historia'
+      path: '/historia'
+      fullPath: '/historia'
+      preLoaderRoute: typeof HistoriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/menu': {
+      id: '/menu'
+      path: '/menu'
+      fullPath: '/menu'
+      preLoaderRoute: typeof MenuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AvisoDePrivacidadRoute: AvisoDePrivacidadRoute,
+  BodasRoute: BodasRoute,
+  CorporativoRoute: CorporativoRoute,
+  HistoriaRoute: HistoriaRoute,
+  MenuRoute: MenuRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

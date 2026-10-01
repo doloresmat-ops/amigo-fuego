@@ -5,8 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Amigo Fuego — sistema de diseño.
- * Paleta oficial en hex exactos (no aproximar).
+ * Amigo Fuego — sistema de diseño (tema carbón, golden hour).
  */
 
 @theme inline {
@@ -22,6 +21,10 @@
   --color-tierra: var(--tierra);
   --color-cielo: var(--cielo);
   --color-oliva: var(--oliva);
+  --color-terracota: var(--terracota);
+  --color-oxido: var(--oxido);
+  --color-burdeos: var(--burdeos);
+  --color-brasa: var(--brasa);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -49,38 +52,38 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.5rem;
 
   --crema: #fcf3e7;
   --fuego: #ff4713;
-  --carbon: #1d1912;
+  --carbon: #121212;
+  --brasa: #1c1814;
   --tierra: #c7893e;
   --cielo: #3f96b4;
-  --oliva: #999a32;
+  --oliva: #b5c43a;
+  --terracota: #c8613f;
+  --oxido: #a4471f;
+  --burdeos: #6b1f2a;
 
-  --background: var(--crema);
-  --foreground: var(--carbon);
-  --card: #fffaf2;
-  --card-foreground: var(--carbon);
-  --popover: #fffaf2;
-  --popover-foreground: var(--carbon);
-  --primary: var(--fuego);
-  --primary-foreground: var(--crema);
-  --secondary: #f4e7d5;
-  --secondary-foreground: var(--carbon);
-  --muted: #f2e5d3;
-  --muted-foreground: #6b6154;
-  --accent: var(--tierra);
-  --accent-foreground: var(--carbon);
-  --destructive: #b3311a;
+  --background: var(--carbon);
+  --foreground: var(--crema);
+  --card: var(--brasa);
+  --card-foreground: var(--crema);
+  --popover: var(--brasa);
+  --popover-foreground: var(--crema);
+  --primary: var(--crema);
+  --primary-foreground: var(--carbon);
+  --secondary: #24201b;
+  --secondary-foreground: var(--crema);
+  --muted: #221d18;
+  --muted-foreground: #b9ab98;
+  --accent: var(--terracota);
+  --accent-foreground: var(--crema);
+  --destructive: #d0452b;
   --destructive-foreground: var(--crema);
-  --border: color-mix(in srgb, var(--tierra) 35%, transparent);
-  --input: color-mix(in srgb, var(--tierra) 45%, transparent);
-  --ring: var(--fuego);
-}
-
-@utility filete {
-  border-top: 1px solid color-mix(in srgb, var(--tierra) 35%, transparent);
+  --border: color-mix(in srgb, var(--tierra) 28%, transparent);
+  --input: color-mix(in srgb, var(--tierra) 40%, transparent);
+  --ring: var(--terracota);
 }
 
 @utility caption-sc {
@@ -97,39 +100,42 @@
   text-transform: uppercase;
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+@utility golden {
+  background-image: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--carbon) 30%, transparent) 0%,
+    color-mix(in srgb, var(--oxido) 25%, transparent) 55%,
+    var(--carbon) 100%
+  );
 }
 
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 @utility animate-marquee {
   animation: marquee 32s linear infinite;
 }
 
+@keyframes soft-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--oliva) 60%, transparent); }
+  70% { box-shadow: 0 0 0 16px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+@utility animate-soft-pulse {
+  animation: soft-pulse 2.4s ease-out infinite;
+}
+
 @layer base {
-  * {
-    border-color: var(--color-border);
-  }
-
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
-  }
-
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-
-  h1,
-  h2,
-  h3 {
+  h1, h2, h3 {
     font-family: var(--font-display);
     font-weight: 600;
     letter-spacing: -0.02em;
