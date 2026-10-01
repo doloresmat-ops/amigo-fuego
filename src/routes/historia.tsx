@@ -30,11 +30,12 @@ function Historia() {
         subtitle="Una familia, una pizzería en Santa Fe y 25 años de fuego en México."
         image={gEquipo}
       />
-      <Section>
+      <section className="bg-crema text-carbon">
+       <Section>
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <img src={gPizzas} alt="Pizzas a la parrilla, herencia familiar" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
-          <div className="space-y-5 text-lg text-crema/80">
-            <h2 className="text-4xl text-crema md:text-5xl">Gabriel y el fuego</h2>
+          <div className="space-y-5 text-lg text-carbon/80">
+            <h2 className="text-4xl text-carbon md:text-5xl">Gabriel y el fuego</h2>
             <p>
               Gabriel es argentino y lleva 25 años en México. Creció entre hornos y masa:
               su familia tenía una pizzería tradicional en Santa Fe.
@@ -46,8 +47,9 @@ function Historia() {
             <p>Así nació Amigo Fuego: el ritual del asado, llevado a tu mesa.</p>
           </div>
         </div>
-      </Section>
-      <section className="border-y border-border bg-brasa">
+       </Section>
+      </section>
+      <section className="border-y border-crema/20 bg-carbon">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
           <p className="eyebrow text-tierra">Nuestros valores</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

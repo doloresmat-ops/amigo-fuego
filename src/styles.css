@@ -71,15 +71,15 @@
 
   --background: var(--carbon);
   --foreground: var(--crema);
-  --card: var(--brasa);
+  --card: var(--carbon);
   --card-foreground: var(--crema);
-  --popover: var(--brasa);
+  --popover: var(--carbon);
   --popover-foreground: var(--crema);
   --primary: var(--crema);
   --primary-foreground: var(--carbon);
-  --secondary: #24201b;
+  --secondary: var(--carbon);
   --secondary-foreground: var(--crema);
-  --muted: #221d18;
+  --muted: var(--carbon);
   --muted-foreground: #b9ab98;
   --accent: var(--terracota);
   --accent-foreground: var(--crema);
