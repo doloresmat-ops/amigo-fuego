@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, TrustStrip, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
-import gParrilla from "@/assets/galeria-parrilla-vivo.jpg";
+
 
 export const Route = createFileRoute("/corporativo")({
   head: () =>
@@ -75,6 +75,7 @@ function Corporativo() {
         </div>
       </section>
       <QuoteForm
+        tone="carbon"
         defaultTipo="Cena Fin de Año"
         title="Cotización para empresas"
         intro="Facturamos. Cuéntanos la fecha, el número de personas y el lugar, y te enviamos una propuesta."
