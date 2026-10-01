@@ -1,0 +1,3 @@
+- [x] Cambiar “Bodas” por “Eventos Sociales” en la navegación superior.
+- [x] Reorganizar las tres tarjetas de ocasiones y sus destinos.
+- [x] Aplicar crema con texto carbón a los botones principales de cotización.

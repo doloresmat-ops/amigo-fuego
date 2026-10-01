@@ -5,7 +5,7 @@ import { QuoteForm } from "@/components/amigo/QuoteForm";
 import hero from "@/assets/hero-parrilla-noche.jpg";
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
 import gJardin from "@/assets/galeria-jardin.jpg";
-import gCorte from "@/assets/galeria-corte.jpg";
+import gEquipo from "@/assets/galeria-equipo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () =>
@@ -18,9 +18,9 @@ export const Route = createFileRoute("/")({
 });
 
 const BLOQUES = [
-  { to: "/corporativo", img: gMesa, label: "Eventos Corporativos", text: "Cenas de fin de año, despachos y cierres de rodaje." },
-  { to: "/bodas", img: gJardin, label: "Bodas y Tornabodas", text: "Una mesa infinita y la parrilla encendida de madrugada." },
-  { to: "/menu", img: gCorte, label: "El Menú", text: "Los 5 pasos del ritual del asado argentino." },
+  { to: "/corporativo", img: gMesa, label: "Eventos Corporativos", text: "Cenas de fin de año, reuniones de despachos y networking." },
+  { to: "/corporativo", img: gEquipo, label: "Producciones y Cines", text: "Catering premium para cierres de rodaje, directores e invitados internacionales." },
+  { to: "/bodas", img: gJardin, label: "Eventos Sociales", text: "Bodas, tornabodas, cumpleaños y celebraciones de vida alrededor del fuego." },
 ] as const;
 
 function Home() {
