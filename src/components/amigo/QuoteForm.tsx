@@ -77,7 +77,7 @@ export function QuoteForm({
               </label>
               <button
                 type="submit"
-                className="mt-2 rounded-full bg-cielo px-6 py-4 text-base font-bold text-blanco transition hover:brightness-110 sm:col-span-2"
+                className="mt-2 rounded-full bg-crema px-6 py-4 text-base font-bold text-carbon transition hover:brightness-90 sm:col-span-2"
               >
                 Quiero mi cotización
               </button>

@@ -7,7 +7,7 @@ export const WA = "https://wa.me/520000000000"; // placeholder: número real pen
 export const NAV = [
   { to: "/", label: "Inicio" },
   { to: "/corporativo", label: "Corporativo" },
-  { to: "/bodas", label: "Bodas" },
+  { to: "/bodas", label: "Eventos Sociales" },
   { to: "/menu", label: "Menú" },
   { to: "/historia", label: "Historia" },
 ] as const;
@@ -22,9 +22,9 @@ export function CtaLink({
   to?: string;
 }) {
   const cls = {
-    crema: "bg-crema text-carbon hover:bg-tierra",
-    oliva: "bg-cielo text-blanco hover:brightness-110",
-    ghost: "border border-crema/40 text-crema hover:bg-crema hover:text-carbon/10",
+    crema: "bg-crema text-carbon hover:brightness-90",
+    oliva: "bg-crema text-carbon hover:brightness-90",
+    ghost: "border border-crema/40 text-crema hover:bg-crema hover:text-carbon",
   }[variant];
   const base = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors ${cls}`;
   if (to.startsWith("#")) return <a href={to} className={base}>{children}</a>;
@@ -55,7 +55,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <a
             href="#cotizar"
-            className="rounded-full bg-cielo px-5 py-2.5 text-sm font-bold text-blanco transition hover:brightness-110"
+            className="rounded-full bg-crema px-5 py-2.5 text-sm font-bold text-carbon transition hover:brightness-90"
           >
             Cotizar
           </a>
