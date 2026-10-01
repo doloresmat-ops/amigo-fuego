@@ -66,15 +66,11 @@ function EventosEmpresas() {
         crumb="Eventos para Empresas"
         eyebrow="Empresas · Productoras · Agencias"
         title="Catering Corporativo y Asado Argentino para Producciones y Empresas"
-        subtitle="No llevamos una parrilla a tu evento. Llevamos una tradición que transforma una comida en un gran momento de negocios."
+        subtitle="La tradición que transforma una comida en un gran momento de negocios."
         image={gMesa}
+        overlay
       >
-        <CtaLink variant="oliva">Cotizar evento corporativo</CtaLink>
-        <p className="max-w-2xl text-crema/85">
-          La carne es festiva, habla de negocios y de poder. El asado no es ir a un
-          restaurante caro, es tener tiempo para reunirte con tu equipo, directores o
-          clientes VIP.
-        </p>
+        <CtaLink variant="crema" size="lg">Cotizar evento corporativo</CtaLink>
       </PageHero>
 
       <TrustStrip />
@@ -128,17 +124,9 @@ function EventosEmpresas() {
               </article>
             ))}
           </div>
-          <p className="mt-10 max-w-3xl text-lg text-carbon/75">
-            Revisa nuestros{" "}
-            <Link to="/menu" className="text-oxido underline underline-offset-4">
-              cortes a la parrilla como vacío y churrasco Angus
-            </Link>{" "}
-            y las{" "}
-            <Link to="/menu" className="text-oxido underline underline-offset-4">
-              mini pizzas de masa madre a la parrilla
-            </Link>
-            , el favorito de los equipos.
-          </p>
+          <div className="mt-12 flex justify-center">
+            <CtaLink variant="dark" size="lg">Cotizar evento corporativo</CtaLink>
+          </div>
         </Section>
       </section>
 
@@ -175,6 +163,21 @@ function EventosEmpresas() {
               </div>
             ))}
           </div>
+          <div className="mt-12 flex justify-center">
+            <CtaLink variant="crema" size="lg">Cotizar evento corporativo</CtaLink>
+          </div>
+          <aside className="mt-16 flex flex-col gap-8 rounded-2xl bg-crema p-8 text-carbon md:flex-row md:items-center md:justify-between md:p-12">
+            <div className="max-w-2xl">
+              <p className="eyebrow text-oxido">También te puede interesar</p>
+              <h3 className="mt-3 text-2xl md:text-3xl">¿Quieres conocer los cortes que llevaremos a tu mesa?</h3>
+              <p className="mt-3 text-carbon/75">
+                Descubre nuestro ritual de 5 pasos. Desde las empanadas de apertura hasta los cortes Angus y las mini pizzas de masa madre a la parrilla.
+              </p>
+            </div>
+            <Link to="/menu" className="inline-flex shrink-0 items-center justify-center rounded-full bg-carbon px-8 py-4 font-bold text-crema transition hover:brightness-125">
+              Ver el Menú Completo
+            </Link>
+          </aside>
         </Section>
       </section>
 

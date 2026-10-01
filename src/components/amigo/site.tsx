@@ -16,8 +16,10 @@ export function CtaLink({
   children,
   variant = "crema",
   to = "#cotizar",
+  size = "md",
 }: {
   children: ReactNode;
+  size?: "md" | "lg";
   variant?: "crema" | "oliva" | "ghost" | "dark" | "dark-outline";
   to?: string;
 }) {
@@ -28,7 +30,8 @@ export function CtaLink({
     dark: "bg-carbon text-crema hover:brightness-125",
     "dark-outline": "border border-carbon text-carbon hover:bg-carbon hover:text-crema",
   }[variant];
-  const base = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors ${cls}`;
+  const sz = size === "lg" ? "px-10 py-5 text-lg font-bold shadow-xl" : "px-6 py-3 text-sm font-semibold";
+  const base = `inline-flex items-center justify-center rounded-full ${sz} transition-colors ${cls}`;
   if (to.startsWith("#")) return <a href={to} className={base}>{children}</a>;
   return <Link to={to} className={base}>{children}</Link>;
 }
@@ -154,7 +157,9 @@ export function PageHero({
   image,
   children,
   crumb,
+  overlay = false,
 }: {
+  overlay?: boolean;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -165,7 +170,7 @@ export function PageHero({
   return (
     <section className="relative isolate overflow-hidden">
       <img src={image} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover" />
-      <div className="golden absolute inset-0 -z-10" />
+      <div className={overlay ? "absolute inset-0 -z-10 bg-carbon/70" : "golden absolute inset-0 -z-10"} />
       <div className="mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:px-10 md:pb-24">
         {crumb && (
           <nav aria-label="Migas de pan" className="mb-6 text-sm text-crema/70">
