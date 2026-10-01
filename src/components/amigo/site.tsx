@@ -6,7 +6,7 @@ export const WA = "https://wa.me/520000000000"; // placeholder: número real pen
 
 export const NAV = [
   { to: "/", label: "Inicio" },
-  { to: "/corporativo", label: "Corporativo" },
+  { to: "/corporativo", label: "Empresas y Producciones" },
   { to: "/bodas", label: "Eventos Sociales" },
   { to: "/menu", label: "Menú" },
   { to: "/historia", label: "Historia" },
@@ -18,13 +18,15 @@ export function CtaLink({
   to = "#cotizar",
 }: {
   children: ReactNode;
-  variant?: "crema" | "oliva" | "ghost";
+  variant?: "crema" | "oliva" | "ghost" | "dark" | "dark-outline";
   to?: string;
 }) {
   const cls = {
     crema: "bg-crema text-carbon hover:brightness-90",
     oliva: "bg-crema text-carbon hover:brightness-90",
     ghost: "border border-crema/40 text-crema hover:bg-crema hover:text-carbon",
+    dark: "bg-carbon text-crema hover:brightness-125",
+    "dark-outline": "border border-carbon text-carbon hover:bg-carbon hover:text-crema",
   }[variant];
   const base = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors ${cls}`;
   if (to.startsWith("#")) return <a href={to} className={base}>{children}</a>;
@@ -105,7 +107,7 @@ export function WhatsAppFab() {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-brasa">
+    <footer className="border-t border-crema/20 bg-carbon">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-4 md:px-10">
         <div className="md:col-span-2">
           <Logo tone="crema" />
@@ -132,15 +134,14 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow text-tierra">Servicios</p>
           <ul className="mt-4 space-y-2 text-sm text-crema/80">
-            <li><Link to="/corporativo">Catering de asado en CDMX</Link></li>
-            <li><Link to="/corporativo">Asados a domicilio para empresas</Link></li>
-            <li><Link to="/corporativo">Banquetes corporativos</Link></li>
-            <li><Link to="/bodas">Catering para bodas y tornabodas</Link></li>
+            <li><Link to="/corporativo" className="hover:text-crema">Eventos para Empresas</Link></li>
+            <li><Link to="/corporativo" className="hover:text-crema">Producciones y Cines</Link></li>
+            <li><Link to="/bodas" className="hover:text-crema">Eventos Sociales y Bodas</Link></li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-border px-5 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Amigo Fuego · Parrilla Argentina · Ciudad de México
+      <div className="border-t border-crema/20 px-5 py-5 text-center text-xs text-muted-foreground">
+        © {new Date().getFullYear()} Amigo Fuego · Parrilla Argentina
       </div>
     </footer>
   );
@@ -203,7 +204,7 @@ export function Section({
 export function TrustStrip() {
   const clientes = ["Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente"];
   return (
-    <section className="border-y border-border bg-brasa py-12">
+    <section className="border-y border-crema/20 bg-carbon py-12">
       <p className="px-5 text-center font-display text-lg italic text-tierra md:text-xl">
         La opción de confianza para productoras, agencias y despachos corporativos.
       </p>
