@@ -7,11 +7,11 @@ import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
 export const Route = createFileRoute("/eventos-empresas")({
   head: () =>
     pageHead(
-      "/corporativo",
+      "/eventos-empresas",
       "Catering Corporativo y Asados para Producciones | Amigo Fuego",
-      "Asados argentinos para cenas de fin de año, despachos, clientes internacionales y cierres de rodaje. Desde 10 personas hasta eventos masivos en CDMX.", "Corporativo"
+      "Asados argentinos para cenas de fin de año, despachos, clientes internacionales y cierres de rodaje. Desde 10 personas hasta eventos masivos en CDMX.", "Eventos para Empresas"
     ),
-  component: Corporativo,
+  component: EventosEmpresas,
 });
 
 const OCASIONES = [
