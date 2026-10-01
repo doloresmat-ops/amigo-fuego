@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
+import { SiteHeader, SiteFooter, WhatsAppFab } from "../components/amigo/site";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -77,14 +78,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Amigo Fuego | Parrilla argentina para eventos en México" },
-      {
-        name: "description",
-        content:
-          "Cenas corporativas, cierres de rodaje, bodas y tornabodas. Asado con historia.",
-      },
       { name: "author", content: "Amigo Fuego" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Amigo Fuego" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -114,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <HeadContent />
       </head>
@@ -132,7 +128,12 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SiteHeader />
+      <main>
+        <Outlet />
+      </main>
+      <SiteFooter />
+      <WhatsAppFab />
     </QueryClientProvider>
   );
 }
