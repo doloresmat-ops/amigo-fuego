@@ -60,7 +60,7 @@ function Historia() {
               </div>
             ))}
           </div>
-          <div className="mt-12"><CtaLink variant="oliva" to="/corporativo">Llevar el fuego a mi evento</CtaLink></div>
+          <div className="mt-12"><CtaLink variant="oliva" to="/eventos-empresas">Llevar el fuego a mi evento</CtaLink></div>
         </div>
       </section>
     </>
