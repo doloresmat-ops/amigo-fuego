@@ -27,21 +27,26 @@ function Bodas() {
         <CtaLink variant="oliva">Cotizar mi evento</CtaLink>
       </PageHero>
       <section className="bg-crema text-carbon">
-       <Section>
-        <div className="mx-auto max-w-5xl text-center">
-          <p className="eyebrow text-oxido">La mesa infinita</p>
-          <h2 className="mt-6 text-5xl leading-[1.05] md:text-7xl lg:text-8xl">
-            <span aria-hidden="true" className="text-oxido">“</span>Una celebración que sabe a familia<span aria-hidden="true" className="text-oxido">”</span>
-          </h2>
-          <div className="mx-auto mt-10 h-px w-24 bg-oxido" />
-          <p className="mx-auto mt-10 max-w-2xl text-lg text-carbon/75 md:text-xl">
-            Nada de platos que llegan y se van. La parrilla queda a la vista, los cortes
-            pasan de mano en mano y la mesa se llena de conversación. Así se celebra en
-            Argentina, y así lo llevamos a tu evento. Conoce <Link to="/historia" className="text-oxido underline underline-offset-4">la historia de Gabriel y su familia parrillera</Link>,
-            que lleva más de 25 años compartiendo el fuego en México.
-          </p>
-        </div>
-       </Section>
+        <Section>
+          <div className="mx-auto grid max-w-6xl overflow-hidden rounded-2xl bg-blanco shadow-xl md:grid-cols-[1fr_1.2fr]">
+            <div className="flex flex-col justify-center bg-carbon p-10 text-crema md:p-14">
+              <p className="eyebrow text-tierra">Catering para Eventos Sociales y Celebraciones</p>
+              <h2 className="mt-6 text-4xl leading-tight md:text-5xl">Una celebración que sabe a familia.</h2>
+              <div className="mt-8 h-px w-16 bg-oxido" />
+            </div>
+            <div className="flex flex-col justify-center p-10 md:p-14">
+              <p className="text-xl leading-relaxed text-carbon/85 md:text-2xl">
+                Para anfitriones que se preocupan menos por impresionar y más por emocionar.
+                Llevamos el ritual del asado a tu jardín para crear una mesa infinita donde la
+                conversación nunca termina.
+              </p>
+              <p className="mt-6 text-carbon/70">
+                Conoce <Link to="/historia" className="text-oxido underline underline-offset-4">la historia de Gabriel y su familia parrillera</Link>,
+                que lleva más de 25 años compartiendo el fuego en México.
+              </p>
+            </div>
+          </div>
+        </Section>
       </section>
       <section className="border-y border-crema/20 bg-carbon">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">

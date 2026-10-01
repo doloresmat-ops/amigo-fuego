@@ -24,7 +24,8 @@ export function QuoteForm({
   tone?: "crema" | "carbon";
 }) {
   const [sent, setSent] = useState(false);
-  const dark = tone === "carbon";
+  void tone;
+  const dark = false; // la sección del formulario siempre es crema
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();

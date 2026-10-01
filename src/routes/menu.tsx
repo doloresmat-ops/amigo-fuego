@@ -5,6 +5,7 @@ import { QuoteForm } from "@/components/amigo/QuoteForm";
 import gCorte from "@/assets/galeria-corte.jpg";
 import gPizzas from "@/assets/galeria-mini-pizzas.jpg";
 import gCalabaza from "@/assets/galeria-calabaza.jpg";
+import gMaridaje from "@/assets/galeria-maridaje.jpg";
 import gParrilla from "@/assets/galeria-parrilla-vivo.jpg";
 
 export const Route = createFileRoute("/menu")({
@@ -87,8 +88,22 @@ function Menu() {
        </Section>
       </section>
       <section className="bg-carbon text-crema">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">
+          <img src={gMaridaje} alt="Brindis con Malbec, vermut y fernet alrededor de la parrilla" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
+          <div>
+            <p className="eyebrow text-tierra">Bebidas y maridaje</p>
+            <h2 className="mt-4 text-4xl md:text-6xl">El Maridaje: Vermut, Fernet y Malbec</h2>
+            <p className="mt-6 text-lg text-crema/80">
+              No es ir a un restaurante, es tener tiempo para reunirte. El ritual comienza mucho
+              antes del primer corte con un vermut de bienvenida. En la mesa del parrillero nunca
+              falta el fernet, el vino Malbec y algo que siempre sobra: tiempo.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-crema text-carbon">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-          <p className="eyebrow text-tierra">Productos héroe</p>
+          <p className="eyebrow text-oxido">Productos héroe</p>
           <div className="mt-10 grid gap-8 md:grid-cols-2">
             <article className="md:col-span-2">
               <div className="relative overflow-hidden rounded-xl">
@@ -108,23 +123,23 @@ function Menu() {
               <article key={h.t}>
                 <img src={h.img} alt={h.t} loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover" />
                 <h3 className="mt-5 text-3xl">{h.t}</h3>
-                <p className="mt-2 text-crema/70">{h.d}</p>
+                <p className="mt-2 text-carbon/70">{h.d}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
-      <section className="bg-crema text-carbon">
+      <section className="bg-carbon text-crema">
        <Section className="text-center">
-        <p className="eyebrow text-oxido">Precio</p>
+        <p className="eyebrow text-tierra">Precio</p>
         <p className="mt-4 font-display text-5xl md:text-7xl">
-          Paquetes desde <span className="text-oxido">$550 MXN</span>
+          Paquetes desde <span className="text-tierra">$550 MXN</span>
         </p>
-        <p className="mt-3 text-carbon/70">por persona</p>
-        <div className="mt-8"><CtaLink variant="dark">Cotizar ahora</CtaLink></div>
+        <p className="mt-3 text-crema/70">por persona</p>
+        <div className="mt-8"><CtaLink variant="crema">Cotizar ahora</CtaLink></div>
        </Section>
       </section>
-      <QuoteForm tone="carbon" />
+      <QuoteForm />
     </>
   );
 }
