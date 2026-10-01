@@ -36,7 +36,7 @@ function Bodas() {
           <p className="text-lg text-carbon/75">
             Nada de platos que llegan y se van. La parrilla queda a la vista, los cortes
             pasan de mano en mano y la mesa se llena de conversación. Así se celebra en
-            Argentina, y así lo llevamos a tu jardín. Conoce <Link to="/historia" className="text-oxido underline underline-offset-4">la historia de Gabriel y su familia parrillera</Link>,
+            Argentina, y así lo llevamos a tu evento. Conoce <Link to="/historia" className="text-oxido underline underline-offset-4">la historia de Gabriel y su familia parrillera</Link>,
             que lleva más de 25 años compartiendo el fuego en México.
           </p>
         </div>
