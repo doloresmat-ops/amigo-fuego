@@ -74,7 +74,7 @@ function EventosEmpresas() {
           </div>
         </div>
       </section>
-      <QuoteForm defaultTipo="Cena de Fin de Año" />
+      <QuoteForm defaultTipo="Cena de Fin de Año" tone="carbon" />
     </>
   );
 }
