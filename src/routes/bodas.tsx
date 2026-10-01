@@ -57,7 +57,7 @@ function Bodas() {
           </div>
         </div>
       </section>
-      <QuoteForm defaultTipo="Boda / Tornaboda" title="Cuéntanos de tu boda" />
+      <QuoteForm defaultTipo="Evento Social / Celebración" />
     </>
   );
 }
