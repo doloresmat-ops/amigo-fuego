@@ -1,3 +1,7 @@
 - [x] Cambiar “Bodas” por “Eventos Sociales” en la navegación superior.
 - [x] Reorganizar las tres tarjetas de ocasiones y sus destinos.
 - [x] Aplicar crema con texto carbón a los botones principales de cotización.
+- [x] Actualizar navegación y texto pequeño de portada.
+- [x] Añadir banner de acceso al menú tras las tarjetas.
+- [x] Alternar secciones carbón y crema, incluyendo precio, formulario y pie; adaptar contraste.
+- [x] Limpiar ubicación y pilares de servicios del pie.

@@ -27,7 +27,7 @@ function Home() {
   return (
     <>
       <PageHero
-        eyebrow="Parrilla argentina · CDMX"
+        eyebrow="Parrilla argentina"
         title="Catering de Asado Argentino y Parrilla a Domicilio"
         subtitle="No vendemos carne, vendemos un ritual. Llevamos el fuego, el maestro parrillero y la experiencia completa a tu mesa."
         image={hero}
@@ -36,16 +36,16 @@ function Home() {
         <CtaLink variant="ghost" to="/menu">Ver el menú</CtaLink>
       </PageHero>
       <TrustStrip />
-      <section className="border-b border-border bg-brasa">
+      <section className="border-b border-carbon/15 bg-crema text-carbon">
         <div className="mx-auto max-w-7xl px-5 py-16 text-center md:px-10 md:py-20">
-          <p className="eyebrow text-tierra">Precio</p>
+          <p className="eyebrow text-oxido">Precio</p>
           <p className="mt-4 font-display text-4xl md:text-6xl">
-            Paquetes desde <span className="text-oliva">$550 MXN</span>
+            Paquetes desde <span className="text-carbon">$550 MXN</span>
           </p>
-          <p className="mt-3 text-crema/70">por persona</p>
+          <p className="mt-3 text-carbon/70">por persona</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <CtaLink>Cotizar ahora</CtaLink>
-            <CtaLink variant="ghost" to="/menu">Ver el menú</CtaLink>
+            <CtaLink variant="dark">Cotizar ahora</CtaLink>
+            <CtaLink variant="dark-outline" to="/menu">Ver el menú</CtaLink>
           </div>
         </div>
       </section>
@@ -54,7 +54,7 @@ function Home() {
         <h2 className="mt-4 max-w-2xl text-4xl md:text-5xl">Elige tu ocasión</h2>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {BLOQUES.map((b) => (
-            <Link key={b.to} to={b.to} className="group relative isolate block aspect-[4/5] overflow-hidden rounded-xl">
+            <Link key={b.label} to={b.to} className="group relative isolate block aspect-[4/5] overflow-hidden rounded-xl">
               <img src={b.img} alt={b.label} loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="golden absolute inset-0 -z-10" />
               <div className="flex h-full flex-col justify-end p-6">
@@ -66,6 +66,12 @@ function Home() {
           ))}
         </div>
       </Section>
+      <section className="bg-carbon text-crema">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 py-14 md:flex-row md:items-center md:px-10 md:py-20">
+          <h2 className="max-w-2xl text-3xl md:text-4xl">El Ritual: Conoce lo que llevamos a tu mesa</h2>
+          <CtaLink to="/menu">Ver el Menú Completo</CtaLink>
+        </div>
+      </section>
       <QuoteForm />
     </>
   );

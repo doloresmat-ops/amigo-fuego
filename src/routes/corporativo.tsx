@@ -40,22 +40,24 @@ function Corporativo() {
         <CtaLink variant="oliva">Cotizar evento corporativo</CtaLink>
       </PageHero>
       <TrustStrip />
-      <Section>
-        <p className="eyebrow text-tierra">Ocasiones</p>
+      <section className="bg-crema text-carbon">
+       <Section>
+        <p className="eyebrow text-oxido">Ocasiones</p>
         <h2 className="mt-4 max-w-3xl text-4xl md:text-5xl">Para cuando la mesa también cierra tratos</h2>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-carbon/20 bg-carbon/20 sm:grid-cols-2">
           {OCASIONES.map((o) => (
-            <div key={o.t} className="bg-brasa p-8">
-              <h3 className="text-2xl text-crema">{o.t}</h3>
-              <p className="mt-3 text-crema/70">{o.d}</p>
+            <div key={o.t} className="bg-crema p-8">
+              <h3 className="text-2xl text-carbon">{o.t}</h3>
+              <p className="mt-3 text-carbon/70">{o.d}</p>
             </div>
           ))}
         </div>
-        <p className="mt-10 max-w-3xl text-lg text-crema/75">
-          Revisa nuestros <Link to="/menu" className="text-fuego underline underline-offset-4">cortes a la parrilla como vacío y churrasco Angus</Link> y
-          las <Link to="/menu" className="text-fuego underline underline-offset-4">mini pizzas de masa madre a la parrilla</Link>, el favorito de los equipos.
+        <p className="mt-10 max-w-3xl text-lg text-carbon/75">
+          Revisa nuestros <Link to="/menu" className="text-oxido underline underline-offset-4">cortes a la parrilla como vacío y churrasco Angus</Link> y
+          las <Link to="/menu" className="text-oxido underline underline-offset-4">mini pizzas de masa madre a la parrilla</Link>, el favorito de los equipos.
         </p>
-      </Section>
+       </Section>
+      </section>
       <section className="relative isolate overflow-hidden">
         <img src={gParrilla} alt="Parrilla encendida en evento" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-carbon/80" />
@@ -64,7 +66,7 @@ function Corporativo() {
           <h2 className="mt-4 text-4xl md:text-5xl">Desde juntas íntimas de 10 personas hasta eventos masivos</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {FORMATOS.map((f) => (
-              <div key={f.t} className="rounded-xl border border-border bg-carbon/60 p-8">
+              <div key={f.t} className="rounded-lg border border-crema/20 bg-carbon/60 p-8">
                 <p className="font-display text-5xl text-terracota">{f.n}</p>
                 <p className="mt-2 text-sm uppercase tracking-widest text-crema/60">personas</p>
                 <h3 className="mt-6 text-2xl">{f.t}</h3>

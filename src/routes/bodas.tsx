@@ -26,21 +26,23 @@ function Bodas() {
       >
         <CtaLink variant="oliva">Cotizar mi boda</CtaLink>
       </PageHero>
-      <Section>
+      <section className="bg-crema text-carbon">
+       <Section>
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <p className="eyebrow text-tierra">La mesa infinita</p>
+            <p className="eyebrow text-oxido">La mesa infinita</p>
             <h2 className="mt-4 text-4xl md:text-5xl">Una boda que sabe a familia</h2>
           </div>
-          <p className="text-lg text-crema/75">
+          <p className="text-lg text-carbon/75">
             Nada de platos que llegan y se van. La parrilla queda a la vista, los cortes
             pasan de mano en mano y la mesa se llena de conversación. Así se celebra en
-            Argentina, y así lo llevamos a tu jardín. Conoce <Link to="/historia" className="text-fuego underline underline-offset-4">la historia de Gabriel y su familia parrillera</Link>,
+            Argentina, y así lo llevamos a tu jardín. Conoce <Link to="/historia" className="text-oxido underline underline-offset-4">la historia de Gabriel y su familia parrillera</Link>,
             que lleva más de 25 años compartiendo el fuego en México.
           </p>
         </div>
-      </Section>
-      <section className="border-y border-border bg-burdeos/30">
+       </Section>
+      </section>
+      <section className="border-y border-crema/20 bg-carbon">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">
           <img src={gChoripan} alt="Choripanes en la parrilla de madrugada" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
           <div>

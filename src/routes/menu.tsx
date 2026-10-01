@@ -38,8 +38,9 @@ function Menu() {
       >
         <CtaLink variant="oliva">Cotizar mi menú</CtaLink>
       </PageHero>
-      <Section>
-        <p className="eyebrow text-tierra">Los 5 pasos del ritual</p>
+      <section className="bg-crema text-carbon">
+       <Section>
+        <p className="eyebrow text-oxido">Los 5 pasos del ritual</p>
         <div className="mt-8 grid gap-8 md:grid-cols-[1fr_1.4fr]">
           <div role="tablist" aria-label="Pasos del ritual" className="flex flex-col gap-2">
             {PASOS.map((s, i) => (
@@ -49,27 +50,28 @@ function Menu() {
                 aria-selected={i === active}
                 onClick={() => setActive(i)}
                 className={`flex items-center gap-4 rounded-lg border px-5 py-4 text-left transition-colors ${
-                  i === active ? "border-terracota bg-terracota/15" : "border-border hover:bg-brasa"
+                  i === active ? "border-carbon bg-carbon/10" : "border-carbon/25 hover:bg-carbon/5"
                 }`}
               >
-                <span className="font-display text-3xl text-terracota">{i + 1}</span>
-                <span className="text-lg text-crema">{s.t}</span>
+                <span className="font-display text-3xl text-oxido">{i + 1}</span>
+                <span className="text-lg text-carbon">{s.t}</span>
               </button>
             ))}
           </div>
-          <div role="tabpanel" className="rounded-xl border border-border bg-brasa p-8 md:p-10">
-            <p className="eyebrow text-oliva">Paso {active + 1}</p>
+          <div role="tabpanel" className="rounded-lg border border-carbon/25 bg-crema p-8 md:p-10">
+            <p className="eyebrow text-oxido">Paso {active + 1}</p>
             <h2 className="mt-3 text-4xl">{p.t}</h2>
-            <p className="mt-4 text-crema/75">{p.d}</p>
+            <p className="mt-4 text-carbon/75">{p.d}</p>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {p.items.map((it) => (
-                <li key={it} className="border-t border-border pt-3 font-display text-xl">{it}</li>
+                <li key={it} className="border-t border-carbon/25 pt-3 font-display text-xl">{it}</li>
               ))}
             </ul>
           </div>
         </div>
-      </Section>
-      <section className="border-y border-border bg-brasa">
+       </Section>
+      </section>
+      <section className="border-y border-crema/20 bg-carbon">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
           <p className="eyebrow text-tierra">Productos héroe</p>
           <div className="mt-10 grid gap-8 md:grid-cols-2">
@@ -86,14 +88,16 @@ function Menu() {
           </div>
         </div>
       </section>
-      <Section className="text-center">
-        <p className="eyebrow text-tierra">Precio</p>
+      <section className="bg-crema text-carbon">
+       <Section className="text-center">
+        <p className="eyebrow text-oxido">Precio</p>
         <p className="mt-4 font-display text-5xl md:text-7xl">
-          Paquetes desde <span className="text-oliva">$550 MXN</span>
+          Paquetes desde <span className="text-carbon">$550 MXN</span>
         </p>
-        <p className="mt-3 text-crema/70">por persona</p>
-        <div className="mt-8"><CtaLink variant="oliva">Cotizar ahora</CtaLink></div>
-      </Section>
+        <p className="mt-3 text-carbon/70">por persona</p>
+        <div className="mt-8"><CtaLink variant="dark">Cotizar ahora</CtaLink></div>
+       </Section>
+      </section>
       <QuoteForm />
     </>
   );
