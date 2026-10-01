@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 import gJardin from "@/assets/galeria-jardin.jpg";
@@ -9,7 +9,7 @@ export const Route = createFileRoute("/bodas")({
     pageHead(
       "/bodas",
       "Catering de Asado Argentino para Bodas y Tornabodas | Amigo Fuego",
-      "Asado argentino para bodas en jardín y la Tornaboda Amigo Fuego: parrilla encendida de madrugada con choripanes para tus invitados.",
+      "Asado argentino para bodas en jardín y la Tornaboda Amigo Fuego: parrilla encendida de madrugada con choripanes para tus invitados.", "Bodas"
     ),
   component: Bodas,
 });
@@ -18,6 +18,7 @@ function Bodas() {
   return (
     <>
       <PageHero
+        crumb="Bodas"
         eyebrow="Bodas · Tornabodas"
         title="Catering de Asado Argentino para Bodas y Tornabodas Inolvidables"
         subtitle="Para parejas que se preocupan menos por impresionar y más por emocionar, con una mesa infinita y cercana."
@@ -34,7 +35,8 @@ function Bodas() {
           <p className="text-lg text-crema/75">
             Nada de platos que llegan y se van. La parrilla queda a la vista, los cortes
             pasan de mano en mano y la mesa se llena de conversación. Así se celebra en
-            Argentina, y así lo llevamos a tu jardín.
+            Argentina, y así lo llevamos a tu jardín. Conoce <Link to="/historia" className="text-fuego underline underline-offset-4">la historia de Gabriel y su familia parrillera</Link>,
+            que lleva más de 25 años compartiendo el fuego en México.
           </p>
         </div>
       </Section>

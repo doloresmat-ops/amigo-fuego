@@ -1,8 +1,8 @@
 import { useState, type FormEvent } from "react";
 
 export const TIPOS_EVENTO = [
-  "Cena de Fin de Año Corporativa",
-  "Producción / Rodaje",
+  "Cena Fin de Año",
+  "Producción",
   "Reunión de Despacho",
   "Boda / Tornaboda",
   "Otro",
@@ -77,7 +77,7 @@ export function QuoteForm({
               </label>
               <button
                 type="submit"
-                className="mt-2 rounded-full bg-oliva px-6 py-4 text-base font-bold text-carbon transition-colors hover:bg-crema sm:col-span-2"
+                className="mt-2 rounded-full bg-fuego px-6 py-4 text-base font-bold text-carbon transition-colors hover:bg-crema hover:text-carbon sm:col-span-2"
               >
                 Quiero mi cotización
               </button>

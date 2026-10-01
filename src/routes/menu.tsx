@@ -11,7 +11,7 @@ export const Route = createFileRoute("/menu")({
     pageHead(
       "/menu",
       "Menú de Asado Argentino y Experiencia en Vivo | Amigo Fuego",
-      "El ritual del asado en 5 pasos: vermut, empanadas, vacío, asado de tira, churrasco Angus y mini pizzas de masa madre. Paquetes desde $550 MXN por persona.",
+      "El ritual del asado en 5 pasos: vermut, empanadas, vacío, asado de tira, churrasco Angus y mini pizzas de masa madre. Paquetes desde $550 MXN por persona.", "Menú"
     ),
   component: Menu,
 });
@@ -30,6 +30,7 @@ function Menu() {
   return (
     <>
       <PageHero
+        crumb="Menú"
         eyebrow="Menú · Experiencia"
         title="El Ritual del Asado Argentino: Menú y Experiencia en Vivo"
         subtitle="Cinco pasos, un solo fuego. Así se vive un asado Amigo Fuego."

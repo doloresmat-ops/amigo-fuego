@@ -8,7 +8,7 @@ export const Route = createFileRoute("/historia")({
     pageHead(
       "/historia",
       "El Legado del Fuego: Quiénes Somos | Amigo Fuego",
-      "La historia de Gabriel, parrillero argentino con 25 años en México, y de cómo una pizzería familiar de Santa Fe se convirtió en Amigo Fuego.",
+      "La historia de Gabriel, parrillero argentino con 25 años en México, y de cómo una pizzería familiar de Santa Fe se convirtió en Amigo Fuego.", "Nuestra Historia"
     ),
   component: Historia,
 });
@@ -24,6 +24,7 @@ function Historia() {
   return (
     <>
       <PageHero
+        crumb="Nuestra Historia"
         eyebrow="Nuestra historia"
         title="El Legado del Fuego: Quiénes Somos"
         subtitle="Una familia, una pizzería en Santa Fe y 25 años de fuego en México."

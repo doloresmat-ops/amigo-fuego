@@ -6,7 +6,7 @@ export const Route = createFileRoute("/aviso-de-privacidad")({
     pageHead(
       "/aviso-de-privacidad",
       "Aviso de Privacidad | Amigo Fuego",
-      "Cómo Amigo Fuego trata los datos personales que compartes al solicitar una cotización.",
+      "Cómo Amigo Fuego trata los datos personales que compartes al solicitar una cotización.", "Aviso de privacidad"
     ),
   component: Aviso,
 });
