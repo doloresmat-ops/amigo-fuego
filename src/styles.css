@@ -24,6 +24,8 @@
   --color-terracota: var(--terracota);
   --color-oxido: var(--oxido);
   --color-burdeos: var(--burdeos);
+  --color-blanco: var(--blanco);
+  --color-wa: var(--wa);
   --color-brasa: var(--brasa);
 
   --color-background: var(--background);
@@ -57,6 +59,8 @@
   --crema: #fcf3e7;
   --fuego: #ff4713;
   --carbon: #1d1912;
+  --blanco: #ffffff;
+  --wa: #25d366;
   --brasa: #26211a;
   --tierra: #c7893e;
   --cielo: #3f96b4;
@@ -118,7 +122,7 @@
 }
 
 @keyframes soft-pulse {
-  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--fuego) 60%, transparent); }
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--wa) 60%, transparent); }
   70% { box-shadow: 0 0 0 16px transparent; }
   100% { box-shadow: 0 0 0 0 transparent; }
 }
