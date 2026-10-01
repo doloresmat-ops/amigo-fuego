@@ -86,7 +86,7 @@ function Menu() {
         </div>
        </Section>
       </section>
-      <section className="border-y border-crema/20 bg-carbon">
+      <section className="bg-carbon text-crema">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
           <p className="eyebrow text-tierra">Productos héroe</p>
           <div className="mt-10 grid gap-8 md:grid-cols-2">
