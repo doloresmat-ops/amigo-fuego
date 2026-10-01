@@ -152,18 +152,29 @@ export function PageHero({
   subtitle,
   image,
   children,
+  crumb,
 }: {
   eyebrow: string;
   title: string;
   subtitle: string;
   image: string;
   children?: ReactNode;
+  crumb?: string;
 }) {
   return (
     <section className="relative isolate overflow-hidden">
       <img src={image} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover" />
       <div className="golden absolute inset-0 -z-10" />
       <div className="mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:px-10 md:pb-24">
+        {crumb && (
+          <nav aria-label="Migas de pan" className="mb-6 text-sm text-crema/70">
+            <ol className="flex items-center gap-2">
+              <li><Link to="/" className="hover:text-crema">Inicio</Link></li>
+              <li aria-hidden="true">›</li>
+              <li aria-current="page" className="text-tierra">{crumb}</li>
+            </ol>
+          </nav>
+        )}
         <p className="eyebrow text-tierra">{eyebrow}</p>
         <h1 className="mt-4 max-w-4xl text-4xl leading-[1.05] text-crema md:text-6xl">{title}</h1>
         <p className="mt-6 max-w-2xl text-lg text-crema/85">{subtitle}</p>
@@ -207,8 +218,21 @@ export function TrustStrip() {
   );
 }
 
-export function pageHead(path: string, title: string, description: string) {
+export function pageHead(path: string, title: string, description: string, crumb?: string) {
   return {
+    scripts: crumb
+      ? [{
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: "/" },
+              { "@type": "ListItem", position: 2, name: crumb, item: path },
+            ],
+          }),
+        }]
+      : [],
     meta: [
       { title },
       { name: "description", content: description },

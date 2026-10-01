@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, TrustStrip, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
@@ -9,7 +9,7 @@ export const Route = createFileRoute("/corporativo")({
     pageHead(
       "/corporativo",
       "Catering Corporativo y Asados para Producciones | Amigo Fuego",
-      "Asados argentinos para cenas de fin de año, despachos, clientes internacionales y cierres de rodaje. Desde 10 personas hasta eventos masivos en CDMX.",
+      "Asados argentinos para cenas de fin de año, despachos, clientes internacionales y cierres de rodaje. Desde 10 personas hasta eventos masivos en CDMX.", "Corporativo"
     ),
   component: Corporativo,
 });
@@ -31,6 +31,7 @@ function Corporativo() {
   return (
     <>
       <PageHero
+        crumb="Corporativo"
         eyebrow="Empresas · Productoras · Agencias"
         title="Catering Corporativo y Asados para Producciones y Cines"
         subtitle="La carne es festiva, la carne habla de negocios y de poder. Llevamos la parrilla a tu oficina, foro o terraza."
@@ -50,6 +51,10 @@ function Corporativo() {
             </div>
           ))}
         </div>
+        <p className="mt-10 max-w-3xl text-lg text-crema/75">
+          Revisa nuestros <Link to="/menu" className="text-fuego underline underline-offset-4">cortes a la parrilla como vacío y churrasco Angus</Link> y
+          las <Link to="/menu" className="text-fuego underline underline-offset-4">mini pizzas de masa madre a la parrilla</Link>, el favorito de los equipos.
+        </p>
       </Section>
       <section className="relative isolate overflow-hidden">
         <img src={gParrilla} alt="Parrilla encendida en evento" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />
@@ -70,7 +75,7 @@ function Corporativo() {
         </div>
       </section>
       <QuoteForm
-        defaultTipo="Cena de Fin de Año Corporativa"
+        defaultTipo="Cena Fin de Año"
         title="Cotización para empresas"
         intro="Facturamos. Cuéntanos la fecha, el número de personas y el lugar, y te enviamos una propuesta."
       />
