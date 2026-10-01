@@ -176,7 +176,9 @@ export function PageHero({
             </ol>
           </nav>
         )}
-        <p className="eyebrow text-tierra">{eyebrow}</p>
+        <p className="eyebrow inline-flex w-fit items-center rounded-full border border-crema/30 bg-carbon/70 px-4 py-2 text-crema backdrop-blur-sm">
+          {eyebrow}
+        </p>
         <h1 className="mt-4 max-w-4xl text-4xl leading-[1.05] text-crema md:text-6xl">{title}</h1>
         <p className="mt-6 max-w-2xl text-lg text-crema/85">{subtitle}</p>
         {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
@@ -204,14 +206,14 @@ export function Section({
 export function TrustStrip() {
   const clientes = ["Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente"];
   return (
-    <section className="border-y border-crema/20 bg-carbon py-12">
-      <p className="px-5 text-center font-display text-lg italic text-tierra md:text-xl">
+    <section className="border-y border-carbon/15 bg-crema py-12 text-carbon">
+      <p className="px-5 text-center font-display text-lg italic text-oxido md:text-xl">
         La opción de confianza para productoras, agencias y despachos corporativos.
       </p>
       <div className="mt-7 overflow-hidden">
         <div className="flex w-max animate-marquee gap-14">
           {[...clientes, ...clientes].map((c, i) => (
-            <span key={i} className="whitespace-nowrap font-display text-lg text-crema/50">{c}</span>
+            <span key={i} className="whitespace-nowrap font-display text-lg text-carbon/45">{c}</span>
           ))}
         </div>
       </div>

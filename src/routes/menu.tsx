@@ -98,7 +98,7 @@ function Menu() {
         <div className="mt-8"><CtaLink variant="dark">Cotizar ahora</CtaLink></div>
        </Section>
       </section>
-      <QuoteForm />
+      <QuoteForm tone="carbon" />
     </>
   );
 }
