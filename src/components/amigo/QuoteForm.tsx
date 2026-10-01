@@ -43,7 +43,7 @@ export function QuoteForm({
           <p className={`mt-5 ${dark ? "text-crema/75" : "text-carbon/75"}`}>{intro}</p>
         </div>
         <div
-          className={`rounded-xl border-t-4 border-oxido p-6 text-carbon shadow-[0_18px_40px_-20px_rgba(29,25,18,0.45)] md:col-span-3 md:p-8 ${dark ? "bg-crema" : "bg-blanco"}`}
+          className={`rounded-xl border-t-4 border-oxido bg-blanco p-6 text-carbon shadow-[0_18px_40px_-20px_rgba(29,25,18,0.45)] md:col-span-3 md:p-8`}
         >
           {sent ? (
             <div className="py-10 text-center" role="status">
