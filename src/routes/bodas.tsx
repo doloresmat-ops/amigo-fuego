@@ -8,8 +8,8 @@ export const Route = createFileRoute("/bodas")({
   head: () =>
     pageHead(
       "/bodas",
-      "Catering de Asado Argentino para Bodas y Tornabodas | Amigo Fuego",
-      "Asado argentino para bodas en jardín y la Tornaboda Amigo Fuego: parrilla encendida de madrugada con choripanes para tus invitados.", "Bodas"
+      "Catering de Asado Argentino para Eventos Sociales | Amigo Fuego",
+      "Asado argentino para eventos sociales y celebraciones, con la Tornafiesta Amigo Fuego: parrilla encendida de madrugada con choripanes.", "Eventos Sociales"
     ),
   component: Bodas,
 });
@@ -18,22 +18,23 @@ function Bodas() {
   return (
     <>
       <PageHero
-        crumb="Bodas"
-        eyebrow="Bodas · Tornabodas"
-        title="Eventos Sociales y Bodas Inolvidables"
+        crumb="Eventos Sociales"
+        eyebrow="Eventos Sociales · Tornafiestas"
+        title="Eventos Sociales Inolvidables"
         subtitle="Para parejas que se preocupan menos por impresionar y más por emocionar, con una mesa infinita y cercana."
         image={gJardin}
       >
-        <CtaLink variant="oliva">Cotizar mi boda</CtaLink>
+        <CtaLink variant="oliva">Cotizar mi evento</CtaLink>
       </PageHero>
       <section className="bg-crema text-carbon">
        <Section>
-        <div className="grid gap-10 md:grid-cols-2 md:items-center">
-          <div>
-            <p className="eyebrow text-oxido">La mesa infinita</p>
-            <h2 className="mt-4 text-4xl md:text-5xl">Una boda que sabe a familia</h2>
-          </div>
-          <p className="text-lg text-carbon/75">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="eyebrow text-oxido">La mesa infinita</p>
+          <h2 className="mt-6 text-5xl leading-[1.05] md:text-7xl lg:text-8xl">
+            <span aria-hidden="true" className="text-oxido">“</span>Una celebración que sabe a familia<span aria-hidden="true" className="text-oxido">”</span>
+          </h2>
+          <div className="mx-auto mt-10 h-px w-24 bg-oxido" />
+          <p className="mx-auto mt-10 max-w-2xl text-lg text-carbon/75 md:text-xl">
             Nada de platos que llegan y se van. La parrilla queda a la vista, los cortes
             pasan de mano en mano y la mesa se llena de conversación. Así se celebra en
             Argentina, y así lo llevamos a tu evento. Conoce <Link to="/historia" className="text-oxido underline underline-offset-4">la historia de Gabriel y su familia parrillera</Link>,

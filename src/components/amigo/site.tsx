@@ -113,7 +113,7 @@ export function SiteFooter() {
           <Logo tone="crema" />
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
             No vendemos carne, vendemos un ritual. Parrilla argentina con maestro
-            parrillero para empresas, producciones y bodas.
+            parrillero para empresas, producciones y eventos sociales.
           </p>
         </div>
         <div>
@@ -136,7 +136,7 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm text-crema/80">
             <li><Link to="/eventos-empresas" className="hover:text-crema">Eventos para Empresas</Link></li>
             <li><Link to="/eventos-empresas" className="hover:text-crema">Producciones y Cines</Link></li>
-            <li><Link to="/bodas" className="hover:text-crema">Eventos Sociales y Bodas</Link></li>
+            <li><Link to="/bodas" className="hover:text-crema">Eventos Sociales</Link></li>
           </ul>
         </div>
       </div>

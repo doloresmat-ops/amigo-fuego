@@ -58,26 +58,23 @@ function EventosEmpresas() {
         </p>
        </Section>
       </section>
-      <section className="bg-crema text-carbon">
+      <section className="border-t border-crema/15 bg-carbon text-crema">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-          <p className="eyebrow text-oxido">Formatos flexibles</p>
+          <p className="eyebrow text-tierra">Formatos flexibles</p>
           <h2 className="mt-4 text-4xl md:text-5xl">Desde juntas íntimas de 10 personas hasta eventos masivos</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {FORMATOS.map((f) => (
-              <div key={f.t} className="rounded-lg border-2 border-carbon/15 bg-blanco p-8">
-                <p className="font-display text-5xl text-oxido">{f.n}</p>
-                <p className="mt-2 text-sm uppercase tracking-widest text-carbon/60">personas</p>
+              <div key={f.t} className="rounded-lg border border-crema/20 bg-crema/5 p-8">
+                <p className="font-display text-5xl text-fuego">{f.n}</p>
+                <p className="mt-2 text-sm uppercase tracking-widest text-crema/60">personas</p>
                 <h3 className="mt-6 text-2xl">{f.t}</h3>
-                <p className="mt-2 text-carbon/70">{f.d}</p>
+                <p className="mt-2 text-crema/70">{f.d}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <QuoteForm
-        tone="carbon"
-        defaultTipo="Cena de Fin de Año"
-      />
+      <QuoteForm defaultTipo="Cena de Fin de Año" />
     </>
   );
 }
