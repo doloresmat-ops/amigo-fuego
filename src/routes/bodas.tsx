@@ -20,7 +20,7 @@ function Bodas() {
       <PageHero
         crumb="Bodas"
         eyebrow="Bodas · Tornabodas"
-        title="Catering de Asado Argentino para Bodas y Tornabodas Inolvidables"
+        title="Eventos Sociales y Bodas Inolvidables"
         subtitle="Para parejas que se preocupan menos por impresionar y más por emocionar, con una mesa infinita y cercana."
         image={gJardin}
       >
