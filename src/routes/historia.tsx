@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, pageHead } from "@/components/amigo/site";
+import { QuoteForm } from "@/components/amigo/QuoteForm";
 import gEquipo from "@/assets/galeria-equipo.jpg";
 import gParrillero from "@/assets/historia-parrillero.jpg";
 
@@ -71,6 +72,7 @@ function Historia() {
           </div>
         </div>
       </section>
+      <QuoteForm />
     </>
   );
 }
