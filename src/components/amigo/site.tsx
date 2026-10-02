@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Logo } from "./Logo";
+import { Button } from "@/components/ui/button";
 
 export const WA = "https://wa.me/520000000000"; // placeholder: número real pendiente
 
@@ -14,27 +15,14 @@ export const NAV = [
 
 export function CtaLink({
   children,
-  variant = "crema",
   to = "#cotizar",
-  size = "md",
 }: {
   children: ReactNode;
-  size?: "md" | "lg";
-  variant?: "crema" | "oliva" | "fuego" | "ghost" | "dark" | "dark-outline";
   to?: string;
 }) {
-  const cls = {
-    crema: "bg-crema text-carbon hover:brightness-90",
-    oliva: "bg-crema text-carbon hover:brightness-90",
-    fuego: "bg-fuego text-blanco hover:brightness-110",
-    ghost: "border border-crema/40 text-crema hover:bg-crema hover:text-carbon",
-    dark: "bg-carbon text-crema hover:brightness-125",
-    "dark-outline": "border border-carbon text-carbon hover:bg-carbon hover:text-crema",
-  }[variant];
-  const sz = size === "lg" ? "px-10 py-5 text-lg font-bold shadow-xl" : "px-6 py-3 text-sm font-semibold";
-  const base = `inline-flex items-center justify-center rounded-full ${sz} transition-colors ${cls}`;
-  if (to.startsWith("#")) return <a href={to} className={base}>{children}</a>;
-  return <Link to={to} className={base}>{children}</Link>;
+  const cls = "min-h-12 rounded-full bg-fuego px-8 py-4 text-base font-bold text-blanco shadow-lg transition hover:brightness-110 sm:px-10 sm:py-5 sm:text-lg";
+  if (to.startsWith("#")) return <Button asChild className={cls}><a href={to}>{children}</a></Button>;
+  return <Button asChild className={cls}><Link to={to}>{children}</Link></Button>;
 }
 
 export function SiteHeader() {
@@ -59,20 +47,16 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <a
-            href="#cotizar"
-            className="rounded-full bg-crema px-5 py-2.5 text-sm font-bold text-carbon transition hover:brightness-90"
-          >
-            Cotizar
-          </a>
-          <button
+          <CtaLink>Cotizar</CtaLink>
+          <Button
+            variant="outline"
             className="rounded-md border border-border px-3 py-2 text-sm text-crema lg:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label="Abrir menú"
           >
             {open ? "Cerrar" : "Menú"}
-          </button>
+          </Button>
         </div>
       </div>
       {open && (

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, TrustStrip, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
@@ -70,7 +70,7 @@ function EventosEmpresas() {
         image={gMesa}
         overlay
       >
-        <CtaLink variant="crema" size="lg">Cotizar evento corporativo</CtaLink>
+        <CtaLink>Cotizar evento corporativo</CtaLink>
       </PageHero>
 
       <TrustStrip />
@@ -125,7 +125,7 @@ function EventosEmpresas() {
             ))}
           </div>
           <div className="mt-12 flex justify-center">
-            <CtaLink variant="dark" size="lg">Cotizar evento corporativo</CtaLink>
+            <CtaLink>Cotizar evento corporativo</CtaLink>
           </div>
         </Section>
       </section>
@@ -164,7 +164,7 @@ function EventosEmpresas() {
             ))}
           </div>
           <div className="mb-16 mt-12 flex justify-center">
-            <CtaLink variant="fuego" size="lg">Cotizar evento corporativo</CtaLink>
+            <CtaLink>Cotizar evento corporativo</CtaLink>
           </div>
         </Section>
       </section>
@@ -180,12 +180,7 @@ function EventosEmpresas() {
                 Descubre nuestro ritual de 5 pasos. Desde las empanadas de apertura hasta los cortes Angus y las mini pizzas de masa madre a la parrilla.
               </p>
             </div>
-            <Link
-              to="/menu"
-              className="inline-flex shrink-0 items-center justify-center rounded-full bg-crema px-8 py-4 font-bold text-carbon transition hover:brightness-95"
-            >
-              Ver el Menú Completo
-            </Link>
+            <CtaLink to="/menu">Ver el Menú Completo</CtaLink>
           </aside>
         </div>
       </section>

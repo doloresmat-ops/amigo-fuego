@@ -32,8 +32,8 @@ function Home() {
         subtitle="No vendemos carne, vendemos un ritual. Llevamos el fuego, el maestro parrillero y la experiencia completa a tu mesa."
         image={hero}
       >
-        <CtaLink variant="oliva">Cotizar mi evento</CtaLink>
-        <CtaLink variant="ghost" to="/menu">Ver el menú</CtaLink>
+        <CtaLink>Cotizar mi evento</CtaLink>
+        <CtaLink to="/menu">Ver el menú</CtaLink>
       </PageHero>
       <TrustStrip />
       <section className="bg-carbon text-crema">
@@ -45,7 +45,7 @@ function Home() {
           <p className="mt-3 text-crema/70">por persona</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <CtaLink>Cotizar ahora</CtaLink>
-            <CtaLink variant="ghost" to="/menu">Ver el menú</CtaLink>
+            <CtaLink to="/menu">Ver el menú</CtaLink>
           </div>
         </div>
       </section>
