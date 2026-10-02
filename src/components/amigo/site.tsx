@@ -20,9 +20,8 @@ export function CtaLink({
   children: ReactNode;
   to?: string;
 }) {
-  const cls = "min-h-12 rounded-full bg-fuego px-8 py-4 text-base font-bold text-blanco shadow-lg transition hover:brightness-110 sm:px-10 sm:py-5 sm:text-lg";
-  if (to.startsWith("#")) return <Button asChild className={cls}><a href={to}>{children}</a></Button>;
-  return <Button asChild className={cls}><Link to={to}>{children}</Link></Button>;
+  if (to.startsWith("#")) return <Button asChild variant="conversion" size="conversion"><a href={to}>{children}</a></Button>;
+  return <Button asChild variant="conversion" size="conversion"><Link to={to}>{children}</Link></Button>;
 }
 
 export function SiteHeader() {
