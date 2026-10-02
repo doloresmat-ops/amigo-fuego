@@ -76,14 +76,14 @@ function Historia() {
           </div>
         </div>
       </section>
-      <section className="bg-carbon text-crema">
+      <section className="bg-crema text-carbon">
         <div className="mx-auto max-w-4xl px-5 py-20 text-center md:py-28">
-          <h3 className="text-3xl leading-tight text-crema md:text-4xl">¿Listo para ver lo que llevaremos a tu mesa?</h3>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-crema/80">
+          <h3 className="text-3xl leading-tight text-carbon md:text-4xl">¿Listo para ver lo que llevaremos a tu mesa?</h3>
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-carbon/80">
             Descubre el ritual de 5 pasos. Desde las empanadas y el vermut de bienvenida, hasta el desfile de cortes premium cocinados lentamente al fuego.
           </p>
           <div className="mt-10 flex justify-center">
-            <CtaLink variant="fuego" size="lg" to="/menu">Ver el Menú Completo</CtaLink>
+            <CtaLink to="/menu">Ver el Menú Completo</CtaLink>
           </div>
         </div>
       </section>
@@ -99,7 +99,7 @@ function Historia() {
             ))}
           </div>
           <div className="mt-14 flex justify-center">
-            <CtaLink variant="fuego" size="lg" to="#cotizar">Llevar el fuego a mi evento</CtaLink>
+            <CtaLink to="#cotizar">Llevar el fuego a mi evento</CtaLink>
           </div>
         </div>
       </section>

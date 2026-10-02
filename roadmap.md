@@ -5,3 +5,5 @@
 - [x] Añadir banner de acceso al menú tras las tarjetas.
 - [x] Alternar secciones carbón y crema, incluyendo precio, formulario y pie; adaptar contraste.
 - [x] Limpiar ubicación y pilares de servicios del pie.
+- [x] Separar el banner del Menú de Valores en Historia con fondo crema y textos carbón.
+- [x] Unificar los botones de conversión del sitio en naranja fuego, blanco y tamaño amplio.

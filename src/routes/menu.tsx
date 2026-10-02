@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { CtaLink, PageHero, Section, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
+import { Button } from "@/components/ui/button";
 import gCorte from "@/assets/galeria-corte.jpg";
 import gPizzas from "@/assets/galeria-mini-pizzas.jpg";
 import gCalabaza from "@/assets/galeria-calabaza.jpg";
@@ -38,7 +39,7 @@ function Menu() {
         subtitle="Cinco pasos, un solo fuego. Así se vive un asado Amigo Fuego."
         image={gParrilla}
       >
-        <CtaLink variant="oliva">Cotizar mi menú</CtaLink>
+        <CtaLink>Cotizar mi menú</CtaLink>
       </PageHero>
       <section className="bg-crema text-carbon">
        <Section>
@@ -48,7 +49,7 @@ function Menu() {
             {PASOS.map((s, i) => {
               const on = i === active;
               return (
-                <button
+                <Button
                   key={s.t}
                   role="tab"
                   aria-selected={on}
@@ -70,7 +71,7 @@ function Menu() {
                   >
                     +
                   </span>
-                </button>
+                </Button>
               );
             })}
           </div>
@@ -136,7 +137,7 @@ function Menu() {
           Paquetes desde <span className="text-tierra">$550 MXN</span>
         </p>
         <p className="mt-3 text-crema/70">por persona</p>
-        <div className="mt-8"><CtaLink variant="crema">Cotizar ahora</CtaLink></div>
+         <div className="mt-8"><CtaLink>Cotizar ahora</CtaLink></div>
        </Section>
       </section>
       <QuoteForm />

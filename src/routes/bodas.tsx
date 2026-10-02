@@ -25,7 +25,7 @@ function Bodas() {
         image={gJardin}
         overlay
       >
-        <CtaLink variant="crema" size="lg">Cotizar mi evento</CtaLink>
+        <CtaLink>Cotizar mi evento</CtaLink>
       </PageHero>
       <section className="bg-crema text-carbon">
         <Section>
@@ -42,7 +42,7 @@ function Bodas() {
                 conversación nunca termina.
               </p>
               <div className="mt-8">
-                <CtaLink variant="fuego" to="/historia">Conoce nuestro legado parrillero</CtaLink>
+                <CtaLink to="/historia">Conoce nuestro legado parrillero</CtaLink>
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@ function Bodas() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <CtaLink variant="crema" size="lg">Cotizar mi celebración</CtaLink>
+            <CtaLink>Cotizar mi celebración</CtaLink>
           </div>
         </Section>
       </section>
@@ -83,7 +83,7 @@ function Bodas() {
               madrugada. Choripanes recién hechos, chimichurri y pan para que la fiesta
               siga hasta el amanecer.
             </p>
-            <div className="mt-8"><CtaLink variant="fuego" size="lg">Cotizar Tornafiesta</CtaLink></div>
+            <div className="mt-8"><CtaLink>Cotizar Tornafiesta</CtaLink></div>
           </div>
         </div>
       </section>

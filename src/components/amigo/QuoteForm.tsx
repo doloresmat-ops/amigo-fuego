@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { Button } from "@/components/ui/button";
 
 export const TIPOS_EVENTO = [
   "Cena de Fin de Año",
@@ -85,12 +86,14 @@ export function QuoteForm({
                 <span className="mb-1.5 block text-sm text-crema">Fecha estimada</span>
                 <input required type="date" name="fecha" className={field} />
               </label>
-              <button
+              <Button
                 type="submit"
-                className="mt-2 rounded-full bg-fuego px-6 py-4 text-base font-bold text-blanco transition hover:brightness-110 sm:col-span-2"
+                variant="conversion"
+                size="conversion"
+                className="mt-2 sm:col-span-2"
               >
                 Quiero mi cotización
-              </button>
+              </Button>
             </form>
           )}
         </div>
