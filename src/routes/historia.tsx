@@ -77,14 +77,17 @@ function Historia() {
         </div>
       </section>
       <section className="bg-crema text-carbon">
-        <div className="mx-auto max-w-4xl px-5 py-20 text-center md:py-28">
-          <h3 className="text-3xl leading-tight text-carbon md:text-4xl">¿Listo para ver lo que llevaremos a tu mesa?</h3>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-carbon/80">
-            Descubre el ritual de 5 pasos. Desde las empanadas y el vermut de bienvenida, hasta el desfile de cortes premium cocinados lentamente al fuego.
-          </p>
-          <div className="mt-10 flex justify-center">
+        <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
+          <aside className="flex flex-col gap-8 rounded-2xl bg-carbon p-8 text-crema shadow-xl md:flex-row md:items-center md:justify-between md:p-12">
+            <div className="max-w-2xl">
+              <p className="eyebrow text-tierra">También te puede interesar</p>
+              <h3 className="mt-3 text-2xl md:text-3xl">¿Listo para ver lo que llevaremos a tu mesa?</h3>
+              <p className="mt-3 text-crema/80">
+                Descubre el ritual de 5 pasos. Desde las empanadas y el vermut de bienvenida, hasta el desfile de cortes premium cocinados lentamente al fuego.
+              </p>
+            </div>
             <CtaLink to="/menu">Ver el Menú Completo</CtaLink>
-          </div>
+          </aside>
         </div>
       </section>
       <section className="border-y border-crema/20 bg-carbon">
