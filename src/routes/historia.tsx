@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, pageHead } from "@/components/amigo/site";
 import gEquipo from "@/assets/galeria-equipo.jpg";
-import gPizzas from "@/assets/galeria-mini-pizzas.jpg";
+import gParrillero from "@/assets/historia-parrillero.jpg";
 
 export const Route = createFileRoute("/historia")({
   head: () =>
@@ -14,16 +14,17 @@ export const Route = createFileRoute("/historia")({
 });
 
 const VALORES = [
-  { t: "Hospitalidad", d: "Recibimos a tus invitados como si fueran nuestros." },
-  { t: "Generosidad", d: "Mesas abundantes, sin medir de más." },
-  { t: "Autenticidad", d: "Asado argentino de verdad, sin disfraces." },
-  { t: "Oficio", d: "Años frente al fuego, aprendiendo cada corte." },
+  { t: "Hospitalidad", d: "La experiencia es cercana y sin formalidades innecesarias. Hay un lugar para ti en la mesa." },
+  { t: "Generosidad", d: "Comida al centro, porciones abundantes. La mesa debe sentirse abierta, no medida." },
+  { t: "Autenticidad", d: "Fuego real, personas reales. Mostramos el asado tal como lo vivimos." },
+  { t: "Oficio", d: "Conocimiento y técnica. Sabemos trabajar las brasas y elegir los cortes." },
 ];
 
 function Historia() {
   return (
     <>
       <PageHero
+        overlay
         crumb="Nuestra Historia"
         eyebrow="Nuestra historia"
         title="El Legado del Fuego: Quiénes Somos"
@@ -33,18 +34,23 @@ function Historia() {
       <section className="bg-crema text-carbon">
        <Section>
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
-          <img src={gPizzas} alt="Pizzas a la parrilla, herencia familiar" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
+          <img src={gParrillero} alt="Maestro parrillero trabajando cortes sobre las brasas" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
           <div className="space-y-5 text-lg text-carbon/80">
-            <h2 className="text-4xl text-carbon md:text-5xl">Gabriel y el fuego</h2>
+            <h2 className="text-4xl text-carbon md:text-5xl">Gabriel y el Fuego: 25 años de oficio.</h2>
             <p>
-              Gabriel es argentino y lleva 25 años en México. Creció entre hornos y masa:
-              su familia tenía una pizzería tradicional en Santa Fe.
+              Gabriel es un migrante argentino que lleva 25 años en México. Creció entre hornos y masa,
+              heredando el oficio de la pizzería tradicional de su familia en la provincia de Santa Fe.
             </p>
             <p>
-              Tras abrir su local en Satélite, empezó a llevar el asado a eventos. Primero
-              con una parrilla, luego con dos, luego con tres, siempre junto a su esposa.
+              Tras abrir su propio local en Satélite, la nostalgia y la demanda lo llevaron a sacar las
+              brasas de su casa para llevarlas a eventos sociales. Empezó con una parrilla, luego con dos,
+              luego con tres, siempre junto a su esposa.
             </p>
-            <p>Así nació Amigo Fuego: el ritual del asado, llevado a tu mesa.</p>
+            <p>
+              Así nació Amigo Fuego. No como un negocio de banquetes corporativos, sino como el deseo
+              genuino de acercar a los demás el ritual del asado argentino, transformando cualquier evento
+              en una celebración alrededor del fuego.
+            </p>
           </div>
         </div>
        </Section>
@@ -60,7 +66,9 @@ function Historia() {
               </div>
             ))}
           </div>
-          <div className="mt-12"><CtaLink variant="oliva" to="/eventos-empresas">Llevar el fuego a mi evento</CtaLink></div>
+          <div className="mt-14 flex justify-center">
+            <CtaLink variant="fuego" size="lg" to="#cotizar">Llevar el fuego a mi evento</CtaLink>
+          </div>
         </div>
       </section>
     </>
