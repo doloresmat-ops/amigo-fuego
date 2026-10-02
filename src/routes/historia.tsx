@@ -76,8 +76,16 @@ function Historia() {
           </div>
         </div>
       </section>
-      <section className="bg-crema py-12 text-center">
-        <CtaLink variant="dark-outline" to="/menu">Explora nuestro menú de 5 pasos</CtaLink>
+      <section className="bg-crema text-carbon">
+        <div className="mx-auto max-w-4xl px-5 py-20 text-center md:py-28">
+          <h3 className="text-3xl leading-tight text-carbon md:text-4xl">¿Listo para ver lo que llevaremos a tu mesa?</h3>
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-carbon/80">
+            Descubre el ritual de 5 pasos. Desde las empanadas y el vermut de bienvenida, hasta el desfile de cortes premium cocinados lentamente al fuego.
+          </p>
+          <div className="mt-10 flex justify-center">
+            <CtaLink variant="fuego" size="lg" to="/menu">Ver el Menú Completo</CtaLink>
+          </div>
+        </div>
       </section>
       <section className="border-y border-crema/20 bg-carbon">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
