@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
+import gJardin from "@/assets/galeria-jardin.jpg";
 import gEquipo from "@/assets/galeria-equipo.jpg";
 import gParrillero from "@/assets/historia-parrillero.jpg";
 
@@ -55,6 +56,28 @@ function Historia() {
           </div>
         </div>
        </Section>
+      </section>
+      <section className="border-t border-carbon/15 bg-crema text-carbon">
+        <Section>
+          <h2 className="max-w-3xl text-4xl md:text-5xl">El Oficio del Fuego y los Cortes Premium.</h2>
+          <div className="mt-10 grid gap-10 text-lg text-carbon/80 md:grid-cols-2">
+            <p>Detrás de cada plato hay conocimiento, técnica y un profundo respeto por el fuego. En Argentina, el asado es una tradición única que requiere paciencia. El fuego se enciende con anticipación, sin prisa, creando las brasas perfectas mientras la conversación comienza. No somos un servicio de banquetes exprés; somos maestros parrilleros que dominan los tiempos de cocción de la carne asada.</p>
+            <p>Llevamos a tus eventos cortes premium como el asado de tira, el churrasco Angus y el vacío, cocinándolos lentamente frente a tus invitados. La parrilla se convierte en el punto de encuentro natural: los amigos se acercan, miran el fuego y confían en la experiencia de quien sabe trabajar las brasas y elegir los cortes exactos para una carne siempre en su punto.</p>
+          </div>
+        </Section>
+      </section>
+      <section className="bg-carbon text-crema">
+        <div className="grid md:grid-cols-2">
+          <img src={gJardin} alt="Mesa larga compartida con invitados, vino y tablas de asado" loading="lazy" className="h-full min-h-[320px] w-full object-cover" />
+          <div className="px-5 py-20 md:px-14 md:py-28">
+            <p className="eyebrow text-tierra">Catering de Asado a Domicilio</p>
+            <h2 className="mt-4 text-4xl md:text-5xl">La Mesa Infinita.</h2>
+            <p className="mt-6 text-lg text-crema/80">No es simplemente la pregunta de "¿Qué vamos a comer?", sino "¿Qué vamos a celebrar?". Amigo Fuego no llega a tu evento con charolas de comida precalentada. Llevamos una experiencia auditiva, olfativa y de sabor a tu oficina, jardín o foro de grabación. Ya sea para una cena corporativa de fin de año, una reunión mensual de despacho, o una tornafiesta, diseñamos mesas donde la carne pasa de mano en mano, las porciones son generosas y el tiempo siempre sobra para la sobremesa.</p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-crema py-12 text-center">
+        <CtaLink variant="dark-outline" to="/menu">Explora nuestro menú de 5 pasos</CtaLink>
       </section>
       <section className="border-y border-crema/20 bg-carbon">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
