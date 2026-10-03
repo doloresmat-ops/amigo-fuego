@@ -9,4 +9,6 @@
 - [x] Unificar los botones de conversión del sitio en naranja fuego, blanco y tamaño amplio.
 - [x] Mostrar los cinco pasos completos en Menú y añadir galería horizontal ilustrativa antes del precio.
 - [x] Restaurar la alternancia en Productos Héroe y animar la galería como marquesina continua.
+- [x] Compactar "Los 5 pasos del ritual" en cuadrícula de tarjetas blancas (3 + 2 centradas).
+- [x] Pasar la galería "Del fuego a tu evento" a fondo carbón para restaurar la cebra con Productos Héroe.
 - [ ] Sustituir las imágenes ilustrativas de la galería por fotografías reales (pendiente de recibirlas).
