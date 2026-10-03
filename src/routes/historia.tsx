@@ -10,7 +10,7 @@ export const Route = createFileRoute("/historia")({
     pageHead(
       "/historia",
       "El Legado del Fuego: Quiénes Somos | Amigo Fuego",
-      "La historia de Gabriel, parrillero argentino con 25 años en México, y de cómo una pizzería familiar de Santa Fe se convirtió en Amigo Fuego.", "Nuestra Historia"
+      "La historia de Gabriel, parrillero argentino con 25 años en México, y de cómo una pizzería familiar de Entre Ríos se convirtió en Amigo Fuego.", "Nuestra Historia"
     ),
   component: Historia,
 });
@@ -30,7 +30,7 @@ function Historia() {
         crumb="Nuestra Historia"
         eyebrow="Nuestra historia"
         title="El Legado del Fuego: Quiénes Somos"
-        subtitle="Una familia, una pizzería en Santa Fe y 25 años de fuego en México."
+        subtitle="Una familia, una pizzería en Entre Ríos y 25 años de fuego en México."
         image={gEquipo}
       />
       <section className="bg-crema text-carbon">
@@ -41,7 +41,7 @@ function Historia() {
             <h2 className="text-4xl text-carbon md:text-5xl">Gabriel y el Fuego: 25 años de oficio.</h2>
             <p>
               Gabriel es un migrante argentino que lleva 25 años en México. Creció entre hornos y masa,
-              heredando el oficio de la pizzería tradicional de su familia en Santa Fe. Tras abrir las
+              heredando el oficio de la pizzería tradicional de su familia en Entre Ríos. Tras abrir las
               puertas de{" "}
               <a
                 href="https://lunfardopizzeria.com"
