@@ -72,18 +72,22 @@ function Bodas() {
           </div>
         </Section>
       </section>
-      <section className="border-b border-carbon/15 bg-crema text-carbon">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">
-           <div className="image-zoom overflow-hidden rounded-xl"><img src={gChoripan} alt="Choripanes en la parrilla de madrugada" loading="lazy" className="aspect-[4/5] w-full object-cover" /></div>
-          <div>
-             <p className="eyebrow text-tierra">Sección estelar</p>
-            <h2 className="mt-4 text-4xl md:text-6xl">La Tornafiesta Amigo Fuego</h2>
-            <p className="mt-6 text-lg text-carbon/80">
-              Cuando la pista sigue llena y el hambre aparece, la parrilla se enciende de
-              madrugada. Choripanes recién hechos, chimichurri y pan para que la fiesta
-              siga hasta el amanecer.
-            </p>
-            <div className="mt-8"><CtaLink>Cotizar Tornafiesta</CtaLink></div>
+      <section className="bg-crema text-carbon">
+        <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
+          <div className="mb-10 grid gap-10 overflow-hidden rounded-2xl bg-carbon p-8 text-crema shadow-xl md:grid-cols-2 md:items-center md:p-16 md:mb-16">
+            <div className="image-zoom overflow-hidden rounded-xl">
+              <img src={gChoripan} alt="Choripanes en la parrilla de madrugada" loading="lazy" className="aspect-[4/5] w-full object-cover" />
+            </div>
+            <div>
+              <p className="eyebrow text-tierra">Sección estelar</p>
+              <h2 className="mt-4 text-4xl md:text-6xl">La Tornafiesta Amigo Fuego</h2>
+              <p className="mt-6 text-lg text-crema/85">
+                Cuando la pista sigue llena y el hambre aparece, la parrilla se enciende de
+                madrugada. Choripanes recién hechos, chimichurri y pan para que la fiesta
+                siga hasta el amanecer.
+              </p>
+              <div className="mt-8"><CtaLink>Cotizar Tornafiesta</CtaLink></div>
+            </div>
           </div>
         </div>
       </section>
