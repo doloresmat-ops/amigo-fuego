@@ -1,13 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import { CtaLink, PageHero, Section, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
-import { Button } from "@/components/ui/button";
 import gCorte from "@/assets/galeria-corte.jpg";
 import gPizzas from "@/assets/galeria-mini-pizzas.jpg";
 import gCalabaza from "@/assets/galeria-calabaza.jpg";
 import gMaridaje from "@/assets/galeria-maridaje.jpg";
 import gParrilla from "@/assets/galeria-parrilla-vivo.jpg";
+import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
+import gJardin from "@/assets/galeria-jardin.jpg";
+import gEquipo from "@/assets/galeria-equipo.jpg";
 
 export const Route = createFileRoute("/menu")({
   head: () =>
@@ -27,9 +28,15 @@ const PASOS = [
   { t: "Los imprescindibles", d: "Sin esto no hay asado.", items: ["Chimichurri", "Salsa criolla", "Pan"] },
 ];
 
+const GALERIA = [
+  { img: gParrilla, alt: "Parrilla encendida durante el servicio de asado" },
+  { img: gCorte, alt: "Cortes de carne preparados sobre el fuego" },
+  { img: gMesa, alt: "Mesa dispuesta para compartir un asado" },
+  { img: gEquipo, alt: "Equipo de parrilleros durante un evento" },
+  { img: gJardin, alt: "Invitados reunidos alrededor de una mesa al aire libre" },
+];
+
 function Menu() {
-  const [active, setActive] = useState(0);
-  const p = PASOS[active] ?? PASOS[0]!;
   return (
     <>
       <PageHero
@@ -44,48 +51,18 @@ function Menu() {
       <section className="bg-crema text-carbon">
        <Section>
         <p className="eyebrow text-oxido">Los 5 pasos del ritual</p>
-        <div className="mt-8 grid gap-8 md:grid-cols-[1fr_1.4fr]">
-          <div role="tablist" aria-label="Pasos del ritual" aria-orientation="vertical" className="flex flex-col gap-2">
-            {PASOS.map((s, i) => {
-              const on = i === active;
-              return (
-                <Button
-                  key={s.t}
-                  role="tab"
-                  aria-selected={on}
-                  aria-controls="ritual-panel"
-                  onClick={() => setActive(i)}
-                  className={`group flex items-center gap-4 rounded-r-lg border-l-4 px-5 py-4 text-left transition-all duration-300 ${
-                    on
-                      ? "border-fuego bg-carbon text-fuego shadow-lg"
-                      : "border-carbon/20 bg-blanco/60 text-carbon hover:border-fuego/60 hover:bg-carbon/10 hover:text-oxido"
-                  }`}
-                >
-                  <span className={`font-display text-3xl ${on ? "text-fuego" : "text-oxido"}`}>{i + 1}</span>
-                  <span className={`flex-1 text-lg ${on ? "text-fuego" : ""}`}>{s.t}</span>
-                  <span
-                    aria-hidden="true"
-                    className={`flex h-8 w-8 items-center justify-center rounded-full border text-xl transition-transform duration-300 ${
-                      on ? "rotate-45 border-fuego text-fuego" : "border-carbon/30 group-hover:border-oxido group-hover:translate-x-1"
-                    }`}
-                  >
-                    +
-                  </span>
-                </Button>
-              );
-            })}
-          </div>
-          <div id="ritual-panel" role="tabpanel" key={active} className="animate-in fade-in slide-in-from-right-4 rounded-lg border-l-4 border-fuego bg-carbon p-8 text-crema shadow-xl duration-500 md:p-10">
-            <p className="eyebrow text-fuego">Paso {active + 1} de {PASOS.length}</p>
-            <h2 className="mt-3 text-4xl text-crema md:text-5xl">{p.t}</h2>
-            <p className="mt-4 text-crema/75">{p.d}</p>
-            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-              {p.items.map((it) => (
-                <li key={it} className="border-t border-crema/25 pt-3 font-display text-xl">{it}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <ol className="mt-10 border-t border-carbon/20">
+          {PASOS.map((paso, i) => (
+            <li key={paso.t} className="grid gap-4 border-b border-carbon/20 py-8 sm:grid-cols-[5rem_1fr] md:grid-cols-[6rem_minmax(0,1fr)_minmax(12rem,0.7fr)] md:gap-10 md:py-10">
+              <span aria-hidden="true" className="font-display text-5xl text-fuego md:text-6xl">{String(i + 1).padStart(2, "0")}</span>
+              <div>
+                <h2 className="text-2xl text-carbon md:text-3xl">{paso.t}</h2>
+                <p className="mt-3 max-w-lg text-base text-carbon/75 md:text-lg">{paso.d}</p>
+              </div>
+              <p className="self-center text-base leading-relaxed text-carbon/80 sm:col-start-2 md:col-start-3 md:text-lg">{paso.items.join(" · ")}</p>
+            </li>
+          ))}
+        </ol>
        </Section>
       </section>
       <section className="bg-carbon text-crema">
@@ -101,6 +78,19 @@ function Menu() {
             </p>
           </div>
         </div>
+      </section>
+      <section className="overflow-hidden bg-crema py-20 text-carbon md:py-28" aria-labelledby="galeria-asados-title">
+        <div className="mx-auto max-w-7xl px-5 md:px-10">
+          <h3 id="galeria-asados-title" className="max-w-3xl text-3xl text-carbon md:text-5xl">Del fuego a tu evento: Así se ven nuestras mesas</h3>
+        </div>
+        <div className="mt-9 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain scroll-smooth px-5 pb-5 md:gap-6 md:px-[max(2.5rem,calc((100vw-80rem)/2+2.5rem))]" aria-label="Galería de asados">
+          {GALERIA.map((foto) => (
+            <figure key={foto.alt} className="w-[78vw] max-w-[560px] shrink-0 snap-start sm:w-[52vw] lg:w-[38vw]">
+              <img src={foto.img} alt={foto.alt} loading="lazy" className="aspect-[4/3] w-full rounded-md object-cover" />
+            </figure>
+          ))}
+        </div>
+        <p className="mx-auto max-w-7xl px-5 text-sm text-carbon/65 md:px-10">Imágenes ilustrativas.</p>
       </section>
       <section className="bg-crema text-carbon">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
