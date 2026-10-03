@@ -54,9 +54,7 @@ function Historia() {
               en la Ciudad de México,
             </p>
             <p>
-              la nostalgia y la demanda lo llevaron a sacar las
-              brasas de su casa para llevarlas a eventos sociales. Empezó con una parrilla, luego con dos,
-              luego con tres, siempre junto a su esposa.
+              La nostalgia y la demanda lo llevaron a sacar las brasas de su casa para llevarlas a eventos sociales. Junto a su esposa Lolita, empezó con una parrilla para agasajar a los amigos y luego el boca a boca se fue regando: hay parrilla argentina en México.{"\u00a0"}
             </p>
             <p>
               Así nació Amigo Fuego. No como un negocio de banquetes corporativos, sino como el deseo
