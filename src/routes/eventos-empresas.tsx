@@ -85,7 +85,7 @@ function EventosEmpresas() {
                className="aspect-[4/3] w-full object-cover"
              /></div>
             <div>
-              <p className="eyebrow text-tierra">¿Por qué Amigo Fuego para tu empresa?</p>
+              <p className="eyebrow text-tierra">¿POR QUÉ ELEGIR AMIGO FUEGO PARA TU EMPRESA?</p>
               <h2 className="mt-4 text-4xl md:text-5xl">
                 El gran anfitrión de tus cierres de negocio
               </h2>
