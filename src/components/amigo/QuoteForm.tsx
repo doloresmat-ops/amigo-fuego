@@ -41,7 +41,7 @@ export function QuoteForm({
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-5 md:px-10 md:py-28">
         <div className="md:col-span-2">
-          <p className="eyebrow text-carbon/70">Cotización</p>
+           <p className="eyebrow text-tierra">Cotización</p>
           <h2 className="mt-4 text-4xl md:text-5xl">{title}</h2>
           <p className={`mt-5 ${dark ? "text-crema/75" : "text-carbon/75"}`}>{intro}</p>
         </div>

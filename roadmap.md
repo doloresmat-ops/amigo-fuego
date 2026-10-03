@@ -11,4 +11,5 @@
 - [x] Restaurar la alternancia en Productos Héroe y animar la galería como marquesina continua.
 - [x] Compactar "Los 5 pasos del ritual" en cuadrícula de tarjetas blancas (3 + 2 centradas).
 - [x] Pasar la galería "Del fuego a tu evento" a fondo carbón para restaurar la cebra con Productos Héroe.
+- [x] Diferenciar botones de cotización y menú juntos; aplicar acentos ocre, oliva y azul y microinteracción al botón principal.
 - [ ] Sustituir las imágenes ilustrativas de la galería por fotografías reales (pendiente de recibirlas).

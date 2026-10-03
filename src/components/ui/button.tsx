@@ -10,7 +10,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
-        conversion: "rounded-full bg-fuego text-blanco shadow-lg hover:brightness-110",
+        conversion: "rounded-full bg-fuego text-blanco shadow-lg transition-[transform,box-shadow] duration-300 motion-safe:hover:-translate-y-0.5 hover:shadow-[0_10px_24px_color-mix(in_srgb,var(--fuego)_40%,transparent)]",
+        menuOutline: "rounded-full border-2 border-crema bg-transparent text-crema transition-colors duration-300 hover:bg-crema hover:text-carbon",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
           "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",

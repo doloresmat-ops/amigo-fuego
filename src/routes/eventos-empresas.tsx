@@ -106,7 +106,7 @@ function EventosEmpresas() {
       {/* Ocasiones */}
       <section className="bg-crema text-carbon">
         <Section>
-          <p className="eyebrow text-oxido">Ocasiones</p>
+           <p className="eyebrow text-tierra">Ocasiones</p>
           <h2 className="mt-4 max-w-3xl text-4xl md:text-5xl">
             Para cuando la mesa también cierra tratos
           </h2>
@@ -193,7 +193,7 @@ function EventosEmpresas() {
               <li key={c} className="flex items-center gap-3 font-semibold">
                 <span
                   aria-hidden="true"
-                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-tierra/60 text-tierra"
+                   className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-oliva/60 text-oliva"
                 >
                   <svg
                     viewBox="0 0 24 24"

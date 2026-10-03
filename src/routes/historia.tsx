@@ -70,7 +70,7 @@ function Historia() {
         <div className="grid md:grid-cols-2">
           <img src={gJardin} alt="Mesa larga compartida con invitados, vino y tablas de asado" loading="lazy" className="h-full min-h-[320px] w-full object-cover" />
           <div className="px-5 py-20 md:px-14 md:py-28">
-            <p className="eyebrow text-oxido">Catering de Asado a Domicilio</p>
+             <p className="eyebrow text-tierra">Catering de Asado a Domicilio</p>
             <h2 className="mt-4 text-4xl md:text-5xl">La Mesa Infinita.</h2>
             <p className="mt-6 text-lg text-carbon/80">No es simplemente la pregunta de "¿Qué vamos a comer?", sino "¿Qué vamos a celebrar?". Amigo Fuego no llega a tu evento con charolas de comida precalentada. Llevamos una experiencia auditiva, olfativa y de sabor a tu oficina, jardín o foro de grabación. Ya sea para una cena corporativa de fin de año, una reunión mensual de despacho, o una tornafiesta, diseñamos mesas donde la carne pasa de mano en mano, las porciones son generosas y el tiempo siempre sobra para la sobremesa.</p>
           </div>

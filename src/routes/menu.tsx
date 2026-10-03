@@ -50,7 +50,7 @@ function Menu() {
       </PageHero>
       <section id="ritual" className="bg-crema text-carbon">
        <Section>
-        <p className="eyebrow text-oxido">Los 5 pasos del ritual</p>
+         <p className="eyebrow text-tierra">Los 5 pasos del ritual</p>
         <h2 className="mt-4 max-w-2xl text-3xl text-carbon md:text-5xl">Cinco pasos, un solo fuego</h2>
         <div className="mt-10 flex flex-wrap justify-center gap-6">
           {PASOS.map((paso, i) => (
@@ -110,7 +110,7 @@ function Menu() {
                   <img src={gCorte} alt="Cortes premium al fuego en la parrilla" loading="lazy" className="aspect-[16/9] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 md:aspect-[21/9]" />
                   <div className="golden absolute inset-0" />
                   <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
-                    <p className="eyebrow text-fuego">La protagonista</p>
+                     <p className="eyebrow text-tierra">La protagonista</p>
                     <h3 className="mt-2 text-4xl text-crema transition-colors duration-300 group-hover:text-fuego md:text-6xl">Cortes Premium al Fuego</h3>
                     <p className="mt-3 max-w-xl text-lg text-crema/90">Vacío, asado de tira y churrasco Angus cocinados lentamente.</p>
                   </div>
@@ -139,9 +139,9 @@ function Menu() {
       </section>
       <section className="bg-carbon text-crema">
         <Section className="text-center">
-        <p className="eyebrow text-crema">Precio</p>
+         <p className="eyebrow text-tierra">Precio</p>
         <p className="mt-4 font-display text-5xl md:text-7xl">
-          Paquetes desde <span className="text-crema">$550 MXN</span>
+           Paquetes desde <span className="text-tierra">$550 MXN</span>
         </p>
         <p className="mt-3 text-crema/80">por persona</p>
          <div className="mt-8"><CtaLink>Cotizar ahora</CtaLink></div>

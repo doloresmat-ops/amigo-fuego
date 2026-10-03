@@ -16,12 +16,15 @@ export const NAV = [
 export function CtaLink({
   children,
   to = "#cotizar",
+  secondary = false,
 }: {
   children: ReactNode;
   to?: string;
+  secondary?: boolean;
 }) {
-  if (to.startsWith("#")) return <Button asChild variant="conversion" size="conversion"><a href={to}>{children}</a></Button>;
-  return <Button asChild variant="conversion" size="conversion"><Link to={to}>{children}</Link></Button>;
+  const variant = secondary ? "menuOutline" : "conversion";
+  if (to.startsWith("#")) return <Button asChild variant={variant} size="conversion"><a href={to}>{children}</a></Button>;
+  return <Button asChild variant={variant} size="conversion"><Link to={to}>{children}</Link></Button>;
 }
 
 export function SiteHeader() {
@@ -108,11 +111,11 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm">
             {NAV.map((n) => (
               <li key={n.to}>
-                <Link to={n.to} className="text-crema/80 hover:text-crema">{n.label}</Link>
+                 <Link to={n.to} className="text-crema/80 transition-colors hover:text-cielo">{n.label}</Link>
               </li>
             ))}
             <li>
-              <Link to="/aviso-de-privacidad" className="text-crema/80 hover:text-crema">
+               <Link to="/aviso-de-privacidad" className="text-crema/80 transition-colors hover:text-cielo">
                 Aviso de privacidad
               </Link>
             </li>
@@ -121,9 +124,9 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow text-tierra">Servicios</p>
           <ul className="mt-4 space-y-2 text-sm text-crema/80">
-            <li><Link to="/eventos-empresas" className="hover:text-crema">Eventos para Empresas</Link></li>
-            <li><Link to="/eventos-empresas" className="hover:text-crema">Producciones y Cines</Link></li>
-            <li><Link to="/bodas" className="hover:text-crema">Eventos Sociales</Link></li>
+             <li><Link to="/eventos-empresas" className="transition-colors hover:text-cielo">Eventos para Empresas</Link></li>
+             <li><Link to="/eventos-empresas" className="transition-colors hover:text-cielo">Producciones y Cines</Link></li>
+             <li><Link to="/bodas" className="transition-colors hover:text-cielo">Eventos Sociales</Link></li>
           </ul>
         </div>
       </div>
@@ -165,7 +168,7 @@ export function PageHero({
             </ol>
           </nav>
         )}
-        <p className="eyebrow inline-flex w-fit items-center rounded-full border border-crema/30 bg-carbon/70 px-4 py-2 text-crema backdrop-blur-sm">
+        <p className="eyebrow inline-flex w-fit items-center rounded-full border border-tierra/60 bg-carbon/70 px-4 py-2 text-tierra backdrop-blur-sm">
           {eyebrow}
         </p>
         <h1 className="mt-4 max-w-4xl text-4xl leading-[1.05] text-crema md:text-6xl">{title}</h1>
