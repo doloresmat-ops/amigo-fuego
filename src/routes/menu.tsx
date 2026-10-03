@@ -51,18 +51,17 @@ function Menu() {
       <section className="bg-crema text-carbon">
        <Section>
         <p className="eyebrow text-oxido">Los 5 pasos del ritual</p>
-        <ol className="mt-10 border-t border-carbon/20">
+        <h2 className="mt-4 max-w-2xl text-3xl text-carbon md:text-5xl">Cinco pasos, un solo fuego</h2>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PASOS.map((paso, i) => (
-            <li key={paso.t} className="grid gap-4 border-b border-carbon/20 py-8 sm:grid-cols-[5rem_1fr] md:grid-cols-[6rem_minmax(0,1fr)_minmax(12rem,0.7fr)] md:gap-10 md:py-10">
+            <article key={paso.t} className="flex flex-col rounded-xl bg-blanco p-6 shadow-[0_6px_20px_rgba(29,25,18,0.08)] sm:p-8">
               <span aria-hidden="true" className="font-display text-5xl text-fuego md:text-6xl">{String(i + 1).padStart(2, "0")}</span>
-              <div>
-                <h2 className="text-2xl text-carbon md:text-3xl">{paso.t}</h2>
-                <p className="mt-3 max-w-lg text-base text-carbon/75 md:text-lg">{paso.d}</p>
-              </div>
-              <p className="self-center text-base leading-relaxed text-carbon/80 sm:col-start-2 md:col-start-3 md:text-lg">{paso.items.join(" · ")}</p>
-            </li>
+              <h3 className="mt-4 text-2xl text-carbon">{paso.t}</h3>
+              <p className="mt-3 text-base text-carbon/75">{paso.d}</p>
+              <p className="mt-auto pt-4 text-base leading-relaxed text-carbon/80">{paso.items.join(" · ")}</p>
+            </article>
           ))}
-        </ol>
+        </div>
        </Section>
       </section>
       <section className="bg-carbon text-crema">
@@ -79,9 +78,9 @@ function Menu() {
           </div>
         </div>
       </section>
-      <section className="overflow-hidden bg-crema py-20 text-carbon md:py-28" aria-labelledby="galeria-asados-title">
+      <section className="overflow-hidden bg-carbon py-20 text-crema md:py-28" aria-labelledby="galeria-asados-title">
         <div className="mx-auto max-w-7xl px-5 md:px-10">
-          <h3 id="galeria-asados-title" className="max-w-3xl text-3xl text-carbon md:text-5xl">Del fuego a tu evento: Así se ven nuestras mesas</h3>
+          <h3 id="galeria-asados-title" className="max-w-3xl text-3xl text-crema md:text-5xl">Del fuego a tu evento: Así se ven nuestras mesas</h3>
         </div>
         <div className="mt-9 overflow-hidden" aria-label="Galería de asados">
           <div className="flex w-max animate-gallery-marquee motion-reduce:animate-none">
@@ -96,7 +95,7 @@ function Menu() {
             ))}
           </div>
         </div>
-        <p className="mx-auto mt-5 max-w-7xl px-5 text-sm text-carbon/65 md:px-10">Imágenes ilustrativas.</p>
+        <p className="mx-auto mt-5 max-w-7xl px-5 text-sm text-crema/60 md:px-10">Imágenes ilustrativas.</p>
       </section>
       <section className="border-t border-carbon/15 bg-crema text-carbon">
 
