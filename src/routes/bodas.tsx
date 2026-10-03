@@ -33,7 +33,7 @@ function Bodas() {
             <div className="flex flex-col justify-center bg-carbon p-10 text-crema md:p-14">
               <p className="eyebrow text-tierra">Catering para Eventos Sociales y Celebraciones</p>
               <h2 className="mt-6 text-4xl leading-tight md:text-5xl">Una celebración que sabe a familia.</h2>
-              <div className="mt-8 h-px w-16 bg-oxido" />
+               <div className="mt-8 h-px w-16 bg-cielo/70" />
             </div>
             <div className="flex flex-col justify-center p-10 md:p-14">
               <p className="text-xl leading-relaxed text-carbon/85 md:text-2xl">
@@ -61,7 +61,7 @@ function Bodas() {
               ["Fiestas Privadas", "Comida real, fuego real y momentos espontáneos sin formalidades innecesarias."],
             ].map(([t, d]) => (
               <article key={t} className="rounded-xl border border-crema/20 bg-crema/5 p-8">
-                <div className="h-px w-12 bg-oxido" />
+                 <div className="h-px w-12 bg-cielo/70" />
                 <h3 className="mt-6 text-2xl">{t}</h3>
                 <p className="mt-4 leading-relaxed text-crema/80">{d}</p>
               </article>
@@ -76,7 +76,7 @@ function Bodas() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">
           <img src={gChoripan} alt="Choripanes en la parrilla de madrugada" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
           <div>
-            <p className="eyebrow text-oxido">Sección estelar</p>
+             <p className="eyebrow text-tierra">Sección estelar</p>
             <h2 className="mt-4 text-4xl md:text-6xl">La Tornafiesta Amigo Fuego</h2>
             <p className="mt-6 text-lg text-carbon/80">
               Cuando la pista sigue llena y el hambre aparece, la parrilla se enciende de

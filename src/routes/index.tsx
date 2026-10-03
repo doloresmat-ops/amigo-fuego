@@ -33,25 +33,25 @@ function Home() {
         image={hero}
       >
         <CtaLink>Cotizar mi evento</CtaLink>
-        <CtaLink to="/menu">Ver el menú</CtaLink>
+        <CtaLink to="/menu" secondary>Ver el menú</CtaLink>
       </PageHero>
       <TrustStrip />
       <section className="bg-carbon text-crema">
         <div className="mx-auto max-w-7xl px-5 py-16 text-center md:px-10 md:py-20">
           <p className="eyebrow text-tierra">Precio</p>
           <p className="mt-4 font-display text-4xl md:text-6xl">
-            Paquetes desde <span className="text-crema">$550 MXN</span>
+            Paquetes desde <span className="text-tierra">$550 MXN</span>
           </p>
           <p className="mt-3 text-crema/70">por persona</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <CtaLink>Cotizar ahora</CtaLink>
-            <CtaLink to="/menu">Ver el menú</CtaLink>
+            <CtaLink to="/menu" secondary>Ver el menú</CtaLink>
           </div>
         </div>
       </section>
       <section className="bg-crema text-carbon">
         <Section>
-          <p className="eyebrow text-oxido">¿Qué estás organizando?</p>
+          <p className="eyebrow text-tierra">¿Qué estás organizando?</p>
           <h2 className="mt-4 max-w-2xl text-4xl md:text-5xl">Elige tu ocasión</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {BLOQUES.map((b) => (
