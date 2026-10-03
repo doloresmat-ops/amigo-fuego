@@ -11,8 +11,7 @@ export function SiteMotion() {
     const main = document.querySelector("main");
     if (!main || !('IntersectionObserver' in window)) return;
 
-    const targets = Array.from(main.querySelectorAll<HTMLElement>("h1, h2, h3, p, img:not([data-hero-image]), [data-stagger] > *"))
-      .filter((element) => !element.closest("[data-stagger] > *:not(:scope)"));
+    const targets = Array.from(main.querySelectorAll<HTMLElement>("h1, h2, h3, p, img:not([data-hero-image]), [data-stagger] > *"));
     // A card animates as a unit; its headings, copy and imagery should not animate twice.
     const cards = new Set(main.querySelectorAll("[data-stagger] > *"));
     const reveals = targets.filter((element) => cards.has(element) || !element.parentElement?.closest("[data-stagger] > *"));

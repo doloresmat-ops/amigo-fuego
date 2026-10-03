@@ -36,7 +36,7 @@ function Historia() {
       <section className="bg-crema text-carbon">
        <Section>
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
-          <img src={gParrillero} alt="Maestro parrillero trabajando cortes sobre las brasas" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
+           <div className="image-zoom overflow-hidden rounded-xl"><img src={gParrillero} alt="Maestro parrillero trabajando cortes sobre las brasas" loading="lazy" className="aspect-[4/5] w-full object-cover" /></div>
           <div className="space-y-5 text-lg text-carbon/80">
             <h2 className="text-4xl text-carbon md:text-5xl">Gabriel y el Fuego: 25 años de oficio.</h2>
             <p>
@@ -68,7 +68,7 @@ function Historia() {
       </section>
       <section className="bg-crema text-carbon">
         <div className="grid md:grid-cols-2">
-          <img src={gJardin} alt="Mesa larga compartida con invitados, vino y tablas de asado" loading="lazy" className="h-full min-h-[320px] w-full object-cover" />
+           <div className="image-zoom min-h-[320px] overflow-hidden"><img src={gJardin} alt="Mesa larga compartida con invitados, vino y tablas de asado" loading="lazy" className="h-full min-h-[320px] w-full object-cover" /></div>
           <div className="px-5 py-20 md:px-14 md:py-28">
              <p className="eyebrow text-tierra">Catering de Asado a Domicilio</p>
             <h2 className="mt-4 text-4xl md:text-5xl">La Mesa Infinita.</h2>
@@ -93,7 +93,7 @@ function Historia() {
       <section className="border-y border-crema/20 bg-carbon">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
           <p className="eyebrow text-tierra">Nuestros valores</p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+           <div data-stagger className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {VALORES.map((v) => (
               <div key={v.t} className="rounded-xl border border-border p-7">
                 <h3 className="text-2xl text-terracota">{v.t}</h3>

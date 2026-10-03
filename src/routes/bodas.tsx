@@ -54,7 +54,7 @@ function Bodas() {
             <p className="eyebrow text-tierra">Celebraciones</p>
             <h2 className="mt-4 text-4xl md:text-5xl">Cualquier motivo es bueno para encender el fuego</h2>
           </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+           <div data-stagger className="mt-14 grid gap-6 md:grid-cols-3">
             {[
               ["Cumpleaños y Aniversarios", "El fuego se enciende con anticipación para un gran festejo. Porciones abundantes al centro de la mesa para compartir y repetir."],
               ["Bautizos y Primeras Comuniones", "Una forma de celebrar tan relajada como un domingo en familia. Tú disfruta de tus invitados, nuestro maestro parrillero se encarga de las brasas."],
@@ -74,7 +74,7 @@ function Bodas() {
       </section>
       <section className="border-b border-carbon/15 bg-crema text-carbon">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">
-          <img src={gChoripan} alt="Choripanes en la parrilla de madrugada" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
+           <div className="image-zoom overflow-hidden rounded-xl"><img src={gChoripan} alt="Choripanes en la parrilla de madrugada" loading="lazy" className="aspect-[4/5] w-full object-cover" /></div>
           <div>
              <p className="eyebrow text-tierra">Sección estelar</p>
             <h2 className="mt-4 text-4xl md:text-6xl">La Tornafiesta Amigo Fuego</h2>

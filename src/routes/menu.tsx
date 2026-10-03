@@ -52,7 +52,7 @@ function Menu() {
        <Section>
          <p className="eyebrow text-tierra">Los 5 pasos del ritual</p>
         <h2 className="mt-4 max-w-2xl text-3xl text-carbon md:text-5xl">Cinco pasos, un solo fuego</h2>
-        <div className="mt-10 flex flex-wrap justify-center gap-6">
+         <div data-stagger className="mt-10 flex flex-wrap justify-center gap-6">
           {PASOS.map((paso, i) => (
             <article key={paso.t} className="flex w-full flex-col rounded-xl bg-blanco p-6 shadow-[0_6px_20px_rgba(29,25,18,0.08)] sm:w-[calc(50%-0.75rem)] sm:p-8 lg:w-[calc(33.333%-1rem)]">
               <span aria-hidden="true" className="font-display text-5xl text-fuego md:text-6xl">{String(i + 1).padStart(2, "0")}</span>
@@ -66,7 +66,7 @@ function Menu() {
       </section>
       <section className="bg-carbon text-crema">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">
-          <img src={gMaridaje} alt="Brindis con Malbec, vermut y fernet alrededor de la parrilla" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
+           <div className="image-zoom overflow-hidden rounded-xl"><img src={gMaridaje} alt="Brindis con Malbec, vermut y fernet alrededor de la parrilla" loading="lazy" className="aspect-[4/5] w-full object-cover" /></div>
           <div>
             <p className="eyebrow text-tierra">Bebidas y maridaje</p>
             <h2 className="mt-4 text-4xl md:text-6xl">El Maridaje: Vermut, Fernet y Malbec</h2>
@@ -87,7 +87,7 @@ function Menu() {
             {[false, true].map((duplicate) => (
               <div key={String(duplicate)} className="flex w-max shrink-0 gap-4 pr-4 md:gap-6 md:pr-6" aria-hidden={duplicate ? "true" : undefined}>
                 {GALERIA.map((foto) => (
-                  <figure key={foto.alt} className="w-[78vw] max-w-[560px] shrink-0 sm:w-[52vw] lg:w-[38vw]">
+                   <figure key={foto.alt} className="image-zoom w-[78vw] max-w-[560px] shrink-0 overflow-hidden rounded-md sm:w-[52vw] lg:w-[38vw]">
                     <img src={foto.img} alt={duplicate ? "" : foto.alt} loading="lazy" className="aspect-[4/3] w-full rounded-md object-cover" />
                   </figure>
                 ))}
@@ -104,10 +104,10 @@ function Menu() {
             <h3 className="mt-4 max-w-3xl text-2xl text-crema md:text-3xl">
               Una pequeña muestra de la abundancia que llevamos a tu mesa. Conoce nuestras opciones de entradas, cortes y guarniciones al fuego.
             </h3>
-            <div className="mt-10 grid gap-8 md:grid-cols-2">
+             <div data-stagger className="mt-10 grid gap-8 md:grid-cols-2">
               <article className="group md:col-span-2">
-                <div className="relative overflow-hidden rounded-xl">
-                  <img src={gCorte} alt="Cortes premium al fuego en la parrilla" loading="lazy" className="aspect-[16/9] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 md:aspect-[21/9]" />
+                 <div className="image-zoom relative overflow-hidden rounded-xl">
+                   <img src={gCorte} alt="Cortes premium al fuego en la parrilla" loading="lazy" className="aspect-[16/9] w-full object-cover md:aspect-[21/9]" />
                   <div className="golden absolute inset-0" />
                   <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
                      <p className="eyebrow text-tierra">La protagonista</p>
@@ -121,8 +121,8 @@ function Menu() {
                 { img: gPizzas, t: "Mini pizzas de masa madre a la parrilla", d: "El ultra éxito de la casa, herencia de la pizzería familiar en Santa Fe." },
               ].map((h) => (
                 <article key={h.t} className="group cursor-default">
-                  <div className="overflow-hidden rounded-xl">
-                    <img src={h.img} alt={h.t} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" />
+                   <div className="image-zoom overflow-hidden rounded-xl">
+                     <img src={h.img} alt={h.t} loading="lazy" className="aspect-[4/3] w-full object-cover" />
                   </div>
                   <h3 className="mt-5 text-3xl text-crema transition-colors duration-300 group-hover:text-fuego">{h.t}</h3>
                   <p className="mt-2 text-crema/75">{h.d}</p>
