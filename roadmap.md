@@ -7,3 +7,4 @@
 - [x] Limpiar ubicación y pilares de servicios del pie.
 - [x] Separar el banner del Menú de Valores en Historia con fondo crema y textos carbón.
 - [x] Unificar los botones de conversión del sitio en naranja fuego, blanco y tamaño amplio.
+- [x] Mostrar los cinco pasos completos en Menú y añadir galería horizontal antes del precio.
