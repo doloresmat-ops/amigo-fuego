@@ -28,16 +28,19 @@ export function SiteMotion() {
       observer.observe(element);
     });
 
-    const hero = main.querySelector<HTMLElement>("[data-parallax-hero]");
-    const heroImage = hero?.querySelector<HTMLElement>("[data-hero-image]");
+    // Every section that opts in (page heroes and cinematic banners) gets the same parallax.
+    const heroSections = Array.from(main.querySelectorAll<HTMLElement>("[data-parallax-hero]"));
     let frame = 0;
     const updateParallax = () => {
       frame = 0;
-      if (!hero || !heroImage) return;
-      const rect = hero.getBoundingClientRect();
-      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
-      const shift = Math.max(0, Math.min(hero.offsetHeight, -rect.top)) * 0.17;
-      heroImage.style.setProperty("--hero-shift", `${shift}px`);
+      for (const section of heroSections) {
+        const image = section.querySelector<HTMLElement>("[data-hero-image]");
+        if (!image) continue;
+        const rect = section.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) continue;
+        const shift = Math.max(0, Math.min(section.offsetHeight, -rect.top)) * 0.17;
+        image.style.setProperty("--hero-shift", `${shift}px`);
+      }
     };
     const onScroll = () => {
       if (!frame) frame = requestAnimationFrame(updateParallax);
@@ -52,7 +55,9 @@ export function SiteMotion() {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
       if (frame) cancelAnimationFrame(frame);
-      heroImage?.style.removeProperty("--hero-shift");
+      for (const section of heroSections) {
+        section.querySelector<HTMLElement>("[data-hero-image]")?.style.removeProperty("--hero-shift");
+      }
     };
   }, [pathname]);
 

@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, TrustStrip, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 import hero from "@/assets/hero-parrilla-noche.jpg";
+import ritual from "@/assets/ritual-banner.jpg";
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
 import gJardin from "@/assets/galeria-jardin.jpg";
 import gEquipo from "@/assets/galeria-equipo.jpg";
@@ -68,10 +69,14 @@ function Home() {
           </div>
         </Section>
       </section>
-      <section className="border-y border-crema/15 bg-carbon text-crema">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 py-14 md:flex-row md:items-center md:px-10 md:py-20">
-          <h2 className="max-w-2xl text-3xl md:text-4xl">El Ritual: Conoce lo que llevamos a tu mesa</h2>
-          <CtaLink to="/menu">Ver el Menú Completo</CtaLink>
+      <section data-parallax-hero className="relative isolate overflow-hidden">
+        <img data-hero-image src={ritual} alt="" loading="lazy" className="hero-parallax-image absolute inset-0 -z-20 h-full w-full object-cover" />
+        <div className="absolute inset-0 -z-10 bg-carbon/75" />
+        <div className="mx-auto flex max-w-4xl flex-col items-center px-5 py-20 text-center md:px-10 md:py-28">
+          <h2 className="max-w-2xl text-4xl text-crema md:text-5xl">El Ritual: Conoce lo que llevamos a tu mesa</h2>
+          <div className="mt-8">
+            <CtaLink to="/menu">Ver el Menú Completo</CtaLink>
+          </div>
         </div>
       </section>
       <QuoteForm />
