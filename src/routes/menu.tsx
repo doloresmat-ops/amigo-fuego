@@ -65,18 +65,6 @@ function Menu() {
         </ol>
        </Section>
       </section>
-      <section className="overflow-hidden bg-crema py-20 text-carbon md:py-28" aria-labelledby="galeria-asados-title">
-        <div className="mx-auto max-w-7xl px-5 md:px-10">
-          <h3 id="galeria-asados-title" className="max-w-3xl text-3xl text-carbon md:text-5xl">Del fuego a tu evento: Así se ven nuestras mesas</h3>
-        </div>
-        <div className="mt-9 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain scroll-smooth px-5 pb-5 md:gap-6 md:px-[max(2.5rem,calc((100vw-80rem)/2+2.5rem))]" aria-label="Galería de asados">
-          {GALERIA.map((foto) => (
-            <figure key={foto.alt} className="w-[78vw] max-w-[560px] shrink-0 snap-start sm:w-[52vw] lg:w-[38vw]">
-              <img src={foto.img} alt={foto.alt} loading="lazy" className="aspect-[4/3] w-full rounded-md object-cover" />
-            </figure>
-          ))}
-        </div>
-      </section>
       <section className="bg-carbon text-crema">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">
           <img src={gMaridaje} alt="Brindis con Malbec, vermut y fernet alrededor de la parrilla" loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
@@ -89,6 +77,18 @@ function Menu() {
               falta el fernet, el vino Malbec y algo que siempre sobra: tiempo.
             </p>
           </div>
+        </div>
+      </section>
+      <section className="overflow-hidden bg-crema py-20 text-carbon md:py-28" aria-labelledby="galeria-asados-title">
+        <div className="mx-auto max-w-7xl px-5 md:px-10">
+          <h3 id="galeria-asados-title" className="max-w-3xl text-3xl text-carbon md:text-5xl">Del fuego a tu evento: Así se ven nuestras mesas</h3>
+        </div>
+        <div className="mt-9 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain scroll-smooth px-5 pb-5 md:gap-6 md:px-[max(2.5rem,calc((100vw-80rem)/2+2.5rem))]" aria-label="Galería de asados">
+          {GALERIA.map((foto) => (
+            <figure key={foto.alt} className="w-[78vw] max-w-[560px] shrink-0 snap-start sm:w-[52vw] lg:w-[38vw]">
+              <img src={foto.img} alt={foto.alt} loading="lazy" className="aspect-[4/3] w-full rounded-md object-cover" />
+            </figure>
+          ))}
         </div>
       </section>
       <section className="bg-crema text-carbon">
