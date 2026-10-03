@@ -126,13 +126,13 @@ function Menu() {
           </div>
         </div>
       </section>
-      <section className="bg-crema text-carbon">
-       <Section className="text-center">
-        <p className="eyebrow text-oxido">Precio</p>
+      <section className="bg-carbon text-crema">
+        <Section className="text-center">
+        <p className="eyebrow text-crema">Precio</p>
         <p className="mt-4 font-display text-5xl md:text-7xl">
-          Paquetes desde <span className="text-oxido">$550 MXN</span>
+          Paquetes desde <span className="text-crema">$550 MXN</span>
         </p>
-        <p className="mt-3 text-carbon/70">por persona</p>
+        <p className="mt-3 text-crema/80">por persona</p>
          <div className="mt-8"><CtaLink>Cotizar ahora</CtaLink></div>
        </Section>
       </section>
