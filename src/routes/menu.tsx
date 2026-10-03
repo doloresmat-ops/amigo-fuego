@@ -52,9 +52,9 @@ function Menu() {
        <Section>
         <p className="eyebrow text-oxido">Los 5 pasos del ritual</p>
         <h2 className="mt-4 max-w-2xl text-3xl text-carbon md:text-5xl">Cinco pasos, un solo fuego</h2>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 flex flex-wrap justify-center gap-6">
           {PASOS.map((paso, i) => (
-            <article key={paso.t} className="flex flex-col rounded-xl bg-blanco p-6 shadow-[0_6px_20px_rgba(29,25,18,0.08)] sm:p-8">
+            <article key={paso.t} className="flex w-full flex-col rounded-xl bg-blanco p-6 shadow-[0_6px_20px_rgba(29,25,18,0.08)] sm:w-[calc(50%-0.75rem)] sm:p-8 lg:w-[calc(33.333%-1rem)]">
               <span aria-hidden="true" className="font-display text-5xl text-fuego md:text-6xl">{String(i + 1).padStart(2, "0")}</span>
               <h3 className="mt-4 text-2xl text-carbon">{paso.t}</h3>
               <p className="mt-3 text-base text-carbon/75">{paso.d}</p>
