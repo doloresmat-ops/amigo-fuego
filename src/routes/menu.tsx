@@ -98,7 +98,8 @@ function Menu() {
         </div>
         <p className="mx-auto mt-5 max-w-7xl px-5 text-sm text-carbon/65 md:px-10">Imágenes ilustrativas.</p>
       </section>
-      <section className="bg-carbon text-crema">
+      <section className="border-t border-carbon/15 bg-crema text-carbon">
+
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
           <p className="eyebrow text-tierra">Productos héroe</p>
           <div className="mt-10 grid gap-8 md:grid-cols-2">
@@ -109,7 +110,7 @@ function Menu() {
                 <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
                   <p className="eyebrow text-fuego">La protagonista</p>
                   <h3 className="mt-2 text-4xl text-crema md:text-6xl">Cortes Premium al Fuego</h3>
-                  <p className="mt-3 max-w-xl text-lg text-crema/85">Vacío, asado de tira y churrasco Angus cocinados lentamente.</p>
+                  <p className="mt-3 max-w-xl text-lg text-crema/90">Vacío, asado de tira y churrasco Angus cocinados lentamente.</p>
                 </div>
               </div>
             </article>
@@ -119,8 +120,9 @@ function Menu() {
             ].map((h) => (
               <article key={h.t}>
                 <img src={h.img} alt={h.t} loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover" />
-                <h3 className="mt-5 text-3xl">{h.t}</h3>
-                <p className="mt-2 text-crema/75">{h.d}</p>
+                <h3 className="mt-5 text-3xl text-carbon">{h.t}</h3>
+                <p className="mt-2 text-carbon/75">{h.d}</p>
+
               </article>
             ))}
           </div>
