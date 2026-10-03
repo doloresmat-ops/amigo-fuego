@@ -83,18 +83,24 @@ function Menu() {
         <div className="mx-auto max-w-7xl px-5 md:px-10">
           <h3 id="galeria-asados-title" className="max-w-3xl text-3xl text-carbon md:text-5xl">Del fuego a tu evento: Así se ven nuestras mesas</h3>
         </div>
-        <div className="mt-9 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain scroll-smooth px-5 pb-5 md:gap-6 md:px-[max(2.5rem,calc((100vw-80rem)/2+2.5rem))]" aria-label="Galería de asados">
-          {GALERIA.map((foto) => (
-            <figure key={foto.alt} className="w-[78vw] max-w-[560px] shrink-0 snap-start sm:w-[52vw] lg:w-[38vw]">
-              <img src={foto.img} alt={foto.alt} loading="lazy" className="aspect-[4/3] w-full rounded-md object-cover" />
-            </figure>
-          ))}
+        <div className="mt-9 overflow-hidden" aria-label="Galería de asados">
+          <div className="flex w-max animate-gallery-marquee motion-reduce:animate-none">
+            {[false, true].map((duplicate) => (
+              <div key={String(duplicate)} className="flex w-max shrink-0 gap-4 pr-4 md:gap-6 md:pr-6" aria-hidden={duplicate ? "true" : undefined}>
+                {GALERIA.map((foto) => (
+                  <figure key={foto.alt} className="w-[78vw] max-w-[560px] shrink-0 sm:w-[52vw] lg:w-[38vw]">
+                    <img src={foto.img} alt={duplicate ? "" : foto.alt} loading="lazy" className="aspect-[4/3] w-full rounded-md object-cover" />
+                  </figure>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
-        <p className="mx-auto max-w-7xl px-5 text-sm text-carbon/65 md:px-10">Imágenes ilustrativas.</p>
+        <p className="mx-auto mt-5 max-w-7xl px-5 text-sm text-carbon/65 md:px-10">Imágenes ilustrativas.</p>
       </section>
-      <section className="bg-crema text-carbon">
+      <section className="bg-carbon text-crema">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-          <p className="eyebrow text-oxido">Productos héroe</p>
+          <p className="eyebrow text-tierra">Productos héroe</p>
           <div className="mt-10 grid gap-8 md:grid-cols-2">
             <article className="md:col-span-2">
               <div className="relative overflow-hidden rounded-xl">
@@ -114,19 +120,19 @@ function Menu() {
               <article key={h.t}>
                 <img src={h.img} alt={h.t} loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover" />
                 <h3 className="mt-5 text-3xl">{h.t}</h3>
-                <p className="mt-2 text-carbon/70">{h.d}</p>
+                <p className="mt-2 text-crema/75">{h.d}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
-      <section className="bg-carbon text-crema">
+      <section className="bg-crema text-carbon">
        <Section className="text-center">
-        <p className="eyebrow text-tierra">Precio</p>
+        <p className="eyebrow text-oxido">Precio</p>
         <p className="mt-4 font-display text-5xl md:text-7xl">
-          Paquetes desde <span className="text-tierra">$550 MXN</span>
+          Paquetes desde <span className="text-oxido">$550 MXN</span>
         </p>
-        <p className="mt-3 text-crema/70">por persona</p>
+        <p className="mt-3 text-carbon/70">por persona</p>
          <div className="mt-8"><CtaLink>Cotizar ahora</CtaLink></div>
        </Section>
       </section>
