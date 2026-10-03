@@ -118,7 +118,7 @@ function Menu() {
               </article>
               {[
                 { img: gCalabaza, t: "Calabaza rellena de humita", d: "Asada lentamente en las brasas, cremosa y dulce." },
-                { img: gPizzas, t: "Mini pizzas de masa madre a la parrilla", d: "El ultra éxito de la casa, herencia de la pizzería familiar en Santa Fe." },
+                { img: gPizzas, t: "Mini pizzas de masa madre a la parrilla", d: <>El ultra éxito de la casa, directo desde los hornos de nuestro restaurante hermano,{" "}<a href="https://lunfardopizzeria.com" target="_blank" rel="noopener noreferrer" className="font-medium text-tierra underline decoration-tierra/50 underline-offset-4 transition-colors hover:decoration-tierra">Lunfardo Pizzería</a>.</> },
               ].map((h) => (
                 <article key={h.t} className="group cursor-default">
                    <div className="image-zoom overflow-hidden rounded-xl">

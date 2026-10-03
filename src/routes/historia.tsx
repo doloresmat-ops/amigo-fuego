@@ -41,10 +41,20 @@ function Historia() {
             <h2 className="text-4xl text-carbon md:text-5xl">Gabriel y el Fuego: 25 años de oficio.</h2>
             <p>
               Gabriel es un migrante argentino que lleva 25 años en México. Creció entre hornos y masa,
-              heredando el oficio de la pizzería tradicional de su familia en la provincia de Santa Fe.
+              heredando el oficio de la pizzería tradicional de su familia en Santa Fe. Tras abrir las
+              puertas de{" "}
+              <a
+                href="https://lunfardopizzeria.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-tierra underline decoration-tierra/50 underline-offset-4 transition-colors hover:decoration-tierra"
+              >
+                Lunfardo Pizzería
+              </a>{" "}
+              en la Ciudad de México,
             </p>
             <p>
-              Tras abrir su propio local en Satélite, la nostalgia y la demanda lo llevaron a sacar las
+              la nostalgia y la demanda lo llevaron a sacar las
               brasas de su casa para llevarlas a eventos sociales. Empezó con una parrilla, luego con dos,
               luego con tres, siempre junto a su esposa.
             </p>
