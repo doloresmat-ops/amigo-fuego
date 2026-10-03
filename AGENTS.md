@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Route conversion links through the shared CtaLink and design-system Button so primary actions remain visually consistent across pages.
+- Looping photo marquees use equal duplicated groups and honor reduced-motion preferences so the cycle has no visible jump and stays accessible.
