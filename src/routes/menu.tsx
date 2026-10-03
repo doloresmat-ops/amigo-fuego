@@ -78,9 +78,9 @@ function Menu() {
           </div>
         </div>
       </section>
-      <section className="overflow-hidden bg-carbon py-20 text-crema md:py-28" aria-labelledby="galeria-asados-title">
+      <section className="overflow-hidden bg-crema py-20 text-carbon md:py-28" aria-labelledby="galeria-asados-title">
         <div className="mx-auto max-w-7xl px-5 md:px-10">
-          <h3 id="galeria-asados-title" className="max-w-3xl text-3xl text-crema md:text-5xl">Del fuego a tu evento: Así se ven nuestras mesas</h3>
+          <h3 id="galeria-asados-title" className="max-w-3xl text-3xl text-carbon md:text-5xl">Del fuego a tu evento: Así se ven nuestras mesas</h3>
         </div>
         <div className="mt-9 overflow-hidden" aria-label="Galería de asados">
           <div className="flex w-max animate-gallery-marquee motion-reduce:animate-none">
@@ -95,35 +95,35 @@ function Menu() {
             ))}
           </div>
         </div>
-        <p className="mx-auto mt-5 max-w-7xl px-5 text-sm text-crema/60 md:px-10">Imágenes ilustrativas.</p>
+        <p className="mx-auto mt-5 max-w-7xl px-5 text-sm text-carbon/60 md:px-10">Imágenes ilustrativas.</p>
       </section>
       <section className="bg-crema text-carbon">
-
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-          <p className="eyebrow text-tierra">Productos héroe</p>
-          <div className="mt-10 grid gap-8 md:grid-cols-2">
-            <article className="md:col-span-2">
-              <div className="relative overflow-hidden rounded-xl">
-                <img src={gCorte} alt="Cortes premium al fuego en la parrilla" loading="lazy" className="aspect-[16/9] w-full object-cover md:aspect-[21/9]" />
-                <div className="golden absolute inset-0" />
-                <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
-                  <p className="eyebrow text-fuego">La protagonista</p>
-                  <h3 className="mt-2 text-4xl text-crema md:text-6xl">Cortes Premium al Fuego</h3>
-                  <p className="mt-3 max-w-xl text-lg text-crema/90">Vacío, asado de tira y churrasco Angus cocinados lentamente.</p>
+        <div className="mx-auto max-w-7xl px-5 py-4 md:px-10 md:py-6">
+          <div className="my-10 rounded-2xl bg-carbon p-6 text-crema shadow-[0_24px_60px_rgba(29,25,18,0.25)] sm:p-10 md:my-20 md:p-16">
+            <p className="eyebrow text-tierra">Productos héroe</p>
+            <div className="mt-10 grid gap-8 md:grid-cols-2">
+              <article className="md:col-span-2">
+                <div className="relative overflow-hidden rounded-xl">
+                  <img src={gCorte} alt="Cortes premium al fuego en la parrilla" loading="lazy" className="aspect-[16/9] w-full object-cover md:aspect-[21/9]" />
+                  <div className="golden absolute inset-0" />
+                  <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
+                    <p className="eyebrow text-fuego">La protagonista</p>
+                    <h3 className="mt-2 text-4xl text-crema md:text-6xl">Cortes Premium al Fuego</h3>
+                    <p className="mt-3 max-w-xl text-lg text-crema/90">Vacío, asado de tira y churrasco Angus cocinados lentamente.</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-            {[
-              { img: gCalabaza, t: "Calabaza rellena de humita", d: "Asada lentamente en las brasas, cremosa y dulce." },
-              { img: gPizzas, t: "Mini pizzas de masa madre a la parrilla", d: "El ultra éxito de la casa, herencia de la pizzería familiar en Santa Fe." },
-            ].map((h) => (
-              <article key={h.t}>
-                <img src={h.img} alt={h.t} loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover" />
-                <h3 className="mt-5 text-3xl text-carbon">{h.t}</h3>
-                <p className="mt-2 text-carbon/75">{h.d}</p>
-
               </article>
-            ))}
+              {[
+                { img: gCalabaza, t: "Calabaza rellena de humita", d: "Asada lentamente en las brasas, cremosa y dulce." },
+                { img: gPizzas, t: "Mini pizzas de masa madre a la parrilla", d: "El ultra éxito de la casa, herencia de la pizzería familiar en Santa Fe." },
+              ].map((h) => (
+                <article key={h.t}>
+                  <img src={h.img} alt={h.t} loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover" />
+                  <h3 className="mt-5 text-3xl text-crema">{h.t}</h3>
+                  <p className="mt-2 text-crema/75">{h.d}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
