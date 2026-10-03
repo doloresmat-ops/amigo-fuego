@@ -97,7 +97,7 @@ function Menu() {
         </div>
         <p className="mx-auto mt-5 max-w-7xl px-5 text-sm text-crema/60 md:px-10">Imágenes ilustrativas.</p>
       </section>
-      <section className="border-t border-carbon/15 bg-crema text-carbon">
+      <section className="bg-crema text-carbon">
 
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
           <p className="eyebrow text-tierra">Productos héroe</p>
