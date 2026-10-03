@@ -90,6 +90,7 @@ function Menu() {
             </figure>
           ))}
         </div>
+        <p className="mx-auto max-w-7xl px-5 text-sm text-carbon/65 md:px-10">Imágenes ilustrativas.</p>
       </section>
       <section className="bg-crema text-carbon">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
