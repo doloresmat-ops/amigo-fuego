@@ -53,10 +53,10 @@ function Home() {
         <Section>
           <p className="eyebrow text-tierra">¿Qué estás organizando?</p>
           <h2 className="mt-4 max-w-2xl text-4xl md:text-5xl">Elige tu ocasión</h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+           <div data-stagger className="mt-12 grid gap-6 md:grid-cols-3">
             {BLOQUES.map((b) => (
-              <Link key={b.label} to={b.to} className="group relative isolate block aspect-[4/5] overflow-hidden rounded-xl">
-                <img src={b.img} alt={b.label} loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+               <Link key={b.label} to={b.to} className="image-zoom group relative isolate block aspect-[4/5] overflow-hidden rounded-xl">
+                 <img src={b.img} alt={b.label} loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />
                 <div className="golden absolute inset-0 -z-10" />
                 <div className="flex h-full flex-col justify-end p-6">
                   <h3 className="text-3xl text-crema">{b.label}</h3>

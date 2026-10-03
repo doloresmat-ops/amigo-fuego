@@ -11,6 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import { SiteHeader, SiteFooter, WhatsAppFab } from "../components/amigo/site";
+import { SiteMotion } from "../components/amigo/SiteMotion";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -156,6 +157,7 @@ function RootComponent() {
       <SiteHeader />
       <main>
         <Outlet />
+         <SiteMotion />
       </main>
       <SiteFooter />
       <WhatsAppFab />

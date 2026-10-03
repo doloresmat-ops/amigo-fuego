@@ -79,11 +79,11 @@ function EventosEmpresas() {
       <section className="bg-carbon text-crema">
         <Section>
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-            <img
+             <div className="image-zoom overflow-hidden rounded-lg"><img
               src={gEquipo}
               alt="El equipo de Amigo Fuego cocinando frente a los invitados"
-              className="aspect-[4/3] w-full rounded-lg object-cover"
-            />
+               className="aspect-[4/3] w-full object-cover"
+             /></div>
             <div>
               <p className="eyebrow text-tierra">¿Por qué Amigo Fuego para tu empresa?</p>
               <h2 className="mt-4 text-4xl md:text-5xl">
@@ -110,7 +110,7 @@ function EventosEmpresas() {
           <h2 className="mt-4 max-w-3xl text-4xl md:text-5xl">
             Para cuando la mesa también cierra tratos
           </h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+           <div data-stagger className="mt-12 grid gap-6 sm:grid-cols-2">
             {OCASIONES.map((o, i) => (
               <article
                 key={o.t}
@@ -139,19 +139,19 @@ function EventosEmpresas() {
               <h2 className="mt-4 text-4xl md:text-5xl">
                 Desde juntas íntimas de 10 personas hasta eventos masivos
               </h2>
-              <img
+               <div className="image-zoom mt-8 overflow-hidden rounded-lg md:hidden"><img
                 src={gParrilla}
                 alt="Parrilla encendida en vivo durante un evento"
-                className="mt-8 aspect-[4/3] w-full rounded-lg object-cover md:hidden"
-              />
+                 className="aspect-[4/3] w-full object-cover"
+               /></div>
             </div>
-            <img
+             <div className="image-zoom hidden overflow-hidden rounded-lg md:block"><img
               src={gParrilla}
               alt="Parrilla encendida en vivo durante un evento"
-              className="hidden aspect-[4/3] w-full rounded-lg object-cover md:block"
-            />
+               className="aspect-[4/3] w-full object-cover"
+             /></div>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+           <div data-stagger className="mt-12 grid gap-6 md:grid-cols-3">
             {FORMATOS.map((f) => (
               <div key={f.t} className="rounded-lg bg-crema p-8 text-carbon">
                 <p className="font-display text-5xl text-oxido">{f.n}</p>
