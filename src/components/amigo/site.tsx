@@ -41,8 +41,8 @@ export function SiteHeader() {
               key={n.to}
               to={n.to}
               activeOptions={{ exact: true }}
-              className="text-sm text-crema/75 transition-colors hover:text-crema"
-              activeProps={{ className: "text-sm text-tierra" }}
+              className="text-base text-crema/75 transition-colors hover:text-crema"
+              activeProps={{ className: "text-base text-tierra" }}
             >
               {n.label}
             </Link>
