@@ -48,7 +48,7 @@ function Menu() {
       >
         <CtaLink>Cotizar mi menú</CtaLink>
       </PageHero>
-      <section className="bg-crema text-carbon">
+      <section id="ritual" className="bg-crema text-carbon">
        <Section>
         <p className="eyebrow text-oxido">Los 5 pasos del ritual</p>
         <h2 className="mt-4 max-w-2xl text-3xl text-carbon md:text-5xl">Cinco pasos, un solo fuego</h2>
@@ -100,15 +100,18 @@ function Menu() {
       <section className="bg-crema text-carbon">
         <div className="mx-auto max-w-7xl px-5 py-4 md:px-10 md:py-6">
           <div className="my-10 rounded-2xl bg-carbon p-6 text-crema shadow-[0_24px_60px_rgba(29,25,18,0.25)] sm:p-10 md:my-20 md:p-16">
-            <p className="eyebrow text-tierra">Productos héroe</p>
+            <p className="eyebrow text-tierra">Los estelares de nuestra parrilla</p>
+            <h3 className="mt-4 max-w-3xl text-2xl text-crema md:text-3xl">
+              Una pequeña muestra de la abundancia que llevamos a tu mesa. Conoce nuestras opciones de entradas, cortes y guarniciones al fuego.
+            </h3>
             <div className="mt-10 grid gap-8 md:grid-cols-2">
-              <article className="md:col-span-2">
+              <article className="group md:col-span-2">
                 <div className="relative overflow-hidden rounded-xl">
-                  <img src={gCorte} alt="Cortes premium al fuego en la parrilla" loading="lazy" className="aspect-[16/9] w-full object-cover md:aspect-[21/9]" />
+                  <img src={gCorte} alt="Cortes premium al fuego en la parrilla" loading="lazy" className="aspect-[16/9] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 md:aspect-[21/9]" />
                   <div className="golden absolute inset-0" />
                   <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
                     <p className="eyebrow text-fuego">La protagonista</p>
-                    <h3 className="mt-2 text-4xl text-crema md:text-6xl">Cortes Premium al Fuego</h3>
+                    <h3 className="mt-2 text-4xl text-crema transition-colors duration-300 group-hover:text-fuego md:text-6xl">Cortes Premium al Fuego</h3>
                     <p className="mt-3 max-w-xl text-lg text-crema/90">Vacío, asado de tira y churrasco Angus cocinados lentamente.</p>
                   </div>
                 </div>
@@ -117,12 +120,19 @@ function Menu() {
                 { img: gCalabaza, t: "Calabaza rellena de humita", d: "Asada lentamente en las brasas, cremosa y dulce." },
                 { img: gPizzas, t: "Mini pizzas de masa madre a la parrilla", d: "El ultra éxito de la casa, herencia de la pizzería familiar en Santa Fe." },
               ].map((h) => (
-                <article key={h.t}>
-                  <img src={h.img} alt={h.t} loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover" />
-                  <h3 className="mt-5 text-3xl text-crema">{h.t}</h3>
+                <article key={h.t} className="group cursor-default">
+                  <div className="overflow-hidden rounded-xl">
+                    <img src={h.img} alt={h.t} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" />
+                  </div>
+                  <h3 className="mt-5 text-3xl text-crema transition-colors duration-300 group-hover:text-fuego">{h.t}</h3>
                   <p className="mt-2 text-crema/75">{h.d}</p>
                 </article>
               ))}
+            </div>
+            <div className="mt-12 text-center">
+              <a href="#ritual" className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-fuego px-8 py-4 text-base font-bold text-fuego transition-colors duration-300 hover:bg-fuego hover:text-blanco sm:px-10 sm:text-lg">
+                Ver todas las opciones del menú
+              </a>
             </div>
           </div>
         </div>
