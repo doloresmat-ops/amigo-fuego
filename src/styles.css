@@ -136,6 +136,44 @@
   animation: soft-pulse 2.4s ease-out infinite;
 }
 
+/* Scroll motion is added only after hydration; semantic content remains readable without JS. */
+.site-reveal {
+  opacity: 0;
+  translate: 0 18px;
+  transition: opacity 0.72s ease-out, translate 0.72s ease-out;
+}
+.site-reveal.is-revealed {
+  opacity: 1;
+  translate: 0 0;
+}
+[data-stagger] > :nth-child(2) { transition-delay: 150ms; }
+[data-stagger] > :nth-child(3) { transition-delay: 300ms; }
+[data-stagger] > :nth-child(4) { transition-delay: 450ms; }
+[data-stagger] > :nth-child(5) { transition-delay: 600ms; }
+[data-stagger] > :nth-child(6) { transition-delay: 750ms; }
+
+.hero-parallax-image {
+  height: calc(100% + 22%) !important;
+  transform: translate3d(0, calc(var(--hero-shift, 0px) - 11%), 0);
+  will-change: transform;
+}
+
+/* Scale is independent of the reveal translate and never changes image layout. */
+main img:not([data-hero-image]) {
+  transition: scale 0.5s ease, opacity 0.72s ease-out, translate 0.72s ease-out;
+}
+main img:not([data-hero-image]):hover,
+main .image-zoom:hover img:not([data-hero-image]) {
+  scale: 1.03;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-reveal { opacity: 1; translate: none; transition: none; }
+  .hero-parallax-image { height: 100% !important; transform: none; will-change: auto; }
+  main img:not([data-hero-image]), main img:not([data-hero-image]):hover,
+  main .image-zoom:hover img:not([data-hero-image]) { scale: 1; transition: none; }
+}
+
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
