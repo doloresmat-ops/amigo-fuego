@@ -2,15 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { CtaLink, PageHero, Section, TrustStrip, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
-import { TablaCard, type Tabla } from "@/components/amigo/TablaCard";
+import { TablaCard } from "@/components/amigo/TablaCard";
+import { TABLAS } from "@/components/amigo/tablas";
 import hero from "@/assets/hero-parrilla-noche.jpg";
 import ritual from "@/assets/ritual-banner.jpg";
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
 import gJardin from "@/assets/galeria-jardin.jpg";
 import gEquipo from "@/assets/galeria-equipo.jpg";
-import tQuesos from "@/assets/tabla-quesos.jpg";
-import tEmbutidos from "@/assets/tabla-embutidos.jpg";
-import tCasa from "@/assets/tabla-casa.jpg";
 
 export const Route = createFileRoute("/")({
   head: () =>
@@ -28,26 +26,6 @@ const BLOQUES = [
   { to: "/bodas", img: gJardin, label: "Eventos Sociales", text: "Bodas, tornabodas, cumpleaños y celebraciones de vida alrededor del fuego." },
 ] as const;
 
-const TABLAS: readonly Tabla[] = [
-  {
-    nombre: "Tabla de Quesos",
-    descripcion: "Quesos curados y untuosos con uvas, nueces, miel y pan de masa madre recién cortado.",
-    precio: "Consultar",
-    img: tQuesos,
-  },
-  {
-    nombre: "Tabla de Embutidos",
-    descripcion: "Jamones, salames y fiambres cortados al momento, con pepinillos, mostaza, higos y aceitunas.",
-    precio: "Consultar",
-    img: tEmbutidos,
-  },
-  {
-    nombre: "Tabla de la Casa",
-    descripcion: "Embutidos y quesos juntos en una sola mesa: almendras, membrillo, grissinis y uvas para compartir.",
-    precio: "Consultar",
-    img: tCasa,
-  },
-];
 
 function Home() {
   return (
@@ -103,9 +81,12 @@ function Home() {
             quesos y lo esencial para armar el momento.
           </p>
           <div data-stagger className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {TABLAS.map((tabla) => (
+            {TABLAS.slice(0, 3).map((tabla) => (
               <TablaCard key={tabla.nombre} tabla={tabla} />
             ))}
+          </div>
+          <div className="mt-10 flex justify-center">
+            <CtaLink to="/tablas" secondary>Ver todas las tablas</CtaLink>
           </div>
         </Section>
       </section>

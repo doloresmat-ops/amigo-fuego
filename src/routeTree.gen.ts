@@ -15,6 +15,7 @@ import { Route as BodasRouteImport } from './routes/bodas'
 import { Route as EventosEmpresasRouteImport } from './routes/eventos-empresas'
 import { Route as HistoriaRouteImport } from './routes/historia'
 import { Route as MenuRouteImport } from './routes/menu'
+import { Route as TablasRouteImport } from './routes/tablas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const MenuRoute = MenuRouteImport.update({
   path: '/menu',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TablasRoute = TablasRouteImport.update({
+  id: '/tablas',
+  path: '/tablas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/eventos-empresas': typeof EventosEmpresasRoute
   '/historia': typeof HistoriaRoute
   '/menu': typeof MenuRoute
+  '/tablas': typeof TablasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/eventos-empresas': typeof EventosEmpresasRoute
   '/historia': typeof HistoriaRoute
   '/menu': typeof MenuRoute
+  '/tablas': typeof TablasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +79,7 @@ export interface FileRoutesById {
   '/eventos-empresas': typeof EventosEmpresasRoute
   '/historia': typeof HistoriaRoute
   '/menu': typeof MenuRoute
+  '/tablas': typeof TablasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +90,7 @@ export interface FileRouteTypes {
     | '/eventos-empresas'
     | '/historia'
     | '/menu'
+    | '/tablas'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/eventos-empresas'
     | '/historia'
     | '/menu'
+    | '/tablas'
   id:
     | '__root__'
     | '/'
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
     | '/eventos-empresas'
     | '/historia'
     | '/menu'
+    | '/tablas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +118,7 @@ export interface RootRouteChildren {
   EventosEmpresasRoute: typeof EventosEmpresasRoute
   HistoriaRoute: typeof HistoriaRoute
   MenuRoute: typeof MenuRoute
+  TablasRoute: typeof TablasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MenuRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tablas': {
+      id: '/tablas'
+      path: '/tablas'
+      fullPath: '/tablas'
+      preLoaderRoute: typeof TablasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   EventosEmpresasRoute: EventosEmpresasRoute,
   HistoriaRoute: HistoriaRoute,
   MenuRoute: MenuRoute,
+  TablasRoute: TablasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
