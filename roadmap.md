@@ -14,3 +14,5 @@
 - [x] Diferenciar botones de cotización y menú juntos; aplicar acentos ocre, oliva y azul y microinteracción al botón principal.
 - [x] Animar la aparición de contenido, las portadas, las tarjetas en cascada y el zoom sutil de fotografías en las cinco páginas.
 - [ ] Sustituir las imágenes ilustrativas de la galería por fotografías reales (pendiente de recibirlas).
+- [x] Añadir la sección "Tablas Amigo Fuego" al Inicio con tres tablas y pedido por WhatsApp.
+- [ ] Recibir los precios reales de las tablas (hoy dicen "Consultar") y sus fotografías.
