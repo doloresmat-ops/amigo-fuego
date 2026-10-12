@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, TrustStrip, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 import { TablaCard } from "@/components/amigo/TablaCard";
-import { TABLAS } from "@/components/amigo/tablas";
+import { TABLA } from "@/components/amigo/tablas";
 import hero from "@/assets/hero-parrilla-noche.jpg";
 import ritual from "@/assets/ritual-banner.jpg";
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
@@ -77,16 +77,10 @@ function Home() {
           <p className="eyebrow text-tierra">Para llevar</p>
           <h2 className="mt-4 max-w-2xl text-4xl md:text-5xl">Tablas Amigo Fuego</h2>
           <p className="mt-5 max-w-2xl text-lg text-crema/80">
-            Cuando no hay evento pero sí ganas de mesa compartida. Tablas listas con embutidos,
-            quesos y lo esencial para armar el momento.
+            {TABLA.apoyo}
           </p>
-          <div data-stagger className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {TABLAS.slice(0, 3).map((tabla) => (
-              <TablaCard key={tabla.nombre} tabla={tabla} />
-            ))}
-          </div>
-          <div className="mt-10 flex justify-center">
-            <CtaLink to="/tablas" secondary>Ver todas las tablas</CtaLink>
+          <div className="mt-12">
+            <TablaCard />
           </div>
         </Section>
       </section>

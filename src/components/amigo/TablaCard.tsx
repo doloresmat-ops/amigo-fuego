@@ -1,40 +1,27 @@
-import { Button } from "@/components/ui/button";
-import { waLink } from "./site";
+import { CtaLink } from "./site";
+import { TABLA } from "./tablas";
 
-export type Tabla = {
-  nombre: string;
-  descripcion: string;
-  precio: string;
-  img: string;
-};
-
-/** Tarjeta de una tabla para llevar: foto, nombre, descripción, precio y pedido por WhatsApp. */
-export function TablaCard({ tabla }: { tabla: Tabla }) {
-  const mensaje = `Hola Amigo Fuego, quiero pedir la ${tabla.nombre}. ¿Me pueden confirmar disponibilidad y detalles?`;
-
+export function TablaCard() {
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl bg-crema text-carbon shadow-xl">
-      <div className="image-zoom relative aspect-[4/5] overflow-hidden">
+    <article className="grid overflow-hidden rounded-lg bg-crema text-carbon shadow-xl md:grid-cols-2">
+      <div className="image-zoom relative aspect-[4/3] overflow-hidden md:aspect-auto">
         <img
-          src={tabla.img}
-          alt={tabla.nombre}
+          src={TABLA.img}
+          alt="Tabla de picada con embutidos, quesos y acompañamientos"
           loading="lazy"
           width={800}
           height={1008}
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-2xl">{tabla.nombre}</h3>
-        <p className="mt-3 text-carbon/75">{tabla.descripcion}</p>
-        <p className="eyebrow mt-5 text-tierra">{tabla.precio}</p>
-        <div className="mt-6 md:mt-auto md:pt-6">
-          <Button asChild variant="conversion" className="w-full min-h-11 px-6 py-3 text-base sm:px-6 sm:py-3 sm:text-base">
-            <a href={waLink(mensaje)} target="_blank" rel="noreferrer">
-              Pedir por WhatsApp
-            </a>
-          </Button>
+      <div className="flex flex-col justify-center p-6 sm:p-10 md:p-12">
+        <h3 className="text-3xl">{TABLA.nombre}</h3>
+        <p className="mt-4 text-lg text-carbon/75">{TABLA.descripcion}</p>
+        <p className="mt-4 text-carbon/75">Una misma selección, en cuatro tamaños para compartir.</p>
+        <div className="mt-8">
+          <CtaLink to="/tablas">Ver tamaños y pedir</CtaLink>
         </div>
+        <p className="mt-5 text-sm text-carbon/60">Imagen ilustrativa.</p>
       </div>
     </article>
   );
