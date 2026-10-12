@@ -25,7 +25,7 @@ function TablasPage() {
         title="Tablas Amigo Fuego"
         subtitle={TABLA.apoyo}
         image={tHero}
-        overlay
+        overlay="fuerte"
       >
         <p className="max-w-2xl text-crema/85">Una sola tabla, con los mismos ingredientes en todos los tamaños. Solo cambia la cantidad.</p>
       </PageHero>
