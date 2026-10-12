@@ -2,11 +2,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { CtaLink, PageHero, Section, TrustStrip, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
+import { TablaCard, type Tabla } from "@/components/amigo/TablaCard";
 import hero from "@/assets/hero-parrilla-noche.jpg";
 import ritual from "@/assets/ritual-banner.jpg";
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
 import gJardin from "@/assets/galeria-jardin.jpg";
 import gEquipo from "@/assets/galeria-equipo.jpg";
+import tQuesos from "@/assets/tabla-quesos.jpg";
+import tEmbutidos from "@/assets/tabla-embutidos.jpg";
+import tCasa from "@/assets/tabla-casa.jpg";
 
 export const Route = createFileRoute("/")({
   head: () =>
@@ -23,6 +27,27 @@ const BLOQUES = [
   { to: "/eventos-empresas", img: gEquipo, label: "Producciones y Cines", text: "Catering premium para cierres de rodaje, directores e invitados internacionales." },
   { to: "/bodas", img: gJardin, label: "Eventos Sociales", text: "Bodas, tornabodas, cumpleaños y celebraciones de vida alrededor del fuego." },
 ] as const;
+
+const TABLAS: readonly Tabla[] = [
+  {
+    nombre: "Tabla de Quesos",
+    descripcion: "Quesos curados y untuosos con uvas, nueces, miel y pan de masa madre recién cortado.",
+    precio: "Consultar",
+    img: tQuesos,
+  },
+  {
+    nombre: "Tabla de Embutidos",
+    descripcion: "Jamones, salames y fiambres cortados al momento, con pepinillos, mostaza, higos y aceitunas.",
+    precio: "Consultar",
+    img: tEmbutidos,
+  },
+  {
+    nombre: "Tabla de la Casa",
+    descripcion: "Embutidos y quesos juntos en una sola mesa: almendras, membrillo, grissinis y uvas para compartir.",
+    precio: "Consultar",
+    img: tCasa,
+  },
+];
 
 function Home() {
   return (
@@ -65,6 +90,21 @@ function Home() {
                   <span className="mt-4 text-sm font-semibold text-crema">Ver más →</span>
                 </div>
               </Link>
+            ))}
+          </div>
+        </Section>
+      </section>
+      <section className="bg-carbon text-crema">
+        <Section>
+          <p className="eyebrow text-tierra">Para llevar</p>
+          <h2 className="mt-4 max-w-2xl text-4xl md:text-5xl">Tablas Amigo Fuego</h2>
+          <p className="mt-5 max-w-2xl text-lg text-crema/80">
+            Cuando no hay evento pero sí ganas de mesa compartida. Tablas listas con embutidos,
+            quesos y lo esencial para armar el momento.
+          </p>
+          <div data-stagger className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+            {TABLAS.map((tabla) => (
+              <TablaCard key={tabla.nombre} tabla={tabla} />
             ))}
           </div>
         </Section>
