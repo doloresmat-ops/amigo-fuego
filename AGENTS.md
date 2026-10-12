@@ -13,3 +13,4 @@
 - Use CtaLink's secondary variant only for a menu action paired with a primary quote action, so adjacent calls to action keep a clear hierarchy.
 - Looping photo marquees use equal duplicated groups and honor reduced-motion preferences so the cycle has no visible jump and stays accessible.
 - Keep site-wide scroll reveals and hero parallax in one progressive-enhancement controller, with reduced-motion fallbacks and no hidden server-rendered content.
+- Keep the board presentation, size options, and ingredient groups in one shared catalog consumed by Home and /tablas to prevent inconsistent product information.

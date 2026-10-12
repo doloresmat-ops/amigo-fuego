@@ -219,6 +219,7 @@ export function TrustStrip() {
 }
 
 export function pageHead(path: string, title: string, description: string, crumb?: string) {
+  const url = new URL(path, "https://pixel-perfect-render-34682.lovable.app").href;
   return {
     scripts: crumb
       ? [{
@@ -239,9 +240,9 @@ export function pageHead(path: string, title: string, description: string, crumb
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: path },
+       { property: "og:url", content: url },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: path }],
+    links: [{ rel: "canonical", href: url }],
   };
 }
