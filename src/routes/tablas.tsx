@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
-import { QuoteForm } from "@/components/amigo/QuoteForm";
 import { TABLA, TAMANOS, INGREDIENTES } from "@/components/amigo/tablas";
 import tHero from "@/assets/tabla-hero.jpg";
 
