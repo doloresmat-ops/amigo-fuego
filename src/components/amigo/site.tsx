@@ -5,6 +5,11 @@ import { Button } from "@/components/ui/button";
 
 export const WA = "https://wa.me/520000000000"; // placeholder: número real pendiente
 
+/** Enlace de WhatsApp con el mensaje ya escrito para el cliente. */
+export function waLink(mensaje: string) {
+  return `${WA}?text=${encodeURIComponent(mensaje)}`;
+}
+
 export const NAV = [
   { to: "/", label: "Inicio" },
   { to: "/eventos-empresas", label: "Eventos para Empresas" },
