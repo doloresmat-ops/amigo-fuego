@@ -17,3 +17,4 @@
 - [x] Añadir la sección "Tablas Amigo Fuego" al Inicio con tres tablas y pedido por WhatsApp.
 - [ ] Recibir la fotografía real de la tabla (pendiente del usuario).
 - [x] Actualizar Inicio y /tablas a una sola tabla con cuatro tamaños, precios e ingredientes confirmados; verificar los enlaces y mensajes de pedido (número real de WhatsApp pendiente).
+- [x] Quitar el formulario de /tablas y dejar en su lugar un banner de CTA con botón de cotización.
