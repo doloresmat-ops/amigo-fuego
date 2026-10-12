@@ -1,9 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
-import { Section, pageHead, waLink } from "@/components/amigo/site";
+import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 import { TABLA, TAMANOS, INGREDIENTES } from "@/components/amigo/tablas";
+import tHero from "@/assets/tabla-hero.jpg";
 
 export const Route = createFileRoute("/tablas")({
   head: () =>
@@ -18,20 +19,16 @@ export const Route = createFileRoute("/tablas")({
 function TablasPage() {
   return (
     <>
-      <section className="bg-carbon text-crema">
-        <div className="mx-auto max-w-7xl px-5 pb-16 pt-10 md:px-10 md:pb-20">
-          <nav aria-label="Migas de pan" className="text-sm text-crema/70">
-            <Link to="/" className="hover:text-cielo">Inicio</Link> <span aria-hidden>›</span>{" "}
-            <span className="text-crema">Tablas</span>
-          </nav>
-          <p className="eyebrow mt-10 text-tierra">Para llevar</p>
-          <h1 className="mt-4 max-w-3xl text-5xl md:text-6xl">Tablas Amigo Fuego</h1>
-          <p className="mt-5 max-w-2xl text-lg text-crema/80">
-            {TABLA.apoyo}
-          </p>
-          <p className="mt-5 max-w-2xl text-crema/80">Una sola tabla, con los mismos ingredientes en todos los tamaños. Solo cambia la cantidad.</p>
-        </div>
-      </section>
+      <PageHero
+        crumb="Tablas"
+        eyebrow="Para llevar"
+        title="Tablas Amigo Fuego"
+        subtitle={TABLA.apoyo}
+        image={tHero}
+        overlay
+      >
+        <p className="max-w-2xl text-crema/85">Una sola tabla, con los mismos ingredientes en todos los tamaños. Solo cambia la cantidad.</p>
+      </PageHero>
       <section className="bg-crema text-carbon">
         <Section>
           <p className="eyebrow text-tierra">A tu medida</p>
