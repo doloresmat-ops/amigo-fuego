@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
-import { QuoteForm } from "@/components/amigo/QuoteForm";
 import { TABLA, TAMANOS, INGREDIENTES } from "@/components/amigo/tablas";
 import tHero from "@/assets/tabla-hero.jpg";
 
@@ -77,7 +76,23 @@ function TablasPage() {
           </div>
         </Section>
       </section>
-      <QuoteForm />
+      <section id="cotizar" className="bg-crema text-carbon">
+        <Section className="py-16 md:py-20">
+          <aside className="flex flex-col gap-8 rounded-2xl bg-carbon p-8 text-crema shadow-xl md:flex-row md:items-center md:justify-between md:p-12">
+            <div className="max-w-2xl">
+              <p className="eyebrow text-tierra">Siguiente paso</p>
+              <h2 className="mt-4 text-3xl md:text-4xl">¿Algo más grande que una tabla?</h2>
+              <p className="mt-4 text-crema/80">
+                Cuéntanos la fecha, cuántas personas serán y para qué ocasión. Te enviamos una propuesta a la medida,
+                con la cantidad justa y los detalles de entrega.
+              </p>
+            </div>
+            <Button asChild variant="conversion" size="conversion" className="shrink-0 whitespace-normal">
+              <a href={waLink("Hola Amigo Fuego, quiero cotizar una Tabla de Picada para mi evento. ¿Me ayudan con cantidades, disponibilidad y entrega?")} target="_blank" rel="noopener noreferrer">Cotizar mi tabla</a>
+            </Button>
+          </aside>
+        </Section>
+      </section>
     </>
   );
 }
