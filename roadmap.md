@@ -16,4 +16,4 @@
 - [ ] Sustituir las imágenes ilustrativas de la galería por fotografías reales (pendiente de recibirlas).
 - [x] Añadir la sección "Tablas Amigo Fuego" al Inicio con tres tablas y pedido por WhatsApp.
 - [ ] Recibir la fotografía real de la tabla (pendiente del usuario).
-- [ ] Actualizar Inicio y /tablas a una sola tabla con cuatro tamaños, precios e ingredientes confirmados; verificar los pedidos.
+- [x] Actualizar Inicio y /tablas a una sola tabla con cuatro tamaños, precios e ingredientes confirmados; verificar los enlaces y mensajes de pedido (número real de WhatsApp pendiente).

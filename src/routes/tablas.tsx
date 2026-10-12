@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
+import { QuoteForm } from "@/components/amigo/QuoteForm";
 import { TABLA, TAMANOS, INGREDIENTES } from "@/components/amigo/tablas";
 
 export const Route = createFileRoute("/tablas")({
@@ -79,6 +80,7 @@ function TablasPage() {
           </div>
         </Section>
       </section>
+      <QuoteForm />
     </>
   );
 }
