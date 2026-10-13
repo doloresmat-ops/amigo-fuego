@@ -23,3 +23,9 @@ export const INGREDIENTES = [
 
 /** Aviso de tiempo de preparación: se muestra en /tablas. */
 export const NOTA_ANTICIPACION = "Nota: Las tablas se piden con un día de anticipación";
+
+/** Nota de venta cruzada de bebidas: se muestra bajo los precios en /tablas. */
+export const NOTA_MARIDAJE = {
+  inicio: "El maridaje perfecto:",
+  cuerpo: "Pregunta por nuestra selección de vinos, fernet y cerveza Hércules al enviar tu mensaje.",
+};

@@ -26,3 +26,4 @@
 - [ ] Recibir las fotografías reales de las tablas acompañadas de vinos, fernet, vermut y cerveza Hércules (pendiente del usuario).
 - [x] Reordenar /tablas: portada cinematográfica centrada, ingredientes crema, precios carbón con tarjetas claras y fotos de bebidas crema.
 - [x] Quitar de /tablas el banner final "¿Algo más grande que una tabla?" y mover el ancla de cotización al banner de parrilla.
+- [x] Añadir la nota de maridaje (vinos, fernet y cerveza Hércules) centrada bajo las cuatro tarjetas de precios de /tablas.
