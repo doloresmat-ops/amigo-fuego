@@ -25,4 +25,7 @@ export const INGREDIENTES = [
 export const NOTA_ANTICIPACION = "Nota: Las tablas se piden con un día de anticipación";
 
 /** Nota de venta cruzada de bebidas: se muestra bajo los precios en /tablas. */
-export const NOTA_MARIDAJE = "El maridaje perfecto: Pregunta por nuestra selección de vinos, fernet y cerveza Hércules al enviar tu mensaje.";
+export const NOTA_MARIDAJE = {
+  inicio: "El maridaje perfecto:",
+  cuerpo: "Pregunta por nuestra selección de vinos, fernet y cerveza Hércules al enviar tu mensaje.",
+};

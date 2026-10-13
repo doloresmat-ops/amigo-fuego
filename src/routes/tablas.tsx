@@ -80,8 +80,8 @@ function TablasPage() {
           </div>
           <p className="mx-auto mt-16 max-w-3xl text-center text-base leading-relaxed text-crema/80">
             <span aria-hidden="true">🍷 </span>
-            <span className="font-bold text-tierra">El maridaje perfecto:</span>
-            {" "}Pregunta por nuestra selección de vinos, fernet y cerveza Hércules al enviar tu mensaje.
+            <span className="font-bold text-tierra">{NOTA_MARIDAJE.inicio}</span>
+            {" "}{NOTA_MARIDAJE.cuerpo}
           </p>
         </Section>
       </section>
