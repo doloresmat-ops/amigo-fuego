@@ -24,3 +24,4 @@
 - [ ] Enlazar los PDF de «Ver menú» (pendiente del usuario).
 - [x] Añadir cintillo de anuncio global a /tablas sobre el encabezado, con la nota de pedido con un día de anticipación y los espacios etiquetados para las fotos de tablas acompañadas.
 - [ ] Recibir las fotografías reales de las tablas acompañadas de vinos, fernet, vermut y cerveza Hércules (pendiente del usuario).
+- [x] Reordenar /tablas: portada cinematográfica centrada, ingredientes crema, precios carbón con tarjetas claras y fotos de bebidas crema.
