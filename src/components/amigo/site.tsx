@@ -1,5 +1,5 @@
-import { Link } from "@tanstack/react-router";
-import { useState, type ReactNode } from "react";
+import { Link, useLocation } from "@tanstack/react-router";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 
 export const WA = "https://wa.me/520000000000"; // placeholder: número real pendiente
@@ -16,6 +16,27 @@ export const NAV = [
   { to: "/menu", label: "Menú" },
   { to: "/historia", label: "Historia" },
 ] as const;
+
+export type TablasMenuItem =
+  | { label: string; text: string; to: "/tablas" }
+  | { label: string; text: string; href: string };
+
+/** Desplegable "Tablas" del menú principal. */
+export const TABLAS_MENU: { label: string; items: TablasMenuItem[] } = {
+  label: "Tablas",
+  items: [
+    {
+      label: "Tablas de Picada para llevar",
+      text: "Cuatro tamaños, los mismos ingredientes. De $750 a $1,500 MXN.",
+      to: "/tablas",
+    },
+    {
+      label: "Pedir por WhatsApp",
+      text: "Escríbenos y confirmamos disponibilidad y entrega.",
+      href: waLink("Hola Amigo Fuego, quiero pedir una Tabla de Picada. ¿Me pueden confirmar disponibilidad y detalles?"),
+    },
+  ],
+};
 
 export function CtaLink({
   children,
