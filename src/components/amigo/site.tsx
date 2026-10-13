@@ -13,28 +13,20 @@ export const NAV = [
   { to: "/", label: "Inicio" },
   { to: "/eventos-empresas", label: "Eventos para Empresas" },
   { to: "/bodas", label: "Eventos Sociales" },
-  { to: "/menu", label: "Menú" },
   { to: "/historia", label: "Historia" },
 ] as const;
 
-export type TablasMenuItem =
-  | { label: string; text: string; to: "/tablas" }
-  | { label: string; text: string; href: string };
+export type MenuDropItem = { label: string; text: string; to: "/menu" | "/tablas"; hash?: string };
 
-/** Desplegable "Tablas" del menú principal. */
-export const TABLAS_MENU: { label: string; items: TablasMenuItem[] } = {
-  label: "Tablas",
+/** Desplegable "Menú" del menú principal: 4 servicios (anclas en /menu) + Tablas. */
+export const MENU_DROPDOWN: { label: string; items: MenuDropItem[] } = {
+  label: "Menú",
   items: [
-    {
-      label: "Tablas de Picada para llevar",
-      text: "Cuatro tamaños, los mismos ingredientes. De $750 a $1,500 MXN.",
-      to: "/tablas",
-    },
-    {
-      label: "Pedir por WhatsApp",
-      text: "Escríbenos y confirmamos disponibilidad y entrega.",
-      href: waLink("Hola Amigo Fuego, quiero pedir una Tabla de Picada. ¿Me pueden confirmar disponibilidad y detalles?"),
-    },
+    { label: "Parrilla Argentina", text: "El ritual del asado, al centro de la mesa.", to: "/menu", hash: "parrilla" },
+    { label: "Barra de Pizzas", text: "Masa madre a la parrilla, ensalada y pastas.", to: "/menu", hash: "pizza" },
+    { label: "Barra de Bebidas", text: "Vermut, fernet, Malbec y más.", to: "/menu", hash: "bebidas" },
+    { label: "Choripaneada", text: "Choripanes al momento para tu fiesta.", to: "/menu", hash: "choripaneada" },
+    { label: "Tablas de Picada", text: "Para llevar. Cuatro tamaños, de $750 a $1,500 MXN.", to: "/tablas" },
   ],
 };
 
@@ -67,7 +59,7 @@ function Chevron({ open, className = "h-3.5 w-3.5" }: { open: boolean; className
   );
 }
 
-/** Desplegable del menú principal con las Tablas. */
+/** Desplegable "Menú" del menú principal. */
 function NavDropdown({
   open,
   setOpen,
@@ -116,35 +108,23 @@ function NavDropdown({
         aria-haspopup="true"
         className={`flex items-center gap-1.5 text-base transition-colors hover:text-crema ${active ? "text-tierra" : "text-crema/75"}`}
       >
-        {TABLAS_MENU.label}
+        {MENU_DROPDOWN.label}
         <Chevron open={open} />
       </button>
       {open && (
         <div className="absolute left-1/2 top-full z-50 w-80 -translate-x-1/2 pt-4">
           <ul className="animate-nav-drop rounded-xl border border-crema/15 bg-carbon p-2 shadow-2xl">
-            {TABLAS_MENU.items.map((it) => (
+            {MENU_DROPDOWN.items.map((it) => (
               <li key={it.label}>
-                {"to" in it ? (
-                  <Link
-                    to={it.to}
-                    onClick={() => setOpen(false)}
-                    className="group block rounded-lg px-4 py-3 transition-colors hover:bg-crema/5"
-                  >
-                    <span className="block font-display text-lg text-crema transition-colors group-hover:text-tierra">{it.label}</span>
-                    <span className="mt-1 block text-sm leading-snug text-crema/60">{it.text}</span>
-                  </Link>
-                ) : (
-                  <a
-                    href={it.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={() => setOpen(false)}
-                    className="group block rounded-lg px-4 py-3 transition-colors hover:bg-crema/5"
-                  >
-                    <span className="block font-display text-lg text-crema transition-colors group-hover:text-tierra">{it.label}</span>
-                    <span className="mt-1 block text-sm leading-snug text-crema/60">{it.text}</span>
-                  </a>
-                )}
+                <Link
+                  to={it.to}
+                  hash={it.hash}
+                  onClick={() => setOpen(false)}
+                  className="group block rounded-lg px-4 py-3 transition-colors hover:bg-crema/5"
+                >
+                  <span className="block font-display text-lg text-crema transition-colors group-hover:text-tierra">{it.label}</span>
+                  <span className="mt-1 block text-sm leading-snug text-crema/60">{it.text}</span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -158,7 +138,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);
   const pathname = useLocation({ select: (l) => l.pathname });
-  const tablasActive = pathname === "/tablas";
+  const tablasActive = pathname === "/tablas" || pathname === "/menu";
 
   useEffect(() => {
     setOpen(false);
@@ -182,7 +162,7 @@ export function SiteHeader() {
 
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
-          {NAV.map((n) => (
+          {NAV.slice(0, 3).map((n) => (
             <Link
               key={n.to}
               to={n.to}
@@ -194,6 +174,16 @@ export function SiteHeader() {
             </Link>
           ))}
           <NavDropdown open={dropOpen} setOpen={setDropOpen} active={tablasActive} />
+          {NAV.slice(3).map((n) => (
+            <Link
+              key={n.to}
+              to={n.to}
+              className="text-base text-crema/75 transition-colors hover:text-crema"
+              activeProps={{ className: "text-base text-tierra" }}
+            >
+              {n.label}
+            </Link>
+          ))}
         </nav>
         <div className="flex items-center gap-3">
           <CtaLink>Cotizar</CtaLink>
@@ -227,34 +217,22 @@ export function SiteHeader() {
               aria-expanded={dropOpen}
               className={`flex w-full items-center justify-between py-3 font-display text-xl transition-colors ${tablasActive ? "text-tierra" : "text-crema"}`}
             >
-              {TABLAS_MENU.label}
+              {MENU_DROPDOWN.label}
               <Chevron open={dropOpen} className="h-4 w-4" />
             </button>
             {dropOpen && (
               <div className="pb-2 pl-4">
-                {TABLAS_MENU.items.map((it) =>
-                  "to" in it ? (
-                    <Link
-                      key={it.label}
-                      to={it.to}
-                      onClick={() => setOpen(false)}
-                      className="block py-2 text-lg text-crema/80 transition-colors hover:text-crema"
-                    >
-                      {it.label}
-                    </Link>
-                  ) : (
-                    <a
-                      key={it.label}
-                      href={it.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={() => setOpen(false)}
-                      className="block py-2 text-lg text-crema/80 transition-colors hover:text-crema"
-                    >
-                      {it.label}
-                    </a>
-                  ),
-                )}
+                {MENU_DROPDOWN.items.map((it) => (
+                  <Link
+                    key={it.label}
+                    to={it.to}
+                    hash={it.hash}
+                    onClick={() => setOpen(false)}
+                    className="block py-2 text-lg text-crema/80 transition-colors hover:text-crema"
+                  >
+                    {it.label}
+                  </Link>
+                ))}
               </div>
             )}
           </div>
