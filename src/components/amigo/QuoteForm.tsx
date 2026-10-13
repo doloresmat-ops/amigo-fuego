@@ -32,13 +32,28 @@ export function QuoteForm({
   tone?: "crema" | "carbon";
 }) {
   const [sent, setSent] = useState(false);
+  const [servicios, setServicios] = useState<string[]>([]);
+  const [serviciosError, setServiciosError] = useState(false);
   void tone;
   const dark = false; // la sección del formulario siempre es crema
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!e.currentTarget.checkValidity()) return;
+    if (servicios.length === 0) {
+      setServiciosError(true);
+      return;
+    }
+    setServiciosError(false);
     setSent(true);
+  }
+
+  function toggleServicio(s: string) {
+    setServicios((prev) => {
+      const next = prev.includes(s) ? prev.filter((x) => x !== s) : [...prev, s];
+      if (next.length > 0) setServiciosError(false);
+      return next;
+    });
   }
 
   return (
