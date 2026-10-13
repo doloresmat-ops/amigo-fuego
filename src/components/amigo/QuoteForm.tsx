@@ -7,8 +7,14 @@ export const TIPOS_EVENTO = [
   "Producción / Rodaje",
   "Evento Social / Celebración",
   "Menú de Madrugada / Tornafiesta",
-  "Barra de bebida",
   "Otro",
+] as const;
+
+export const QUE_COTIZAR = [
+  "Parrilla Argentina",
+  "Barra de Pizza",
+  "Barra de Bebida",
+  "Choripaneada",
 ] as const;
 
 const field =
