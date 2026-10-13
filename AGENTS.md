@@ -14,3 +14,4 @@
 - Looping photo marquees use equal duplicated groups and honor reduced-motion preferences so the cycle has no visible jump and stays accessible.
 - Keep site-wide scroll reveals and hero parallax in one progressive-enhancement controller, with reduced-motion fallbacks and no hidden server-rendered content.
 - Keep the board presentation, size options, and ingredient groups in one shared catalog consumed by Home and /tablas to prevent inconsistent product information.
+- Keep main-menu dropdown entries in the shared header module so the desktop panel and the mobile accordion always render the same destinations from one definition.
