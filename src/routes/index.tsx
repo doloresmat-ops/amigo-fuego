@@ -5,6 +5,7 @@ import { QuoteForm } from "@/components/amigo/QuoteForm";
 import { TablaCard } from "@/components/amigo/TablaCard";
 import { TABLA } from "@/components/amigo/tablas";
 import hero from "@/assets/hero-parrilla-noche.jpg";
+import ritualBanner from "@/assets/ritual-banner.jpg";
 const ritual = ritualBanner;
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
 import gJardin from "@/assets/galeria-jardin.jpg";
