@@ -100,8 +100,39 @@ export function QuoteForm({
                   {TIPOS_EVENTO.map((t) => <option key={t}>{t}</option>)}
                 </select>
               </label>
+              <fieldset className="sm:col-span-2">
+                <legend className="mb-1.5 block text-sm text-crema">
+                  ¿Qué quieres cotizar? <span className="text-crema/60">(puedes elegir varias)</span>
+                </legend>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {QUE_COTIZAR.map((s) => (
+                    <label
+                      key={s}
+                      className={`flex min-h-12 cursor-pointer items-center gap-3 rounded-md border px-4 py-2.5 text-sm transition-colors ${
+                        servicios.includes(s)
+                          ? "border-fuego/70 bg-crema/10 text-crema"
+                          : "border-crema/25 bg-crema/5 text-crema/85 hover:border-crema/50"
+                      }`}
+                    >
+                      <input
+                        type="checkbox"
+                        name="servicios"
+                        value={s}
+                        checked={servicios.includes(s)}
+                        onChange={() => toggleServicio(s)}
+                        className="size-4 accent-fuego"
+                      />
+                      {s}
+                    </label>
+                  ))}
+                </div>
+                {serviciosError && (
+                  <p role="alert" className="mt-2 text-sm text-fuego">
+                    Elige al menos una opción.
+                  </p>
+                )}
+              </fieldset>
               <label>
-                <span className="mb-1.5 block text-sm text-crema">Número estimado de personas</span>
                 <input required type="number" min={10} name="personas" className={field} />
               </label>
               <label>
