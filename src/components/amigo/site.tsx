@@ -118,7 +118,7 @@ function NavDropdown({
               <li key={it.label}>
                 <Link
                   to={it.to}
-                  hash={it.hash}
+                  {...(it.hash ? { hash: it.hash } : {})}
                   onClick={() => setOpen(false)}
                   className="group block rounded-lg px-4 py-3 transition-colors hover:bg-crema/5"
                 >
@@ -226,7 +226,7 @@ export function SiteHeader() {
                   <Link
                     key={it.label}
                     to={it.to}
-                    hash={it.hash}
+                    {...(it.hash ? { hash: it.hash } : {})}
                     onClick={() => setOpen(false)}
                     className="block py-2 text-lg text-crema/80 transition-colors hover:text-crema"
                   >
