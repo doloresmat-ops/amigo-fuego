@@ -167,9 +167,19 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-carbon/90 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3 md:px-10">
-        <Link to="/" aria-label="Amigo Fuego, inicio">
-          <img src="/logo-amigo-fuego-web/logo-header-blanco.webp" alt="Amigo Fuego" className="h-10 w-auto md:h-12" />
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-10 md:py-5">
+        <Link to="/" aria-label="Amigo Fuego, inicio" className="shrink-0">
+          <img
+            src="/logo-header@2x.webp"
+            srcSet="/logo-header@2x.webp 111w, /logo-medium.webp 159w"
+            sizes="(min-width: 768px) 80px, 56px"
+            width={111}
+            height={112}
+            alt="Amigo Fuego"
+            fetchPriority="high"
+            className="h-14 w-auto md:h-20"
+          />
+
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
           {NAV.map((n) => (
@@ -275,7 +285,16 @@ export function SiteFooter() {
     <footer className="border-t border-crema/20 bg-carbon">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-4 md:px-10">
         <div className="md:col-span-2">
-          <img src="/logo-amigo-fuego-web/logo-footer-blanco.webp" alt="Amigo Fuego" className="h-16 w-auto" />
+          <img
+            src="/logo-footer@2x.webp"
+            srcSet="/logo-footer@2x.webp 95w, /logo-medium.webp 159w"
+            sizes="(min-width: 768px) 96px, 80px"
+            width={95}
+            height={96}
+            alt="Amigo Fuego"
+            className="h-20 w-auto md:h-24"
+          />
+
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
             No vendemos carne, vendemos un ritual. Parrilla argentina con maestro
             parrillero para empresas, producciones y eventos sociales.
