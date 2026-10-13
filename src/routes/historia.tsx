@@ -3,7 +3,7 @@ import { CtaLink, PageHero, Section, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 import gJardin from "@/assets/galeria-jardin.jpg";
 import gEquipo from "@/assets/galeria-equipo.jpg";
-import gParrillero from "@/assets/historia-parrillero.jpg";
+const gParrillero = "/GabrielBourdinparrilla.webp";
 
 export const Route = createFileRoute("/historia")({
   head: () =>
@@ -36,7 +36,7 @@ function Historia() {
       <section className="bg-crema text-carbon">
        <Section>
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
-           <div className="image-zoom overflow-hidden rounded-xl"><img src={gParrillero} alt="Maestro parrillero trabajando cortes sobre las brasas" loading="lazy" className="aspect-[4/5] w-full object-cover" /></div>
+           <div className="image-zoom overflow-hidden rounded-xl"><img src={gParrillero} alt="Gabriel Bourdin trabajando en la parrilla" loading="lazy" className="aspect-[4/5] w-full object-cover" /></div>
           <div className="space-y-5 text-lg text-carbon/80">
             <h2 className="text-4xl text-carbon md:text-5xl">Gabriel y el Fuego: 25 años de oficio.</h2>
             <p>
