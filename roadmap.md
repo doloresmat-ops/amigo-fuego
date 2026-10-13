@@ -19,3 +19,4 @@
 - [x] Actualizar Inicio y /tablas a una sola tabla con cuatro tamaños, precios e ingredientes confirmados; verificar los enlaces y mensajes de pedido (número real de WhatsApp pendiente).
 - [x] Quitar el formulario de /tablas y dejar en su lugar un banner de CTA con botón de cotización.
 - [x] Añadir al menú principal un desplegable de Tablas con acceso a la página y al pedido por WhatsApp.
+- [x] Cambiar el logo del encabezado y del pie por la versión a color redonda en alta resolución, con altura corregida en escritorio y móvil.
