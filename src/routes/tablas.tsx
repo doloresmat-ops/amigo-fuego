@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
-import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION } from "@/components/amigo/tablas";
+import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, NOTA_MARIDAJE } from "@/components/amigo/tablas";
 
 export const Route = createFileRoute("/tablas")({
   head: () =>
@@ -78,6 +78,11 @@ function TablasPage() {
               </article>
             ))}
           </div>
+          <p className="mx-auto mt-16 max-w-3xl text-center text-base leading-relaxed text-crema/80">
+            <span aria-hidden="true">🍷 </span>
+            <span className="font-bold text-tierra">El maridaje perfecto:</span>
+            {" "}Pregunta por nuestra selección de vinos, fernet y cerveza Hércules al enviar tu mensaje.
+          </p>
         </Section>
       </section>
       <section id="cotizar" className="bg-crema text-carbon">
