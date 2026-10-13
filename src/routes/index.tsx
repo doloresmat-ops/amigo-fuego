@@ -73,18 +73,6 @@ function Home() {
           </div>
         </Section>
       </section>
-      <section className="bg-carbon text-crema">
-        <Section>
-          <p className="eyebrow text-tierra">Para llevar</p>
-          <h2 className="mt-4 max-w-2xl text-4xl md:text-5xl">Tablas Amigo Fuego</h2>
-          <p className="mt-5 max-w-2xl text-lg text-crema/80">
-            {TABLA.apoyo}
-          </p>
-          <div className="mt-12">
-            <TablaCard />
-          </div>
-        </Section>
-      </section>
       <section data-parallax-hero className="relative isolate overflow-hidden">
         <img data-hero-image src={ritual} alt="" loading="lazy" className="hero-parallax-image absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-carbon/75" />
@@ -94,6 +82,18 @@ function Home() {
             <CtaLink to="/menu">Ver el Menú Completo</CtaLink>
           </div>
         </div>
+      </section>
+      <section className="bg-crema text-carbon">
+        <Section>
+          <p className="eyebrow text-tierra">Para llevar</p>
+          <h2 className="mt-4 max-w-2xl text-4xl md:text-5xl">Tablas Amigo Fuego</h2>
+          <p className="mt-5 max-w-2xl text-lg text-carbon/75">
+            {TABLA.apoyo}
+          </p>
+          <div className="mt-12">
+            <TablaCard />
+          </div>
+        </Section>
       </section>
       <QuoteForm />
     </>

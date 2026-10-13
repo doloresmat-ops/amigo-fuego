@@ -3,7 +3,7 @@ import { TABLA } from "./tablas";
 
 export function TablaCard() {
   return (
-    <article className="grid overflow-hidden rounded-lg bg-crema text-carbon shadow-xl md:grid-cols-2">
+    <article className="grid overflow-hidden rounded-lg border border-carbon/15 bg-crema text-carbon shadow-xl md:grid-cols-2">
       <div className="image-zoom relative aspect-[4/3] overflow-hidden md:aspect-auto">
         <img
           src={TABLA.img}
