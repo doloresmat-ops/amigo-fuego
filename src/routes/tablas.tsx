@@ -91,7 +91,7 @@ function TablasPage() {
                     Espacio reservado para la fotografía
                   </div>
                   <figcaption className="mt-3 text-sm font-bold text-tierra">{foto.texto}</figcaption>
-                  <p className="mt-1 text-xs text-crema/55">Pendiente: foto real de {foto.nombre.toLowerCase()}.</p>
+                  <p className="mt-1 text-xs text-crema/55">Fotografía real pendiente.</p>
                 </figure>
               ))}
             </div>
