@@ -133,6 +133,7 @@ export function QuoteForm({
                 )}
               </fieldset>
               <label>
+                <span className="mb-1.5 block text-sm text-crema">Número estimado de personas</span>
                 <input required type="number" min={10} name="personas" className={field} />
               </label>
               <label>
