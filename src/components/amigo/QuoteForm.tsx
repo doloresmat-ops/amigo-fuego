@@ -7,6 +7,7 @@ export const TIPOS_EVENTO = [
   "Producción / Rodaje",
   "Evento Social / Celebración",
   "Menú de Madrugada / Tornafiesta",
+  "Barra de bebida",
   "Otro",
 ] as const;
 
