@@ -3,7 +3,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
 import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, ACOMPANAMIENTOS_FOTO } from "@/components/amigo/tablas";
-import tHero from "@/assets/tabla-hero.jpg";
 
 export const Route = createFileRoute("/tablas")({
   head: () =>
@@ -23,7 +22,8 @@ function TablasPage() {
         eyebrow="Para llevar"
         title="Tablas Amigo Fuego"
         subtitle={TABLA.apoyo}
-        image={tHero}
+        image={TABLA.img}
+        cinematic
         overlay="fuerte"
       >
         <p className="max-w-2xl text-crema/85">Una sola tabla, con los mismos ingredientes en todos los tamaños. Solo cambia la cantidad.</p>
@@ -33,17 +33,41 @@ function TablasPage() {
       </PageHero>
       <section className="bg-crema text-carbon">
         <Section>
+          <p className="eyebrow text-tierra">La misma selección, siempre</p>
+          <h2 className="mt-4 text-3xl md:text-4xl">Lo que lleva tu tabla</h2>
+          <div className="mt-10 grid items-start gap-10 lg:grid-cols-2">
+            <figure>
+              <div className="image-zoom aspect-[4/3] overflow-hidden rounded-lg">
+                <img src={TABLA.img} alt="Tabla de picada con quesos, embutidos y acompañamientos" loading="lazy" width={800} height={1008} className="h-full w-full object-cover" />
+              </div>
+              <figcaption className="mt-3 text-sm text-carbon/60">Imagen ilustrativa.</figcaption>
+            </figure>
+            <div data-stagger className="grid gap-8 sm:grid-cols-2">
+              {INGREDIENTES.map((grupo) => (
+                <div key={grupo.nombre}>
+                  <h3 className="text-xl text-carbon">{grupo.nombre}</h3>
+                  <ul className="mt-4 space-y-2 text-carbon/80">
+                    {grupo.items.map((item) => <li key={item} className="flex gap-3"><span className="text-oliva" aria-hidden="true">✓</span><span>{item}</span></li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Section>
+      </section>
+      <section className="bg-carbon text-crema">
+        <Section>
           <p className="eyebrow text-tierra">A tu medida</p>
           <h2 className="mt-4 text-3xl md:text-4xl">Elige el tamaño de tu mesa</h2>
-          <p className="mt-5 max-w-3xl text-lg text-carbon/80">
+          <p className="mt-5 max-w-3xl text-lg text-crema/80">
             <strong>“Comen”</strong> es la cantidad recomendada si la tabla es el plato principal.
             {" "}<strong>“Pican”</strong> es la cantidad recomendada si es para compartir como entrada o botana.
           </p>
           <p className="mt-3 text-sm text-carbon/70">Precios en MXN.</p>
-          <p className="mt-2 text-sm font-bold text-oxido">{NOTA_ANTICIPACION}</p>
+          <p className="mt-2 text-sm font-bold text-tierra">{NOTA_ANTICIPACION}</p>
           <div data-stagger className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {TAMANOS.map((t) => (
-              <article key={t.comen} className="flex flex-col rounded-lg bg-blanco p-6 shadow-sm">
+              <article key={t.comen} className="flex flex-col rounded-lg border border-tierra/25 bg-crema p-6 text-carbon shadow-lg">
                 <h3 className="text-xl">Comen {t.comen} / pican {t.pican}</h3>
                 <p className="mt-5 font-display text-4xl text-tierra">{t.precio}</p>
                 <div className="mt-auto pt-8">
@@ -56,51 +80,31 @@ function TablasPage() {
           </div>
         </Section>
       </section>
-      <section className="bg-carbon text-crema">
+      <section className="bg-crema text-carbon">
         <Section>
-          <p className="eyebrow text-tierra">La misma selección, siempre</p>
-          <h2 className="mt-4 text-3xl md:text-4xl">Lo que lleva tu tabla</h2>
-          <div className="mt-10 grid items-start gap-10 lg:grid-cols-2">
-            <figure>
-              <div className="image-zoom aspect-[4/3] overflow-hidden rounded-lg">
-                <img src={TABLA.img} alt="Tabla de picada con quesos, embutidos y acompañamientos" loading="lazy" width={800} height={1008} className="h-full w-full object-cover" />
-              </div>
-              <figcaption className="mt-3 text-sm text-crema/60">Imagen ilustrativa.</figcaption>
-            </figure>
-            <div data-stagger className="grid gap-8 sm:grid-cols-2">
-              {INGREDIENTES.map((grupo) => (
-                <div key={grupo.nombre}>
-                  <h3 className="text-xl text-crema">{grupo.nombre}</h3>
-                  <ul className="mt-4 space-y-2 text-crema/80">
-                    {grupo.items.map((item) => <li key={item} className="flex gap-3"><span className="text-oliva" aria-hidden="true">✓</span><span>{item}</span></li>)}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="mt-16 border-t border-crema/15 pt-10">
+          <div>
             <p className="eyebrow text-tierra">Fotografías en camino</p>
-            <h3 className="mt-4 max-w-3xl text-2xl text-crema md:text-3xl">Tablas acompañadas de vinos, fernet, vermut y cerveza Hércules</h3>
-            <p className="mt-4 max-w-3xl text-crema/70">
+            <h3 className="mt-4 max-w-3xl text-2xl text-carbon md:text-3xl">Tablas acompañadas de vinos, fernet, vermut y cerveza Hércules</h3>
+            <p className="mt-4 max-w-3xl text-carbon/70">
               Cada espacio queda etiquetado para recibir la fotografía real de la tabla con su acompañamiento.
             </p>
             <div data-stagger className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {ACOMPANAMIENTOS_FOTO.map((foto) => (
-                <figure key={foto.nombre} className="rounded-lg border border-dashed border-crema/25 bg-crema/5 p-4">
-                  <div className="flex aspect-[4/3] items-center justify-center rounded-md bg-carbon/60 px-4 text-center text-sm text-crema/45">
+                <figure key={foto.nombre} className="rounded-lg border border-dashed border-carbon/25 bg-blanco p-4">
+                  <div className="flex aspect-[4/3] items-center justify-center rounded-md bg-carbon/5 px-4 text-center text-sm text-carbon/60">
                     Espacio reservado para la fotografía
                   </div>
                   <figcaption className="mt-3 text-sm font-bold text-tierra">{foto.texto}</figcaption>
-                  <p className="mt-1 text-xs text-crema/55">Fotografía real pendiente.</p>
+                  <p className="mt-1 text-xs text-carbon/60">Fotografía real pendiente.</p>
                 </figure>
               ))}
             </div>
           </div>
         </Section>
       </section>
-      <section id="cotizar" className="bg-crema text-carbon">
+      <section id="cotizar" className="bg-carbon text-crema">
         <Section className="py-16 md:py-20">
-          <aside className="flex flex-col gap-8 rounded-2xl bg-carbon p-8 text-crema shadow-xl md:flex-row md:items-center md:justify-between md:p-12">
+          <aside className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-2xl">
               <p className="eyebrow text-tierra">Siguiente paso</p>
               <h2 className="mt-4 text-3xl md:text-4xl">¿Algo más grande que una tabla?</h2>
