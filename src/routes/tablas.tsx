@@ -63,7 +63,7 @@ function TablasPage() {
             <strong>“Comen”</strong> es la cantidad recomendada si la tabla es el plato principal.
             {" "}<strong>“Pican”</strong> es la cantidad recomendada si es para compartir como entrada o botana.
           </p>
-          <p className="mt-3 text-sm text-carbon/70">Precios en MXN.</p>
+          <p className="mt-3 text-sm text-crema/70">Precios en MXN.</p>
           <p className="mt-2 text-sm font-bold text-tierra">{NOTA_ANTICIPACION}</p>
           <div data-stagger className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {TAMANOS.map((t) => (
