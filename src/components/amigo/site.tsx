@@ -336,7 +336,9 @@ export function PageHero({
   children,
   crumb,
   overlay = false,
+  cinematic = false,
 }: {
+  cinematic?: boolean;
   overlay?: boolean | "fuerte";
   eyebrow: string;
   title: string;
@@ -346,11 +348,11 @@ export function PageHero({
   crumb?: string;
 }) {
   return (
-    <section data-parallax-hero className="relative isolate overflow-hidden">
+    <section data-parallax-hero className="relative isolate overflow-hidden bg-carbon">
       <img data-hero-image src={image} alt="" className="hero-parallax-image absolute inset-0 -z-20 h-full w-full object-cover" />
       <div className={overlay ? `absolute inset-0 -z-10 ${overlay === "fuerte" ? "bg-carbon/80" : "bg-carbon/70"}` : "golden absolute inset-0 -z-10"} />
-      {overlay === "fuerte" && <div className="absolute inset-0 -z-10 bg-gradient-to-t from-carbon via-carbon/45 to-transparent" />}
-      <div className="mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:px-10 md:pb-24">
+      {overlay === "fuerte" && !cinematic && <div className="absolute inset-0 -z-10 bg-gradient-to-t from-carbon via-carbon/45 to-transparent" />}
+      <div className={cinematic ? "mx-auto flex min-h-[min(620px,65svh)] max-w-7xl flex-col items-center justify-center px-5 py-16 text-center md:px-10 md:py-20" : "mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:px-10 md:pb-24"}>
         {crumb && (
           <nav aria-label="Migas de pan" className="mb-6 text-sm text-crema/70">
             <ol className="flex items-center gap-2">
@@ -365,7 +367,7 @@ export function PageHero({
         </p>
         <h1 className="mt-4 max-w-4xl text-4xl leading-[1.05] text-crema md:text-6xl">{title}</h1>
         <p className="mt-6 max-w-2xl text-lg text-crema/85">{subtitle}</p>
-        {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
+        {children && <div className={cinematic ? "mt-8 flex max-w-2xl flex-col items-center gap-4" : "mt-8 flex flex-wrap gap-3"}>{children}</div>}
       </div>
     </section>
   );
