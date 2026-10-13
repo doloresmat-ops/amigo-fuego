@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
-import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, ACOMPANAMIENTOS_FOTO } from "@/components/amigo/tablas";
+import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION } from "@/components/amigo/tablas";
 
 export const Route = createFileRoute("/tablas")({
   head: () =>
@@ -82,24 +82,19 @@ function TablasPage() {
       </section>
       <section className="bg-crema text-carbon">
         <Section>
-          <div>
-            <p className="eyebrow text-tierra">Fotografías en camino</p>
-            <h3 className="mt-4 max-w-3xl text-2xl text-carbon md:text-3xl">Tablas acompañadas de vinos, fernet, vermut y cerveza Hércules</h3>
-            <p className="mt-4 max-w-3xl text-carbon/70">
-              Cada espacio queda etiquetado para recibir la fotografía real de la tabla con su acompañamiento.
-            </p>
-            <div data-stagger className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-              {ACOMPANAMIENTOS_FOTO.map((foto) => (
-                <figure key={foto.nombre} className="rounded-lg border border-dashed border-carbon/25 bg-blanco p-4">
-                  <div className="flex aspect-[4/3] items-center justify-center rounded-md bg-carbon/5 px-4 text-center text-sm text-carbon/60">
-                    Espacio reservado para la fotografía
-                  </div>
-                  <figcaption className="mt-3 text-sm font-bold text-tierra">{foto.texto}</figcaption>
-                  <p className="mt-1 text-xs text-carbon/60">Fotografía real pendiente.</p>
-                </figure>
-              ))}
+          <aside className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-2xl">
+              <p className="eyebrow text-tierra">Eventos a la parrilla</p>
+              <h2 className="mt-4 text-3xl md:text-4xl">¿Quieres la parrilla en tu evento?</h2>
+              <p className="mt-4 text-carbon/75">
+                Además de nuestras tablas para llevar, cotiza con nosotros la parrilla argentina para tu evento:
+                nosotros llevamos todo y tu solo disfrutas con tus invitados.
+              </p>
             </div>
-          </div>
+            <Button asChild variant="conversion" size="conversion" className="shrink-0 whitespace-normal">
+              <a href="/#cotizar">Cotizar mi evento</a>
+            </Button>
+          </aside>
         </Section>
       </section>
       <section id="cotizar" className="bg-carbon text-crema">
