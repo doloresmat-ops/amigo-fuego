@@ -16,6 +16,9 @@ export const NAV = [
   { to: "/historia", label: "Historia" },
 ] as const;
 
+/** Enlaces del encabezado: el logo ya lleva a Inicio, así que el texto no se repite ahí. */
+export const NAV_HEADER = NAV.filter((n) => n.to !== "/");
+
 export type MenuDropItem = { label: string; text: string; to: "/menu" | "/tablas"; hash?: string };
 
 /** Desplegable "Menú" del menú principal: 4 servicios (anclas en /menu) + Tablas. */
@@ -178,7 +181,7 @@ export function SiteHeader() {
 
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
-          {NAV.slice(0, 3).map((n) => (
+          {NAV_HEADER.slice(0, 2).map((n) => (
             <Link
               key={n.to}
               to={n.to}
@@ -190,7 +193,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <NavDropdown open={dropOpen} setOpen={setDropOpen} active={tablasActive} />
-          {NAV.slice(3).map((n) => (
+          {NAV_HEADER.slice(2).map((n) => (
             <Link
               key={n.to}
               to={n.to}
@@ -216,7 +219,7 @@ export function SiteHeader() {
       </div>
       {open && (
         <nav className="border-t border-border px-5 pb-5 lg:hidden">
-          {NAV.map((n) => (
+          {NAV_HEADER.map((n) => (
             <Link
               key={n.to}
               to={n.to}
