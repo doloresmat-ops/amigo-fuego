@@ -52,8 +52,112 @@ export function CtaLink({
   return <Button asChild variant={variant} size="conversion"><Link to={to}>{children}</Link></Button>;
 }
 
+function Chevron({ open, className = "h-3.5 w-3.5" }: { open: boolean; className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={`${className} shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      aria-hidden="true"
+    >
+      <path d="m6 9 6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+/** Desplegable del menú principal con las Tablas. */
+function NavDropdown({
+  open,
+  setOpen,
+  active,
+}: {
+  open: boolean;
+  setOpen: (v: boolean) => void;
+  active: boolean;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    const onDown = (e: MouseEvent) => {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("mousedown", onDown);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("mousedown", onDown);
+    };
+  }, [open, setOpen]);
+
+  return (
+    <div
+      ref={ref}
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        aria-haspopup="true"
+        className={`flex items-center gap-1.5 text-base transition-colors hover:text-crema ${active ? "text-tierra" : "text-crema/75"}`}
+      >
+        {TABLAS_MENU.label}
+        <Chevron open={open} />
+      </button>
+      {open && (
+        <div className="absolute left-1/2 top-full z-50 w-80 -translate-x-1/2 pt-4">
+          <ul className="animate-nav-drop rounded-xl border border-crema/15 bg-carbon p-2 shadow-2xl">
+            {TABLAS_MENU.items.map((it) => (
+              <li key={it.label}>
+                {"to" in it ? (
+                  <Link
+                    to={it.to}
+                    onClick={() => setOpen(false)}
+                    className="group block rounded-lg px-4 py-3 transition-colors hover:bg-crema/5"
+                  >
+                    <span className="block font-display text-lg text-crema transition-colors group-hover:text-tierra">{it.label}</span>
+                    <span className="mt-1 block text-sm leading-snug text-crema/60">{it.text}</span>
+                  </Link>
+                ) : (
+                  <a
+                    href={it.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => setOpen(false)}
+                    className="group block rounded-lg px-4 py-3 transition-colors hover:bg-crema/5"
+                  >
+                    <span className="block font-display text-lg text-crema transition-colors group-hover:text-tierra">{it.label}</span>
+                    <span className="mt-1 block text-sm leading-snug text-crema/60">{it.text}</span>
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [dropOpen, setDropOpen] = useState(false);
+  const pathname = useLocation({ select: (l) => l.pathname });
+  const tablasActive = pathname === "/tablas";
+
+  useEffect(() => {
+    setOpen(false);
+    setDropOpen(false);
+  }, [pathname]);
+
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-carbon/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3 md:px-10">
@@ -72,6 +176,7 @@ export function SiteHeader() {
               {n.label}
             </Link>
           ))}
+          <NavDropdown open={dropOpen} setOpen={setDropOpen} active={tablasActive} />
         </nav>
         <div className="flex items-center gap-3">
           <CtaLink>Cotizar</CtaLink>
@@ -98,6 +203,44 @@ export function SiteHeader() {
               {n.label}
             </Link>
           ))}
+          <div className="border-t border-crema/10">
+            <button
+              type="button"
+              onClick={() => setDropOpen((v) => !v)}
+              aria-expanded={dropOpen}
+              className={`flex w-full items-center justify-between py-3 font-display text-xl transition-colors ${tablasActive ? "text-tierra" : "text-crema"}`}
+            >
+              {TABLAS_MENU.label}
+              <Chevron open={dropOpen} className="h-4 w-4" />
+            </button>
+            {dropOpen && (
+              <div className="pb-2 pl-4">
+                {TABLAS_MENU.items.map((it) =>
+                  "to" in it ? (
+                    <Link
+                      key={it.label}
+                      to={it.to}
+                      onClick={() => setOpen(false)}
+                      className="block py-2 text-lg text-crema/80 transition-colors hover:text-crema"
+                    >
+                      {it.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={it.label}
+                      href={it.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => setOpen(false)}
+                      className="block py-2 text-lg text-crema/80 transition-colors hover:text-crema"
+                    >
+                      {it.label}
+                    </a>
+                  ),
+                )}
+              </div>
+            )}
+          </div>
         </nav>
       )}
     </header>
