@@ -32,7 +32,7 @@ function Home() {
     <>
       <PageHero
         eyebrow="Parrilla argentina"
-        title="Catering de Asado Argentino y Parrilla a Domicilio"
+        title="Catering de Parrilla Argentina"
         subtitle="No vendemos carne, vendemos un ritual. Llevamos el fuego, el maestro parrillero y la experiencia completa a tu mesa."
         image={hero}
       >
