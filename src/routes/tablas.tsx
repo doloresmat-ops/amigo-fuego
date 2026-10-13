@@ -85,7 +85,7 @@ function TablasPage() {
           <aside className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-2xl">
               <p className="eyebrow text-tierra">Eventos a la parrilla</p>
-              <h2 className="mt-4 text-3xl md:text-4xl">¿Planeas algo más grande que una tabla?</h2>
+              <h2 className="mt-4 text-3xl md:text-4xl">¿Quieres la parrilla en tu evento?</h2>
               <p className="mt-4 text-carbon/75">
                 Además de nuestras tablas para llevar, cotiza con nosotros la parrilla argentina para tu evento:
                 nosotros llevamos todo y tu solo disfrutas con tus invitados.
