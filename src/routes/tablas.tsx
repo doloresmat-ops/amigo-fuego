@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
-import { TABLA, TAMANOS, INGREDIENTES } from "@/components/amigo/tablas";
+import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, ACOMPANAMIENTOS_FOTO } from "@/components/amigo/tablas";
 import tHero from "@/assets/tabla-hero.jpg";
 
 export const Route = createFileRoute("/tablas")({
@@ -27,6 +27,9 @@ function TablasPage() {
         overlay="fuerte"
       >
         <p className="max-w-2xl text-crema/85">Una sola tabla, con los mismos ingredientes en todos los tamaños. Solo cambia la cantidad.</p>
+        <p className="inline-flex items-center rounded-full border border-tierra/50 bg-carbon/70 px-5 py-2.5 text-sm font-bold text-tierra backdrop-blur-sm">
+          {NOTA_ANTICIPACION}
+        </p>
       </PageHero>
       <section className="bg-crema text-carbon">
         <Section>
@@ -37,6 +40,7 @@ function TablasPage() {
             {" "}<strong>“Pican”</strong> es la cantidad recomendada si es para compartir como entrada o botana.
           </p>
           <p className="mt-3 text-sm text-carbon/70">Precios en MXN.</p>
+          <p className="mt-2 text-sm font-bold text-oxido">{NOTA_ANTICIPACION}</p>
           <div data-stagger className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {TAMANOS.map((t) => (
               <article key={t.comen} className="flex flex-col rounded-lg bg-blanco p-6 shadow-sm">
@@ -71,6 +75,24 @@ function TablasPage() {
                     {grupo.items.map((item) => <li key={item} className="flex gap-3"><span className="text-oliva" aria-hidden="true">✓</span><span>{item}</span></li>)}
                   </ul>
                 </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-16 border-t border-crema/15 pt-10">
+            <p className="eyebrow text-tierra">Fotografías en camino</p>
+            <h3 className="mt-4 max-w-3xl text-2xl text-crema md:text-3xl">Tablas acompañadas de vinos, fernet, vermut y cerveza Hércules</h3>
+            <p className="mt-4 max-w-3xl text-crema/70">
+              Cada espacio queda etiquetado para recibir la fotografía real de la tabla con su acompañamiento.
+            </p>
+            <div data-stagger className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+              {ACOMPANAMIENTOS_FOTO.map((foto) => (
+                <figure key={foto.nombre} className="rounded-lg border border-dashed border-crema/25 bg-crema/5 p-4">
+                  <div className="flex aspect-[4/3] items-center justify-center rounded-md bg-carbon/60 px-4 text-center text-sm text-crema/45">
+                    Espacio reservado para la fotografía
+                  </div>
+                  <figcaption className="mt-3 text-sm font-bold text-tierra">{foto.texto}</figcaption>
+                  <p className="mt-1 text-xs text-crema/55">Fotografía real pendiente.</p>
+                </figure>
               ))}
             </div>
           </div>

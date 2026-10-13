@@ -20,3 +20,14 @@ export const INGREDIENTES = [
   { nombre: "Acompañamientos", items: ["Aceitunas Kalamata", "Aceitunas verdes", "Jitomates cherry", "Nueces", "Dip de espinaca", "Miel"] },
   { nombre: "Pan", items: ["2 baguettes de masa madre"] },
 ] as const;
+
+/** Aviso de tiempo de preparación: se muestra en /tablas. */
+export const NOTA_ANTICIPACION = "Nota: Las tablas se piden con un día de anticipación";
+
+/** Espacios reservados para las fotografías reales de tablas acompañadas. */
+export const ACOMPANAMIENTOS_FOTO = [
+  { nombre: "Vinos", texto: "Tabla acompañada de vinos" },
+  { nombre: "Fernet", texto: "Tabla acompañada de fernet" },
+  { nombre: "Vermut", texto: "Tabla acompañada de vermut" },
+  { nombre: "Cerveza Hércules", texto: "Tabla acompañada de cerveza Hércules" },
+] as const;

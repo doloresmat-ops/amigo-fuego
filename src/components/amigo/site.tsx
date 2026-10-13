@@ -134,6 +134,22 @@ function NavDropdown({
   );
 }
 
+/** Cintillo global de anuncio: toda la franja enlaza a /tablas. */
+export function AnnouncementBar() {
+  return (
+    <Link
+      to="/tablas"
+      className="group block bg-fuego px-4 py-2.5 text-center text-[13px] font-bold leading-snug text-blanco transition-colors hover:bg-oxido focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-blanco sm:text-sm"
+    >
+      🔥 AMIGO FUEGO EN CASA: Pide nuestras nuevas tablas de picada a domicilio.{" "}
+      <span className="whitespace-nowrap">
+        Ver opciones{" "}
+        <span aria-hidden="true" className="inline-block transition-transform duration-300 group-hover:translate-x-1">➔</span>
+      </span>
+    </Link>
+  );
+}
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);

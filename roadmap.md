@@ -22,3 +22,5 @@
 - [x] Cambiar el logo del encabezado y del pie por la versión a color redonda en alta resolución, con altura corregida en escritorio y móvil.
 - [x] Reestructurar /menu en 4 servicios con botones duales, desplegable Menú con anclas y opción «Barra de bebida» en el formulario.
 - [ ] Enlazar los PDF de «Ver menú» (pendiente del usuario).
+- [x] Añadir cintillo de anuncio global a /tablas sobre el encabezado, con la nota de pedido con un día de anticipación y los espacios etiquetados para las fotos de tablas acompañadas.
+- [ ] Recibir las fotografías reales de las tablas acompañadas de vinos, fernet, vermut y cerveza Hércules (pendiente del usuario).
