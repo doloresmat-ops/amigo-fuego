@@ -80,7 +80,7 @@ function TablasPage() {
           </div>
         </Section>
       </section>
-      <section className="bg-crema text-carbon">
+      <section id="cotizar" className="bg-crema text-carbon">
         <Section>
           <aside className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-2xl">
@@ -93,23 +93,6 @@ function TablasPage() {
             </div>
             <Button asChild variant="conversion" size="conversion" className="shrink-0 whitespace-normal">
               <a href="/#cotizar">Cotizar mi evento</a>
-            </Button>
-          </aside>
-        </Section>
-      </section>
-      <section id="cotizar" className="bg-carbon text-crema">
-        <Section className="py-16 md:py-20">
-          <aside className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-            <div className="max-w-2xl">
-              <p className="eyebrow text-tierra">Siguiente paso</p>
-              <h2 className="mt-4 text-3xl md:text-4xl">¿Algo más grande que una tabla?</h2>
-              <p className="mt-4 text-crema/80">
-                Cuéntanos la fecha, cuántas personas serán y para qué ocasión. Te enviamos una propuesta a la medida,
-                con la cantidad justa y los detalles de entrega.
-              </p>
-            </div>
-            <Button asChild variant="conversion" size="conversion" className="shrink-0 whitespace-normal">
-              <a href={waLink("Hola Amigo Fuego, quiero cotizar una Tabla de Picada para mi evento. ¿Me ayudan con cantidades, disponibilidad y entrega?")} target="_blank" rel="noopener noreferrer">Cotizar mi tabla</a>
             </Button>
           </aside>
         </Section>
