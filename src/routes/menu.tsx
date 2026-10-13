@@ -3,7 +3,7 @@ import { CtaLink, PageHero, Section, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 import gCorte from "@/assets/galeria-corte.jpg";
 import gPizzas from "@/assets/galeria-mini-pizzas.jpg";
-import gCalabaza from "@/assets/galeria-calabaza.jpg";
+const gCalabaza = "/01_closeup_calabaza_pure.webp";
 import gMaridaje from "@/assets/galeria-maridaje.jpg";
 import gParrilla from "@/assets/galeria-parrilla-vivo.jpg";
 import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
@@ -107,7 +107,7 @@ function Menu() {
              <div data-stagger className="mt-10 grid gap-8 md:grid-cols-2">
               <article className="group md:col-span-2">
                  <div className="image-zoom relative overflow-hidden rounded-xl">
-                   <img src={gCorte} alt="Cortes premium al fuego en la parrilla" loading="lazy" className="aspect-[16/9] w-full object-cover md:aspect-[21/9]" />
+                   <img src="/03_tomahawk_crudo.webp" alt="Corte tomahawk premium" loading="lazy" className="aspect-[16/9] w-full object-cover md:aspect-[21/9]" />
                   <div className="golden absolute inset-0" />
                   <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
                      <p className="eyebrow text-tierra">La protagonista</p>

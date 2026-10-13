@@ -1,4 +1,4 @@
-import tCasa from "@/assets/tabla-casa.jpg";
+const tCasa = "/06_tabla_embutidos.webp";
 
 export const TABLA = {
   nombre: "Tabla de Picada",
