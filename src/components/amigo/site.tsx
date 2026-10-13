@@ -78,6 +78,7 @@ function NavDropdown({
   active: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const hovered = useRef(false);
 
   useEffect(() => {
     if (!open) return;
@@ -99,12 +100,18 @@ function NavDropdown({
     <div
       ref={ref}
       className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={() => {
+        hovered.current = true;
+        setOpen(true);
+      }}
+      onMouseLeave={() => {
+        hovered.current = false;
+        setOpen(false);
+      }}
     >
       <button
         type="button"
-        onClick={() => setOpen(!open)}
+        onClick={() => setOpen(hovered.current ? true : !open)}
         aria-expanded={open}
         aria-haspopup="true"
         className={`flex items-center gap-1.5 text-base transition-colors hover:text-crema ${active ? "text-tierra" : "text-crema/75"}`}
