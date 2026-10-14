@@ -57,7 +57,7 @@ function TablasPage() {
       </section>
       <section className="relative isolate overflow-hidden bg-carbon text-crema">
         <img src={FONDO_PRECIOS} alt="" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />
-        <div className="absolute inset-0 -z-10 bg-carbon/85" />
+        <div className="absolute inset-0 -z-10 bg-carbon/92" />
         <Section>
           <p className="eyebrow text-tierra">A tu medida</p>
           <h2 className="mt-4 text-3xl md:text-4xl">Elige el tamaño de tu mesa</h2>
