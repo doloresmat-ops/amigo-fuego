@@ -1,4 +1,12 @@
-const tCasa = "/06_tabla_embutidos.webp";
+const CDN = "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public";
+const tCasa = `${CDN}/tabla-quesos-embutidos-amigo-fuego.webp`;
+
+/** Galería de tablas y charcutería: se muestra en /tablas. */
+export const GALERIA_TABLAS = [
+  { img: `${CDN}/tabla-charcuteria-higos-amigo-fuego.webp`, alt: "Tabla de charcutería con higos y quesos" },
+  { img: `${CDN}/tabla-embutidos-quesos-amigo-fuego.webp`, alt: "Tabla de embutidos y quesos variados" },
+  { img: `${CDN}/mesa-tomahawk-parrilla-amigo-fuego.webp`, alt: "Mesa servida con tomahawk y acompañamientos" },
+] as const;
 
 export const TABLA = {
   nombre: "Tabla de Picada",

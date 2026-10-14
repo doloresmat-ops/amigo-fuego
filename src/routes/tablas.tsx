@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
-import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, NOTA_MARIDAJE } from "@/components/amigo/tablas";
+import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, NOTA_MARIDAJE, GALERIA_TABLAS } from "@/components/amigo/tablas";
 
 export const Route = createFileRoute("/tablas")({
   head: () =>
