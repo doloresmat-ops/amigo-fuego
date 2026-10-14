@@ -403,25 +403,20 @@ export function TrustStrip() {
     { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/chingon.webp", alt: "Chingón", invert: true },
   ];
   return (
-    <section className="border-y border-carbon/15 bg-crema py-12 text-carbon">
-      <p className="px-5 text-center font-display text-lg italic text-oxido md:text-xl">
-        La opción de confianza para productoras, agencias y despachos corporativos.
+    <section className="border-y border-carbon/15 bg-crema py-14 text-carbon">
+      <p className="eyebrow px-5 text-center text-carbon/85">
+        LA OPCIÓN DE CONFIANZA PARA PRODUCTORAS, AGENCIAS Y DESPACHOS
       </p>
-      <div className="mt-8 overflow-hidden" role="region" aria-label="Logos de clientes">
-        <div className="flex w-max animate-marquee items-center gap-16 px-8">
+      <div className="mt-10 overflow-hidden" role="region" aria-label="Logos de clientes">
+        <div className="flex w-max animate-marquee items-center gap-14 px-7 md:gap-20 md:px-10">
           {[...logos, ...logos].map((logo, i) => (
-            <span
+            <img
               key={i}
-              aria-hidden={i >= logos.length}
-              className="flex h-20 shrink-0 items-center rounded-xl border border-carbon/10 bg-white px-7 md:h-24"
-            >
-              <img
-                src={logo.src}
-                alt={i < logos.length ? logo.alt : ""}
-                loading="lazy"
-                className={`h-8 w-auto max-w-[130px] object-contain md:h-10 ${logo.invert ? "invert" : ""}`}
-              />
-            </span>
+              src={logo.src}
+              alt={i < logos.length ? logo.alt : ""}
+              loading="lazy"
+              className={`client-logo h-9 w-auto max-w-[140px] shrink-0 object-contain md:h-12 ${logo.invert ? "client-logo-invert" : ""}`}
+            />
           ))}
         </div>
       </div>

@@ -144,6 +144,22 @@
   animation: nav-drop 0.2s ease-out both;
 }
 
+/* Logos de clientes: monocromáticos sobre crema, a color en hover. */
+@utility client-logo {
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) opacity(40%);
+  transition: filter 0.3s ease;
+  &:hover {
+    filter: grayscale(0%) opacity(100%);
+  }
+}
+@utility client-logo-invert {
+  filter: grayscale(100%) invert(1) opacity(40%);
+  &:hover {
+    filter: grayscale(0%) invert(1) opacity(100%);
+  }
+}
+
 /* Scroll motion is added only after hydration; semantic content remains readable without JS. */
 .site-reveal {
   opacity: 0;
