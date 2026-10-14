@@ -29,3 +29,5 @@
 - [x] Añadir la nota de maridaje (vinos, fernet y cerveza Hércules) centrada bajo las cuatro tarjetas de precios de /tablas.
 - [x] Poner la foto del mantel de cuadros en "Lo que lleva tu tabla", la foto de charcutería como fondo de la sección de precios y quitar la fila repetida de fotos de /tablas.
 - [x] Cambiar a las nuevas fotos del CDN la portada de Menú (con overlay oscuro al 60%), la sección Parrilla Argentina, la Choripaneada y la ficha de Gabriel y Lolita en Historia.
+- [x] Encuadrar en vertical las fotos de Parrilla Argentina y Choripaneada en /menu (marco 3/4, recorte cero) para que la cabeza de Gabriel se vea completa.
+- [ ] Poner la foto nueva de la Barra de Pizza: el enlace barra-pizzas-amigo-fuego-lunfardo.webp responde 404, falta subirla al repositorio o enviarla por aquí.
