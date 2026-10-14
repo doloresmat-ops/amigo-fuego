@@ -410,14 +410,18 @@ export function TrustStrip() {
       <div className="mt-8 overflow-hidden" role="region" aria-label="Logos de clientes">
         <div className="flex w-max animate-marquee items-center gap-16 px-8">
           {[...logos, ...logos].map((logo, i) => (
-            <img
+            <span
               key={i}
-              src={logo.src}
-              alt={i < logos.length ? logo.alt : ""}
               aria-hidden={i >= logos.length}
-              loading="lazy"
-              className="h-12 w-auto shrink-0 object-contain opacity-80 md:h-14"
-            />
+              className="flex h-20 shrink-0 items-center rounded-xl bg-carbon px-7 md:h-24"
+            >
+              <img
+                src={logo.src}
+                alt={i < logos.length ? logo.alt : ""}
+                loading="lazy"
+                className="h-8 w-auto max-w-[130px] object-contain brightness-0 invert md:h-10"
+              />
+            </span>
           ))}
         </div>
       </div>
