@@ -15,7 +15,7 @@
 - [x] Animar la aparición de contenido, las portadas, las tarjetas en cascada y el zoom sutil de fotografías en las cinco páginas.
 - [ ] Sustituir las imágenes ilustrativas de la galería por fotografías reales (pendiente de recibirlas).
 - [x] Añadir la sección "Tablas Amigo Fuego" al Inicio con tres tablas y pedido por WhatsApp.
-- [ ] Recibir la fotografía real de la tabla (pendiente del usuario).
+- [x] Recibir la fotografía real de la tabla: ya se usan las fotos del CDN en la portada y en la ficha de Tablas.
 - [x] Actualizar Inicio y /tablas a una sola tabla con cuatro tamaños, precios e ingredientes confirmados; verificar los enlaces y mensajes de pedido (número real de WhatsApp pendiente).
 - [x] Quitar el formulario de /tablas y dejar en su lugar un banner de CTA con botón de cotización.
 - [x] Añadir al menú principal un desplegable de Tablas con acceso a la página y al pedido por WhatsApp.
@@ -23,7 +23,8 @@
 - [x] Reestructurar /menu en 4 servicios con botones duales, desplegable Menú con anclas y opción «Barra de bebida» en el formulario.
 - [ ] Enlazar los PDF de «Ver menú» (pendiente del usuario).
 - [x] Añadir cintillo de anuncio global a /tablas sobre el encabezado, con la nota de pedido con un día de anticipación y los espacios etiquetados para las fotos de tablas acompañadas.
-- [ ] Recibir las fotografías reales de las tablas acompañadas de vinos, fernet, vermut y cerveza Hércules (pendiente del usuario).
+- [x] Retirar la fila de fotos de tablas acompañadas de vinos, fernet, vermut y cerveza Hércules: se quitó por repetirse con la foto principal.
 - [x] Reordenar /tablas: portada cinematográfica centrada, ingredientes crema, precios carbón con tarjetas claras y fotos de bebidas crema.
 - [x] Quitar de /tablas el banner final "¿Algo más grande que una tabla?" y mover el ancla de cotización al banner de parrilla.
 - [x] Añadir la nota de maridaje (vinos, fernet y cerveza Hércules) centrada bajo las cuatro tarjetas de precios de /tablas.
+- [x] Poner la foto del mantel de cuadros en "Lo que lleva tu tabla", la foto de charcutería como fondo de la sección de precios y quitar la fila repetida de fotos de /tablas.
