@@ -3,10 +3,11 @@ import type { ReactNode } from "react";
 import { CtaLink, PageHero, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 const CDN = "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public";
-const gParrilla = `${CDN}/parrilla-argentina-amigo-fuego-cortando-carne.webp`;
+const gHero = `${CDN}/hero-parrilla-argentina-amigo-fuego.webp`;
+const gParrilla = `${CDN}/gabriel-bourdin-cortando-carne-parrilla.webp`;
 const gPizzas = `${CDN}/estacion-pizzas-amigo-fuego-evento.webp`;
 const gMaridaje = `${CDN}/barra-bebidas-amigo-fuego-vermut-cerveza.webp`;
-const gChori = `${CDN}/evento-nocturno-amigo-fuego-choripan.webp`;
+const gChori = `${CDN}/choripan-parrilla-argentina-amigo-fuego.webp`;
 
 export const Route = createFileRoute("/menu")({
   head: () =>
@@ -38,7 +39,7 @@ const SERVICIOS: Servicio[] = [
     body: "El ritual completo del asado: bienvenida con vermut, entradas que salen de la parrilla, cortes al punto y guarniciones hechas al fuego. Paquetes desde $550 MXN por persona.",
     items: ["Empanadas y choripanes", "Vacío, asado de tira y churrasco Angus", "Calabaza con humita y pimientos asados", "Chimichurri, salsa criolla y pan"],
     img: gParrilla,
-    alt: "Parrilla encendida durante el servicio de asado",
+    alt: "Gabriel Bourdin cortando carne en la parrilla",
     cta: "Cotizar servicio",
   },
   {
@@ -82,11 +83,12 @@ function Menu() {
   return (
     <>
       <PageHero
+        overlay="suave"
         crumb="Menú"
         eyebrow="Menú · Servicios"
         title="Nuestro Menú: Cuatro Formas de Vivir la Parrilla Argentina"
         subtitle="Parrilla, pizza, bebidas y choripaneada. Elige uno o combínalos para tu evento."
-        image={gParrilla}
+        image={gHero}
       >
         <CtaLink>Cotizar mi menú</CtaLink>
       </PageHero>
