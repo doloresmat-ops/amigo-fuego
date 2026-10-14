@@ -100,7 +100,50 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Young+Serif&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/favicon.ico",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/favicon-16x16.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/favicon-32x32.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "48x48",
+        href: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/favicon-48x48.png",
+      },
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/apple-touch-icon.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "192x192",
+        href: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/android-chrome-192x192.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "512x512",
+        href: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/android-chrome-512x512.png",
+      },
+      {
+        rel: "manifest",
+        href: "/site.webmanifest",
+      },
     ],
     scripts: [
       {
