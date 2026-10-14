@@ -29,6 +29,7 @@ type Servicio = {
   img: string;
   alt: string;
   cta: string;
+  ratio: string;
 };
 
 const SERVICIOS: Servicio[] = [
@@ -41,6 +42,7 @@ const SERVICIOS: Servicio[] = [
     img: gParrilla,
     alt: "Gabriel Bourdin cortando carne en la parrilla",
     cta: "Cotizar servicio",
+    ratio: "aspect-[3/4]",
   },
   {
     id: "pizza",
@@ -56,6 +58,7 @@ const SERVICIOS: Servicio[] = [
     img: gPizzas,
     alt: "Mini pizzas de masa madre a la parrilla",
     cta: "Cotizar barra",
+    ratio: "aspect-[4/3]",
   },
   {
     id: "bebidas",
@@ -66,6 +69,7 @@ const SERVICIOS: Servicio[] = [
     img: gMaridaje,
     alt: "Brindis con Malbec, vermut y fernet",
     cta: "Cotizar barra",
+    ratio: "aspect-[4/3]",
   },
   {
     id: "choripaneada",
@@ -76,6 +80,7 @@ const SERVICIOS: Servicio[] = [
     img: gChori,
     alt: "Choripanes servidos con chimichurri",
     cta: "Cotizar servicio",
+    ratio: "aspect-[3/4]",
   },
 ];
 
@@ -98,7 +103,7 @@ function Menu() {
           <section key={s.id} id={s.id} className={dark ? "bg-carbon text-crema" : "bg-crema text-carbon"}>
             <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">
               <div className={`image-zoom overflow-hidden rounded-xl ${dark ? "md:order-2" : ""}`}>
-                <img src={s.img} alt={s.alt} loading="lazy" className="aspect-[4/3] w-full object-cover" />
+                <img src={s.img} alt={s.alt} loading="lazy" className={`${s.ratio} w-full object-cover`} />
               </div>
               <div>
                 <p className="eyebrow text-tierra">{s.eyebrow}</p>
