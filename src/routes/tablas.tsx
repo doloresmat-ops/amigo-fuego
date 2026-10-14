@@ -53,6 +53,13 @@ function TablasPage() {
               ))}
             </div>
           </div>
+          <div data-stagger className="mt-14 grid gap-5 sm:grid-cols-3">
+            {GALERIA_TABLAS.map((foto) => (
+              <div key={foto.img} className="image-zoom aspect-[4/3] overflow-hidden rounded-lg">
+                <img src={foto.img} alt={foto.alt} loading="lazy" className="h-full w-full object-cover" />
+              </div>
+            ))}
+          </div>
         </Section>
       </section>
       <section className="bg-carbon text-crema">
