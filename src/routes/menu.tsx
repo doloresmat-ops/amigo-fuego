@@ -58,7 +58,7 @@ const SERVICIOS: Servicio[] = [
     img: gPizzas,
     alt: "Barra de pizzas de masa madre Amigo Fuego y Lunfardo",
     cta: "Cotizar barra",
-    ratio: "aspect-[4/3]",
+    ratio: "aspect-[2/1]",
   },
   {
     id: "bebidas",
