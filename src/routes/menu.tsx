@@ -2,10 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { CtaLink, PageHero, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
-import gPizzas from "@/assets/galeria-mini-pizzas.jpg";
-import gMaridaje from "@/assets/galeria-maridaje.jpg";
-import gParrilla from "@/assets/galeria-parrilla-vivo.jpg";
-import gChori from "@/assets/galeria-choripan.jpg";
+const CDN = "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public";
+const gParrilla = `${CDN}/parrilla-argentina-amigo-fuego-cortando-carne.webp`;
+const gPizzas = `${CDN}/estacion-pizzas-amigo-fuego-evento.webp`;
+const gMaridaje = `${CDN}/barra-bebidas-amigo-fuego-vermut-cerveza.webp`;
+const gChori = `${CDN}/evento-nocturno-amigo-fuego-choripan.webp`;
 
 export const Route = createFileRoute("/menu")({
   head: () =>
