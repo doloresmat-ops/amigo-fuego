@@ -5,7 +5,7 @@ import { QuoteForm } from "@/components/amigo/QuoteForm";
 const CDN = "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public";
 const gHero = `${CDN}/hero-parrilla-argentina-amigo-fuego.webp`;
 const gParrilla = `${CDN}/gabriel-bourdin-cortando-carne-parrilla.webp`;
-const gPizzas = `${CDN}/estacion-pizzas-amigo-fuego-evento.webp`;
+const gPizzas = `${CDN}/barra-pizzas-amigo-fuego-lunfardo.webp`;
 const gMaridaje = `${CDN}/barra-bebidas-amigo-fuego-vermut-cerveza.webp`;
 const gChori = `${CDN}/choripan-parrilla-argentina-amigo-fuego.webp`;
 
@@ -56,7 +56,7 @@ const SERVICIOS: Servicio[] = [
     ),
     items: ["Mini pizzas de masa madre", "Ensalada fresca", "Pastas"],
     img: gPizzas,
-    alt: "Mini pizzas de masa madre a la parrilla",
+    alt: "Barra de pizzas de masa madre Amigo Fuego y Lunfardo",
     cta: "Cotizar barra",
     ratio: "aspect-[4/3]",
   },
