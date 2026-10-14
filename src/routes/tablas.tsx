@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
-import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, NOTA_MARIDAJE } from "@/components/amigo/tablas";
+import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, NOTA_MARIDAJE, GALERIA_TABLAS } from "@/components/amigo/tablas";
 
 export const Route = createFileRoute("/tablas")({
   head: () =>
@@ -52,6 +52,13 @@ function TablasPage() {
                 </div>
               ))}
             </div>
+          </div>
+          <div data-stagger className="mt-14 grid gap-5 sm:grid-cols-3">
+            {GALERIA_TABLAS.map((foto) => (
+              <div key={foto.img} className="image-zoom aspect-[4/3] overflow-hidden rounded-lg">
+                <img src={foto.img} alt={foto.alt} loading="lazy" className="h-full w-full object-cover" />
+              </div>
+            ))}
           </div>
         </Section>
       </section>

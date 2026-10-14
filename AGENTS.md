@@ -17,5 +17,5 @@
 - Keep the board presentation, size options, and ingredient groups in one shared catalog consumed by Home and /tablas to prevent inconsistent product information.
 - Keep main-menu dropdown entries in the shared header module so the desktop panel and the mobile accordion always render the same destinations from one definition.
 - Keep the site-wide campaign strip in the shared header module, rendered once above the sticky header, so every page shows the same announcement and points to the same destination without per-page copies.
-- Serve brand marks from the project's own `public/` folder rather than an external CDN while the source repository stays private, because a 404 image would leave the navigation without a logo.
+- Serve brand marks and the Menu/Tablas photography from jsDelivr (`https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/...`) now that the source repository is public; the `@main` branch segment is required because the repo has no tags.
 
