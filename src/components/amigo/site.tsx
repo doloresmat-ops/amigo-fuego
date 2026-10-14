@@ -392,15 +392,15 @@ export function Section({
 export function TrustStrip() {
   const logos = [
     { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/fifa.webp", alt: "FIFA" },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/furia.webp", alt: "Furia" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/furia.webp", alt: "Furia", invert: true },
     { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/gato.webp", alt: "Gato" },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/landia.webp", alt: "Landia" },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/oruga.webp", alt: "Oruga" },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/space.webp", alt: "Space" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/landia.webp", alt: "Landia", invert: true },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/oruga.webp", alt: "Oruga", invert: true },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/space.webp", alt: "Space", invert: true },
     { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/wtf.webp", alt: "WTF" },
     { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/amazon.webp", alt: "Amazon" },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/castingclub.webp", alt: "Casting Club" },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/chingon.webp", alt: "Chingón" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/castingclub.webp", alt: "Casting Club", invert: true },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/chingon.webp", alt: "Chingón", invert: true },
   ];
   return (
     <section className="border-y border-carbon/15 bg-crema py-12 text-carbon">
@@ -413,13 +413,13 @@ export function TrustStrip() {
             <span
               key={i}
               aria-hidden={i >= logos.length}
-              className="flex h-20 shrink-0 items-center rounded-xl bg-carbon px-7 md:h-24"
+              className="flex h-20 shrink-0 items-center rounded-xl border border-carbon/10 bg-white px-7 md:h-24"
             >
               <img
                 src={logo.src}
                 alt={i < logos.length ? logo.alt : ""}
                 loading="lazy"
-                className="h-8 w-auto max-w-[130px] object-contain brightness-0 invert md:h-10"
+                className={`h-8 w-auto max-w-[130px] object-contain md:h-10 ${logo.invert ? "invert" : ""}`}
               />
             </span>
           ))}
