@@ -169,8 +169,8 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-10 md:py-5">
         <Link to="/" aria-label="Amigo Fuego, inicio" className="shrink-0">
           <img
-            src="/logo-header@2x.webp"
-            srcSet="/logo-header@2x.webp 111w, /logo-medium.webp 159w"
+            src="https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/logo-header@2x.webp"
+            srcSet="https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/logo-mobile.webp 56w, https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/logo-header@2x.webp 111w"
             sizes="(min-width: 768px) 80px, 56px"
             width={111}
             height={112}
@@ -283,8 +283,8 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-4 md:px-10">
         <div className="md:col-span-2">
           <img
-            src="/logo-footer@2x.webp"
-            srcSet="/logo-footer@2x.webp 95w, /logo-medium.webp 159w"
+            src="https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/logo-footer@2x.webp"
+            srcSet="https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/logo-footer@2x.webp 95w"
             sizes="(min-width: 768px) 96px, 80px"
             width={95}
             height={96}
