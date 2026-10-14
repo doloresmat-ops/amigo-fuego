@@ -390,16 +390,34 @@ export function Section({
 }
 
 export function TrustStrip() {
-  const clientes = ["Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente"];
+  const logos = [
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/fifa.webp", alt: "FIFA" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/furia.webp", alt: "Furia" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/gato.webp", alt: "Gato" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/landia.webp", alt: "Landia" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/oruga.webp", alt: "Oruga" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/space.webp", alt: "Space" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/wtf.webp", alt: "WTF" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/amazon.webp", alt: "Amazon" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/castingclub.webp", alt: "Casting Club" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/chingon.webp", alt: "Chingón" },
+  ];
   return (
     <section className="border-y border-carbon/15 bg-crema py-12 text-carbon">
       <p className="px-5 text-center font-display text-lg italic text-oxido md:text-xl">
         La opción de confianza para productoras, agencias y despachos corporativos.
       </p>
-      <div className="mt-7 overflow-hidden">
-        <div className="flex w-max animate-marquee gap-14">
-          {[...clientes, ...clientes].map((c, i) => (
-            <span key={i} className="whitespace-nowrap font-display text-lg text-carbon/45">{c}</span>
+      <div className="mt-8 overflow-hidden" role="region" aria-label="Logos de clientes">
+        <div className="flex w-max animate-marquee items-center gap-16 px-8">
+          {[...logos, ...logos].map((logo, i) => (
+            <img
+              key={i}
+              src={logo.src}
+              alt={i < logos.length ? logo.alt : ""}
+              aria-hidden={i >= logos.length}
+              loading="lazy"
+              className="h-12 w-auto shrink-0 object-contain opacity-80 md:h-14"
+            />
           ))}
         </div>
       </div>
