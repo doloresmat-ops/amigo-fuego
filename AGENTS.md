@@ -14,6 +14,7 @@
 - Looping photo marquees use equal duplicated groups and honor reduced-motion preferences so the cycle has no visible jump and stays accessible.
 - Keep site-wide scroll reveals and hero parallax in one progressive-enhancement controller, with reduced-motion fallbacks and no hidden server-rendered content.
 - Use the shared PageHero cinematic mode for centered photo banners so they retain the global parallax controller without changing other page layouts.
+- Choose a PageHero overlay level instead of adding per-page scrim layers: the lightest keeps the photograph clearly visible while still lifting the headline, the middle one is the default, and the strongest is for banners whose photo is very bright.
 - Keep the board presentation, size options, and ingredient groups in one shared catalog consumed by Home and /tablas to prevent inconsistent product information.
 - Keep main-menu dropdown entries in the shared header module so the desktop panel and the mobile accordion always render the same destinations from one definition.
 - Keep the site-wide campaign strip in the shared header module, rendered once above the sticky header, so every page shows the same announcement and points to the same destination without per-page copies.
