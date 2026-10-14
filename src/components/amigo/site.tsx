@@ -2,7 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 
-export const WA = "https://wa.me/520000000000"; // placeholder: número real pendiente
+export const WA = "https://wa.me/525518265450"; // Amigo Fuego: +52 55 1826 5450
 
 /** Enlace de WhatsApp con el mensaje ya escrito para el cliente. */
 export function waLink(mensaje: string) {
