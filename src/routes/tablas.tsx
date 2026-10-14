@@ -40,7 +40,7 @@ function TablasPage() {
               <div className="image-zoom aspect-[4/3] overflow-hidden rounded-lg">
                 <img src={FOTO_INGREDIENTES.img} alt={FOTO_INGREDIENTES.alt} loading="lazy" width={1600} height={1192} className="h-full w-full object-cover" />
               </div>
-              <figcaption className="mt-3 text-sm text-carbon/60">Imagen ilustrativa.</figcaption>
+              <figcaption className="mt-3 text-sm text-carbon/60">{"\n"}</figcaption>
             </figure>
             <div data-stagger className="grid gap-8 sm:grid-cols-2">
               {INGREDIENTES.map((grupo) => (
