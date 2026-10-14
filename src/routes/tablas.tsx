@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
-import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, NOTA_MARIDAJE, GALERIA_TABLAS } from "@/components/amigo/tablas";
+import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, NOTA_MARIDAJE, FOTO_INGREDIENTES, FONDO_PRECIOS } from "@/components/amigo/tablas";
 
 export const Route = createFileRoute("/tablas")({
   head: () =>
@@ -38,7 +38,7 @@ function TablasPage() {
           <div className="mt-10 grid items-start gap-10 lg:grid-cols-2">
             <figure>
               <div className="image-zoom aspect-[4/3] overflow-hidden rounded-lg">
-                <img src={TABLA.img} alt="Tabla de picada con quesos, embutidos y acompañamientos" loading="lazy" width={800} height={1008} className="h-full w-full object-cover" />
+                <img src={FOTO_INGREDIENTES.img} alt={FOTO_INGREDIENTES.alt} loading="lazy" width={1600} height={1192} className="h-full w-full object-cover" />
               </div>
               <figcaption className="mt-3 text-sm text-carbon/60">Imagen ilustrativa.</figcaption>
             </figure>
@@ -53,16 +53,11 @@ function TablasPage() {
               ))}
             </div>
           </div>
-          <div data-stagger className="mt-14 grid gap-5 sm:grid-cols-3">
-            {GALERIA_TABLAS.map((foto) => (
-              <div key={foto.img} className="image-zoom aspect-[4/3] overflow-hidden rounded-lg">
-                <img src={foto.img} alt={foto.alt} loading="lazy" className="h-full w-full object-cover" />
-              </div>
-            ))}
-          </div>
         </Section>
       </section>
-      <section className="bg-carbon text-crema">
+      <section className="relative isolate overflow-hidden bg-carbon text-crema">
+        <img src={FONDO_PRECIOS} alt="" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />
+        <div className="absolute inset-0 -z-10 bg-carbon/85" />
         <Section>
           <p className="eyebrow text-tierra">A tu medida</p>
           <h2 className="mt-4 text-3xl md:text-4xl">Elige el tamaño de tu mesa</h2>
