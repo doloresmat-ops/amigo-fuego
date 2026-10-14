@@ -21,7 +21,7 @@ export function TablaCard() {
         <div className="mt-8">
           <CtaLink to="/tablas">Ver tamaños y pedir</CtaLink>
         </div>
-        <p className="mt-5 text-sm text-carbon/60">Imagen ilustrativa.</p>
+        <p className="mt-5 text-sm text-carbon/60">{"\n"}</p>
       </div>
     </article>
   );
