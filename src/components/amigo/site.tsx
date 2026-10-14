@@ -390,16 +390,38 @@ export function Section({
 }
 
 export function TrustStrip() {
-  const clientes = ["Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente", "Logo cliente"];
+  const logos = [
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/fifa.webp", alt: "FIFA" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/furia.webp", alt: "Furia", invert: true },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/gato.webp", alt: "Gato" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/landia.webp", alt: "Landia", invert: true },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/oruga.webp", alt: "Oruga", invert: true },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/space.webp", alt: "Space", invert: true },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/wtf.webp", alt: "WTF" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/amazon.webp", alt: "Amazon" },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/castingclub.webp", alt: "Casting Club", invert: true },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/chingon.webp", alt: "Chingón", invert: true },
+  ];
   return (
     <section className="border-y border-carbon/15 bg-crema py-12 text-carbon">
       <p className="px-5 text-center font-display text-lg italic text-oxido md:text-xl">
         La opción de confianza para productoras, agencias y despachos corporativos.
       </p>
-      <div className="mt-7 overflow-hidden">
-        <div className="flex w-max animate-marquee gap-14">
-          {[...clientes, ...clientes].map((c, i) => (
-            <span key={i} className="whitespace-nowrap font-display text-lg text-carbon/45">{c}</span>
+      <div className="mt-8 overflow-hidden" role="region" aria-label="Logos de clientes">
+        <div className="flex w-max animate-marquee items-center gap-16 px-8">
+          {[...logos, ...logos].map((logo, i) => (
+            <span
+              key={i}
+              aria-hidden={i >= logos.length}
+              className="flex h-20 shrink-0 items-center rounded-xl border border-carbon/10 bg-white px-7 md:h-24"
+            >
+              <img
+                src={logo.src}
+                alt={i < logos.length ? logo.alt : ""}
+                loading="lazy"
+                className={`h-8 w-auto max-w-[130px] object-contain md:h-10 ${logo.invert ? "invert" : ""}`}
+              />
+            </span>
           ))}
         </div>
       </div>

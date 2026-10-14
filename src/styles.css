@@ -178,6 +178,8 @@ main .image-zoom:hover img:not([data-hero-image]) {
 @media (prefers-reduced-motion: reduce) {
   .site-reveal { opacity: 1; translate: none; transition: none; }
   .hero-parallax-image { height: 100% !important; transform: none; will-change: auto; }
+  .animate-marquee, .animate-gallery-marquee { animation: none; }
+  .animate-marquee { overflow-x: auto; }
   main img:not([data-hero-image]), main img:not([data-hero-image]):hover,
   main .image-zoom:hover img:not([data-hero-image]) { scale: 1; transition: none; }
   .animate-nav-drop { animation: none; }
