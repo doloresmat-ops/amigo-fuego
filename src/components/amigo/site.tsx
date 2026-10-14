@@ -350,7 +350,7 @@ export function PageHero({
   return (
     <section data-parallax-hero className="relative isolate overflow-hidden bg-carbon">
       <img data-hero-image src={image} alt="" className="hero-parallax-image absolute inset-0 -z-20 h-full w-full object-cover" />
-      <div className={overlay ? `absolute inset-0 -z-10 ${overlay === "fuerte" ? "bg-carbon/80" : overlay === "suave" ? "bg-carbon/45" : "bg-carbon/70"}` : "golden absolute inset-0 -z-10"} />
+      <div className={overlay ? `absolute inset-0 -z-10 ${overlay === "fuerte" ? "bg-carbon/80" : overlay === "suave" ? "bg-carbon/60" : "bg-carbon/70"}` : "golden absolute inset-0 -z-10"} />
       {overlay === "fuerte" && !cinematic && <div className="absolute inset-0 -z-10 bg-gradient-to-t from-carbon via-carbon/45 to-transparent" />}
       <div className={cinematic ? "mx-auto flex min-h-[min(620px,65svh)] max-w-7xl flex-col items-center justify-center px-5 py-16 text-center md:px-10 md:py-20" : "mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:px-10 md:pb-24"}>
         {crumb && (

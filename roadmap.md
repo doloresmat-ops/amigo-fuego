@@ -28,4 +28,4 @@
 - [x] Quitar de /tablas el banner final "¿Algo más grande que una tabla?" y mover el ancla de cotización al banner de parrilla.
 - [x] Añadir la nota de maridaje (vinos, fernet y cerveza Hércules) centrada bajo las cuatro tarjetas de precios de /tablas.
 - [x] Poner la foto del mantel de cuadros en "Lo que lleva tu tabla", la foto de charcutería como fondo de la sección de precios y quitar la fila repetida de fotos de /tablas.
-- [x] Cambiar a las nuevas fotos del CDN la portada de Menú (con overlay oscuro al 45%), la sección Parrilla Argentina, la Choripaneada y la ficha de Gabriel y Lolita en Historia.
+- [x] Cambiar a las nuevas fotos del CDN la portada de Menú (con overlay oscuro al 60%), la sección Parrilla Argentina, la Choripaneada y la ficha de Gabriel y Lolita en Historia.
