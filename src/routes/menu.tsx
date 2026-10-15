@@ -30,6 +30,7 @@ type Servicio = {
   alt: string;
   cta: string;
   ratio: string;
+  pdf?: string;
 };
 
 const SERVICIOS: Servicio[] = [
@@ -59,6 +60,7 @@ const SERVICIOS: Servicio[] = [
     alt: "Barra de pizzas de masa madre Amigo Fuego y Lunfardo",
     cta: "Cotizar barra",
     ratio: "aspect-[2/1]",
+    pdf: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego/public/ensalada-pasta-pizza.pdf",
   },
   {
     id: "bebidas",
