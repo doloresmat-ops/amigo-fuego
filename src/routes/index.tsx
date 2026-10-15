@@ -6,6 +6,7 @@ import { TablaCard } from "@/components/amigo/TablaCard";
 import { TABLA } from "@/components/amigo/tablas";
 import hero from "@/assets/hero-parrilla-noche.jpg";
 import ritualBanner from "@/assets/ritual-banner.jpg";
+import corpAsset from "@/assets/eventos-corporativos-parrilla-amigo-fuego.webp.asset.json";
 const ritual = ritualBanner;
 
 export const Route = createFileRoute("/")({
