@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
 
 const CDN = "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public";
 const BLOQUES = [
-  { to: "/eventos-empresas", img: `${CDN}/eventos-corporativos-parrilla-amigo-fuego.webp`, label: "Eventos Corporativos", text: "Cenas de fin de año, reuniones de despachos y networking." },
+  { to: "/eventos-empresas", img: corpAsset.url, label: "Eventos Corporativos", text: "Cenas de fin de año, reuniones de despachos y networking." },
   { to: "/eventos-empresas", img: `${CDN}/producciones-cines-catering-amigo-fuego.webp`, label: "Producciones y Cines", text: "Catering premium para cierres de rodaje, directores e invitados internacionales." },
   { to: "/bodas", img: `${CDN}/eventos-sociales-parrilla-amigo-fuego-noche.webp`, label: "Eventos Sociales", text: "Bodas, tornabodas, cumpleaños y celebraciones de vida alrededor del fuego." },
 ] as const;
