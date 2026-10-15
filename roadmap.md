@@ -34,3 +34,4 @@
 - [x] Poner la foto nueva de la Barra de Pizza: ya está subida al repositorio y se muestra con marco 2/1 para que el pizarrón se vea completo.
 - [x] Cambiar las tres fotos de /eventos-empresas: portada de terraza (con capa oscura "suave" como la de Menú), empanadas bajo carpa en "Por qué elegir" y parrilla nocturna de brochetas y costillar en "Formatos".
 - [x] Cambiar las tres fotos de "Elige tu ocasión" en el Inicio: corporativos, producciones y cines, y eventos sociales, desde el CDN.
+- [x] Corregir la foto de "Eventos Corporativos": el archivo del repositorio tiene un espacio en el nombre y el CDN servía una copia vieja; la tarjeta ahora usa la foto oficial subida por la usuaria.
