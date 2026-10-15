@@ -30,6 +30,7 @@ type Servicio = {
   alt: string;
   cta: string;
   ratio: string;
+  pdf?: string;
 };
 
 const SERVICIOS: Servicio[] = [
@@ -59,6 +60,7 @@ const SERVICIOS: Servicio[] = [
     alt: "Barra de pizzas de masa madre Amigo Fuego y Lunfardo",
     cta: "Cotizar barra",
     ratio: "aspect-[2/1]",
+    pdf: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego/public/ensalada-pasta-pizza.pdf",
   },
   {
     id: "bebidas",
@@ -99,6 +101,7 @@ function Menu() {
       </PageHero>
       {SERVICIOS.map((s, i) => {
         const dark = i % 2 === 1;
+        const verMenuCls = `inline-flex min-h-12 items-center justify-center rounded-full border-2 px-8 py-3 text-base font-bold transition-colors duration-300 ${dark ? "border-crema text-crema hover:bg-crema hover:text-carbon" : "border-fuego text-fuego hover:bg-fuego hover:text-blanco"}`;
         return (
           <section key={s.id} id={s.id} className={dark ? "bg-carbon text-crema" : "bg-crema text-carbon"}>
             <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">
@@ -116,13 +119,22 @@ function Menu() {
                 </ul>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <CtaLink>{s.cta}</CtaLink>
-                  {/* Pendiente: enlazar al PDF del menú de este servicio */}
-                  <a
-                    href="#"
-                    className={`inline-flex min-h-12 items-center justify-center rounded-full border-2 px-8 py-3 text-base font-bold transition-colors duration-300 ${dark ? "border-crema text-crema hover:bg-crema hover:text-carbon" : "border-fuego text-fuego hover:bg-fuego hover:text-blanco"}`}
-                  >
-                    Ver menú
-                  </a>
+                  {s.pdf ? (
+                    <a
+                      href={s.pdf}
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={verMenuCls}
+                    >
+                      Ver menú
+                    </a>
+                  ) : (
+                    /* Pendiente: enlazar al PDF del menú de este servicio */
+                    <a href="#" className={verMenuCls}>
+                      Ver menú
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
