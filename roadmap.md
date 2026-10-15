@@ -21,7 +21,8 @@
 - [x] Añadir al menú principal un desplegable de Tablas con acceso a la página y al pedido por WhatsApp.
 - [x] Cambiar el logo del encabezado y del pie por la versión a color redonda en alta resolución, con altura corregida en escritorio y móvil.
 - [x] Reestructurar /menu en 4 servicios con botones duales, desplegable Menú con anclas y opción «Barra de bebida» en el formulario.
-- [ ] Enlazar los PDF de «Ver menú» (pendiente del usuario).
+- [x] Enlazar el PDF de «Ver menú» en la Barra de Pizza: descarga ensalada-pasta-pizza.pdf del CDN, en pestaña nueva.
+- [ ] Enlazar los PDF de «Ver menú» de Parrilla Argentina, Barra de Bebidas y Choripaneada (pendiente del usuario).
 - [x] Añadir cintillo de anuncio global a /tablas sobre el encabezado, con la nota de pedido con un día de anticipación y los espacios etiquetados para las fotos de tablas acompañadas.
 - [x] Retirar la fila de fotos de tablas acompañadas de vinos, fernet, vermut y cerveza Hércules: se quitó por repetirse con la foto principal.
 - [x] Reordenar /tablas: portada cinematográfica centrada, ingredientes crema, precios carbón con tarjetas claras y fotos de bebidas crema.
@@ -30,4 +31,4 @@
 - [x] Poner la foto del mantel de cuadros en "Lo que lleva tu tabla", la foto de charcutería como fondo de la sección de precios y quitar la fila repetida de fotos de /tablas.
 - [x] Cambiar a las nuevas fotos del CDN la portada de Menú (con overlay oscuro al 60%), la sección Parrilla Argentina, la Choripaneada y la ficha de Gabriel y Lolita en Historia.
 - [x] Encuadrar en vertical las fotos de Parrilla Argentina y Choripaneada en /menu (marco 3/4, recorte cero) para que la cabeza de Gabriel se vea completa.
-- [ ] Poner la foto nueva de la Barra de Pizza: el enlace barra-pizzas-amigo-fuego-lunfardo.webp responde 404, falta subirla al repositorio o enviarla por aquí.
+- [x] Poner la foto nueva de la Barra de Pizza: ya está subida al repositorio y se muestra con marco 2/1 para que el pizarrón se vea completo.
