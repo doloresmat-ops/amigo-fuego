@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, TrustStrip, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
-import gMesa from "@/assets/galeria-mesa-corporativa.jpg";
-import gEquipo from "@/assets/galeria-equipo.jpg";
-import gParrilla from "@/assets/galeria-parrilla-vivo.jpg";
+const CDN = "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public";
+const HERO_EMPRESAS = `${CDN}/evento-terraza-amigo-fuego-servicio.webp`;
+const EMPANADAS_TENT = `${CDN}/evento-amigo-fuego-empanadas-tent.webp`;
+const PARRILLA_NOCTURNA = `${CDN}/parrilla-nocturna-brochetas-costillar.webp`;
 
 export const Route = createFileRoute("/eventos-empresas")({
   head: () =>
@@ -67,8 +68,8 @@ function EventosEmpresas() {
         eyebrow="Empresas · Productoras · Agencias"
         title="Catering Corporativo y Asado Argentino para Producciones y Empresas"
         subtitle="La tradición que transforma una comida en un gran momento de negocios."
-        image={gMesa}
-        overlay
+        image={HERO_EMPRESAS}
+        overlay="suave"
       >
         <CtaLink>Cotizar evento corporativo</CtaLink>
       </PageHero>
@@ -80,8 +81,8 @@ function EventosEmpresas() {
         <Section>
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
              <div className="image-zoom overflow-hidden rounded-lg"><img
-              src={gEquipo}
-              alt="El equipo de Amigo Fuego cocinando frente a los invitados"
+              src={EMPANADAS_TENT}
+              alt="Empanadas y antojitos de Amigo Fuego servidos bajo carpa en un evento"
                className="aspect-[4/3] w-full object-cover"
              /></div>
             <div>
@@ -140,14 +141,14 @@ function EventosEmpresas() {
                 Desde juntas íntimas de 10 personas hasta eventos masivos
               </h2>
                <div className="image-zoom mt-8 overflow-hidden rounded-lg md:hidden"><img
-                src={gParrilla}
-                alt="Parrilla encendida en vivo durante un evento"
+                src={PARRILLA_NOCTURNA}
+                alt="Parrilla nocturna con brochetas y costillar durante un evento"
                  className="aspect-[4/3] w-full object-cover"
                /></div>
             </div>
              <div className="image-zoom hidden overflow-hidden rounded-lg md:block"><img
-              src={gParrilla}
-              alt="Parrilla encendida en vivo durante un evento"
+              src={PARRILLA_NOCTURNA}
+              alt="Parrilla nocturna con brochetas y costillar durante un evento"
                className="aspect-[4/3] w-full object-cover"
              /></div>
           </div>
