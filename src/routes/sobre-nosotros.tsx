@@ -45,7 +45,7 @@ function Historia() {
               heredando el oficio de la pizzería tradicional de su familia en Entre Ríos. Tras abrir las
               puertas de{" "}
               <a
-                href="https://lunfardopizzeria.com"
+                href="https://maps.app.goo.gl/4KYRewDagdMvzozz9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-tierra underline decoration-tierra/50 underline-offset-4 transition-colors hover:decoration-tierra"
