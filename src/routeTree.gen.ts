@@ -12,10 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AvisoDePrivacidadRouteImport } from './routes/aviso-de-privacidad'
 import { Route as BodasRouteImport } from './routes/bodas'
-import { Route as EventosEmpresasRouteImport } from './routes/eventos-empresas'
-import { Route as HistoriaRouteImport } from './routes/historia'
+import { Route as EventosCorporativosRouteImport } from './routes/eventos-corporativos'
 import { Route as MenuRouteImport } from './routes/menu'
-import { Route as TablasRouteImport } from './routes/tablas'
+import { Route as SobreNosotrosRouteImport } from './routes/sobre-nosotros'
+import { Route as TablasDePicadaRouteImport } from './routes/tablas-de-picada'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -32,14 +32,9 @@ const BodasRoute = BodasRouteImport.update({
   path: '/bodas',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EventosEmpresasRoute = EventosEmpresasRouteImport.update({
-  id: '/eventos-empresas',
-  path: '/eventos-empresas',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HistoriaRoute = HistoriaRouteImport.update({
-  id: '/historia',
-  path: '/historia',
+const EventosCorporativosRoute = EventosCorporativosRouteImport.update({
+  id: '/eventos-corporativos',
+  path: '/eventos-corporativos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MenuRoute = MenuRouteImport.update({
@@ -47,9 +42,14 @@ const MenuRoute = MenuRouteImport.update({
   path: '/menu',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TablasRoute = TablasRouteImport.update({
-  id: '/tablas',
-  path: '/tablas',
+const SobreNosotrosRoute = SobreNosotrosRouteImport.update({
+  id: '/sobre-nosotros',
+  path: '/sobre-nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TablasDePicadaRoute = TablasDePicadaRouteImport.update({
+  id: '/tablas-de-picada',
+  path: '/tablas-de-picada',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -57,29 +57,29 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
   '/bodas': typeof BodasRoute
-  '/eventos-empresas': typeof EventosEmpresasRoute
-  '/historia': typeof HistoriaRoute
+  '/eventos-corporativos': typeof EventosCorporativosRoute
   '/menu': typeof MenuRoute
-  '/tablas': typeof TablasRoute
+  '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/tablas-de-picada': typeof TablasDePicadaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
   '/bodas': typeof BodasRoute
-  '/eventos-empresas': typeof EventosEmpresasRoute
-  '/historia': typeof HistoriaRoute
+  '/eventos-corporativos': typeof EventosCorporativosRoute
   '/menu': typeof MenuRoute
-  '/tablas': typeof TablasRoute
+  '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/tablas-de-picada': typeof TablasDePicadaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
   '/bodas': typeof BodasRoute
-  '/eventos-empresas': typeof EventosEmpresasRoute
-  '/historia': typeof HistoriaRoute
+  '/eventos-corporativos': typeof EventosCorporativosRoute
   '/menu': typeof MenuRoute
-  '/tablas': typeof TablasRoute
+  '/sobre-nosotros': typeof SobreNosotrosRoute
+  '/tablas-de-picada': typeof TablasDePicadaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -87,38 +87,38 @@ export interface FileRouteTypes {
     | '/'
     | '/aviso-de-privacidad'
     | '/bodas'
-    | '/eventos-empresas'
-    | '/historia'
+    | '/eventos-corporativos'
     | '/menu'
-    | '/tablas'
+    | '/sobre-nosotros'
+    | '/tablas-de-picada'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/aviso-de-privacidad'
     | '/bodas'
-    | '/eventos-empresas'
-    | '/historia'
+    | '/eventos-corporativos'
     | '/menu'
-    | '/tablas'
+    | '/sobre-nosotros'
+    | '/tablas-de-picada'
   id:
     | '__root__'
     | '/'
     | '/aviso-de-privacidad'
     | '/bodas'
-    | '/eventos-empresas'
-    | '/historia'
+    | '/eventos-corporativos'
     | '/menu'
-    | '/tablas'
+    | '/sobre-nosotros'
+    | '/tablas-de-picada'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AvisoDePrivacidadRoute: typeof AvisoDePrivacidadRoute
   BodasRoute: typeof BodasRoute
-  EventosEmpresasRoute: typeof EventosEmpresasRoute
-  HistoriaRoute: typeof HistoriaRoute
+  EventosCorporativosRoute: typeof EventosCorporativosRoute
   MenuRoute: typeof MenuRoute
-  TablasRoute: typeof TablasRoute
+  SobreNosotrosRoute: typeof SobreNosotrosRoute
+  TablasDePicadaRoute: typeof TablasDePicadaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -144,18 +144,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BodasRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/eventos-empresas': {
-      id: '/eventos-empresas'
-      path: '/eventos-empresas'
-      fullPath: '/eventos-empresas'
-      preLoaderRoute: typeof EventosEmpresasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/historia': {
-      id: '/historia'
-      path: '/historia'
-      fullPath: '/historia'
-      preLoaderRoute: typeof HistoriaRouteImport
+    '/eventos-corporativos': {
+      id: '/eventos-corporativos'
+      path: '/eventos-corporativos'
+      fullPath: '/eventos-corporativos'
+      preLoaderRoute: typeof EventosCorporativosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/menu': {
@@ -165,11 +158,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MenuRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tablas': {
-      id: '/tablas'
-      path: '/tablas'
-      fullPath: '/tablas'
-      preLoaderRoute: typeof TablasRouteImport
+    '/sobre-nosotros': {
+      id: '/sobre-nosotros'
+      path: '/sobre-nosotros'
+      fullPath: '/sobre-nosotros'
+      preLoaderRoute: typeof SobreNosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tablas-de-picada': {
+      id: '/tablas-de-picada'
+      path: '/tablas-de-picada'
+      fullPath: '/tablas-de-picada'
+      preLoaderRoute: typeof TablasDePicadaRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -179,10 +179,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AvisoDePrivacidadRoute: AvisoDePrivacidadRoute,
   BodasRoute: BodasRoute,
-  EventosEmpresasRoute: EventosEmpresasRoute,
-  HistoriaRoute: HistoriaRoute,
+  EventosCorporativosRoute: EventosCorporativosRoute,
   MenuRoute: MenuRoute,
-  TablasRoute: TablasRoute,
+  SobreNosotrosRoute: SobreNosotrosRoute,
+  TablasDePicadaRoute: TablasDePicadaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
