@@ -9,7 +9,7 @@ export const Route = createFileRoute("/bodas-eventos-sociales")({
     pageHead(
       "/bodas-eventos-sociales",
       "Catering de Asado Argentino para Eventos Sociales | Amigo Fuego",
-      "Asado argentino para eventos sociales y celebraciones, con la Tornafiesta Amigo Fuego: parrilla encendida de madrugada con choripanes.", "Eventos Sociales"
+      "Asado argentino para eventos sociales y celebraciones, con la Tornafiesta Amigo Fuego: parrilla encendida de madrugada con choripanes.", "Eventos Sociales", "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/eventos-sociales-parrilla-amigo-fuego-noche.webp"
     ),
   component: Bodas,
 });

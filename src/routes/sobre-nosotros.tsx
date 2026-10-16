@@ -11,7 +11,7 @@ export const Route = createFileRoute("/sobre-nosotros")({
     pageHead(
       "/sobre-nosotros",
       "El Legado del Fuego: Quiénes Somos | Amigo Fuego",
-      "La historia de Gabriel, parrillero argentino con 25 años en México, y de cómo una pizzería familiar de Entre Ríos se convirtió en Amigo Fuego.", "Nuestra Historia"
+      "La historia de Gabriel, parrillero argentino con 25 años en México, y de cómo una pizzería familiar de Entre Ríos se convirtió en Amigo Fuego.", "Nuestra Historia", "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/gabriel-y-lolita-historia-amigo-fuego.webp"
     ),
   component: Historia,
 });
