@@ -12,7 +12,7 @@ export function waLink(mensaje: string) {
 export const NAV = [
   { to: "/", label: "Inicio" },
   { to: "/eventos-corporativos", label: "Eventos para Empresas" },
-  { to: "/bodas", label: "Eventos Sociales" },
+  { to: "/bodas-eventos-sociales", label: "Eventos Sociales" },
   { to: "/sobre-nosotros", label: "Historia" },
 ] as const;
 
@@ -317,7 +317,7 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm text-crema/80">
              <li><Link to="/eventos-corporativos" className="transition-colors hover:text-cielo">Eventos para Empresas</Link></li>
              <li><Link to="/eventos-corporativos" className="transition-colors hover:text-cielo">Producciones y Cines</Link></li>
-             <li><Link to="/bodas" className="transition-colors hover:text-cielo">Eventos Sociales</Link></li>
+             <li><Link to="/bodas-eventos-sociales" className="transition-colors hover:text-cielo">Eventos Sociales</Link></li>
           </ul>
         </div>
       </div>
