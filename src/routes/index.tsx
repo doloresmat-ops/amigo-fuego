@@ -15,6 +15,8 @@ export const Route = createFileRoute("/")({
       "/",
       "Catering de Asado Argentino y Parrilla a Domicilio | Amigo Fuego",
       "Catering de asado argentino en CDMX con maestro parrillero. Eventos corporativos, producciones, bodas y tornabodas. Paquetes desde $550 MXN por persona.",
+      undefined,
+      "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/parrilla-nocturna-brochetas-costillar.webp",
     ),
   component: Home,
 });
