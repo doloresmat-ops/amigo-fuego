@@ -16,6 +16,7 @@ export const Route = createFileRoute("/menu")({
       "Menú: Parrilla, Barra de Pizza, Bebidas y Choripaneada | Amigo Fuego",
       "Cuatro servicios para tu evento: Parrilla Argentina, Barra de Pizza con ensalada y pastas, Barra de Bebidas y Choripaneada. Paquetes desde $550 MXN por persona.",
       "Menú",
+      gHero,
     ),
   component: Menu,
 });

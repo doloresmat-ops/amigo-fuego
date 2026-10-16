@@ -12,7 +12,8 @@ export const Route = createFileRoute("/eventos-corporativos")({
       "/eventos-corporativos",
       "Catering Corporativo y Asado Argentino para Producciones y Empresas | Amigo Fuego",
       "Asado argentino con maestro parrillero para cenas de fin de año, producciones, juntas de despacho y clientes VIP. Desde 10 personas hasta eventos masivos.",
-      "Eventos para Empresas"
+      "Eventos para Empresas",
+      HERO_EMPRESAS,
     ),
   component: EventosEmpresas,
 });
