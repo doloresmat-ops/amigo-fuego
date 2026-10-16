@@ -19,7 +19,7 @@ export function TablaCard() {
         <p className="mt-4 text-lg text-carbon/75">{TABLA.descripcion}</p>
         <p className="mt-4 text-carbon/75">Una misma selección, en cuatro tamaños para compartir.</p>
         <div className="mt-8">
-          <CtaLink to="/tablas">Ver tamaños y pedir</CtaLink>
+          <CtaLink to="/tablas-de-picada">Ver tamaños y pedir</CtaLink>
         </div>
         <p className="mt-5 text-sm text-carbon/60">{"\n"}</p>
       </div>

@@ -11,15 +11,15 @@ export function waLink(mensaje: string) {
 
 export const NAV = [
   { to: "/", label: "Inicio" },
-  { to: "/eventos-empresas", label: "Eventos para Empresas" },
+  { to: "/eventos-corporativos", label: "Eventos para Empresas" },
   { to: "/bodas", label: "Eventos Sociales" },
-  { to: "/historia", label: "Historia" },
+  { to: "/sobre-nosotros", label: "Historia" },
 ] as const;
 
 /** Enlaces del encabezado: el logo ya lleva a Inicio, así que el texto no se repite ahí. */
 export const NAV_HEADER = NAV.filter((n) => n.to !== "/");
 
-export type MenuDropItem = { label: string; text: string; to: "/menu" | "/tablas"; hash?: string };
+export type MenuDropItem = { label: string; text: string; to: "/menu" | "/tablas-de-picada"; hash?: string };
 
 /** Desplegable "Menú" del menú principal: 4 servicios (anclas en /menu) + Tablas. */
 export const MENU_DROPDOWN: { label: string; items: MenuDropItem[] } = {
@@ -29,7 +29,7 @@ export const MENU_DROPDOWN: { label: string; items: MenuDropItem[] } = {
     { label: "Barra de Pizzas", text: "Masa madre a la parrilla, ensalada y pastas.", to: "/menu", hash: "pizza" },
     { label: "Barra de Bebidas", text: "Vermut, fernet, Malbec y más.", to: "/menu", hash: "bebidas" },
     { label: "Choripaneada", text: "Choripanes al momento para tu fiesta.", to: "/menu", hash: "choripaneada" },
-    { label: "Tablas de Picada", text: "Para llevar. Cuatro tamaños, de $750 a $1,500 MXN.", to: "/tablas" },
+    { label: "Tablas de Picada", text: "Para llevar. Cuatro tamaños, de $750 a $1,500 MXN.", to: "/tablas-de-picada" },
   ],
 };
 
@@ -137,11 +137,11 @@ function NavDropdown({
   );
 }
 
-/** Cintillo global de anuncio: toda la franja enlaza a /tablas. */
+/** Cintillo global de anuncio: toda la franja enlaza a /tablas-de-picada-de-picada. */
 export function AnnouncementBar() {
   return (
     <Link
-      to="/tablas"
+      to="/tablas-de-picada"
       className="group block bg-fuego px-4 py-2.5 text-center text-[13px] font-bold leading-snug text-blanco transition-colors hover:bg-oxido focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-blanco sm:text-sm"
     >
       🔥 AMIGO FUEGO EN CASA: Pide nuestras nuevas tablas de picada a domicilio.{" "}
@@ -157,7 +157,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);
   const pathname = useLocation({ select: (l) => l.pathname });
-  const tablasActive = pathname === "/tablas" || pathname === "/menu";
+  const tablasActive = pathname === "/tablas-de-picada" || pathname === "/menu";
 
   useEffect(() => {
     setOpen(false);
@@ -315,8 +315,8 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow text-tierra">Servicios</p>
           <ul className="mt-4 space-y-2 text-sm text-crema/80">
-             <li><Link to="/eventos-empresas" className="transition-colors hover:text-cielo">Eventos para Empresas</Link></li>
-             <li><Link to="/eventos-empresas" className="transition-colors hover:text-cielo">Producciones y Cines</Link></li>
+             <li><Link to="/eventos-corporativos" className="transition-colors hover:text-cielo">Eventos para Empresas</Link></li>
+             <li><Link to="/eventos-corporativos" className="transition-colors hover:text-cielo">Producciones y Cines</Link></li>
              <li><Link to="/bodas" className="transition-colors hover:text-cielo">Eventos Sociales</Link></li>
           </ul>
         </div>
@@ -424,7 +424,7 @@ export function TrustStrip() {
   );
 }
 
-export function pageHead(path: string, title: string, description: string, crumb?: string) {
+export function pageHead(path: string, title: string, description: string, crumb?: string, image?: string) {
   const url = new URL(path, "https://pixel-perfect-render-34682.lovable.app").href;
   return {
     scripts: crumb
@@ -448,6 +448,7 @@ export function pageHead(path: string, title: string, description: string, crumb
       { property: "og:type", content: "website" },
        { property: "og:url", content: url },
       { name: "twitter:card", content: "summary_large_image" },
+      ...(image ? [{ property: "og:image", content: image }, { name: "twitter:image", content: image }] : []),
     ],
     links: [{ rel: "canonical", href: url }],
   };

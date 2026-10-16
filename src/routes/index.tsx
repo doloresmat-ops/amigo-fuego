@@ -21,8 +21,8 @@ export const Route = createFileRoute("/")({
 
 const CDN = "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public";
 const BLOQUES = [
-  { to: "/eventos-empresas", img: corpAsset.url, label: "Eventos Corporativos", text: "Cenas de fin de año, reuniones de despachos y networking." },
-  { to: "/eventos-empresas", img: `${CDN}/producciones-cines-catering-amigo-fuego.webp`, label: "Producciones y Cines", text: "Catering premium para cierres de rodaje, directores e invitados internacionales." },
+  { to: "/eventos-corporativos", img: corpAsset.url, label: "Eventos Corporativos", text: "Cenas de fin de año, reuniones de despachos y networking." },
+  { to: "/eventos-corporativos", img: `${CDN}/producciones-cines-catering-amigo-fuego.webp`, label: "Producciones y Cines", text: "Catering premium para cierres de rodaje, directores e invitados internacionales." },
   { to: "/bodas", img: `${CDN}/eventos-sociales-parrilla-amigo-fuego-noche.webp`, label: "Eventos Sociales", text: "Bodas, tornabodas, cumpleaños y celebraciones de vida alrededor del fuego." },
 ] as const;
 
@@ -60,7 +60,7 @@ function Home() {
            <div data-stagger className="mt-12 grid gap-6 md:grid-cols-3">
             {BLOQUES.map((b) => (
                <Link key={b.label} to={b.to} className="image-zoom group relative isolate block aspect-[4/5] overflow-hidden rounded-xl">
-                 <img src={b.img} alt={b.label} loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />
+                 <img src={b.img} alt={`${b.label} con parrilla argentina Amigo Fuego en CDMX`} loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />
                 <div className="golden absolute inset-0 -z-10" />
                 <div className="flex h-full flex-col justify-end p-6">
                   <h3 className="text-3xl text-crema">{b.label}</h3>
