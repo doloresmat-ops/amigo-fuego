@@ -4,7 +4,7 @@ import { QuoteForm } from "@/components/amigo/QuoteForm";
 import gJardin from "@/assets/galeria-jardin.jpg";
 import gChoripan from "@/assets/galeria-choripan.jpg";
 
-export const Route = createFileRoute("/bodas")({
+export const Route = createFileRoute("/bodas-eventos-sociales")({
   head: () =>
     pageHead(
       "/bodas",

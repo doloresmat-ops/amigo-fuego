@@ -11,7 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AvisoDePrivacidadRouteImport } from './routes/aviso-de-privacidad'
-import { Route as BodasRouteImport } from './routes/bodas'
+import { Route as BodasEventosSocialesRouteImport } from './routes/bodas-eventos-sociales'
 import { Route as EventosCorporativosRouteImport } from './routes/eventos-corporativos'
 import { Route as MenuRouteImport } from './routes/menu'
 import { Route as SobreNosotrosRouteImport } from './routes/sobre-nosotros'
@@ -27,9 +27,9 @@ const AvisoDePrivacidadRoute = AvisoDePrivacidadRouteImport.update({
   path: '/aviso-de-privacidad',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BodasRoute = BodasRouteImport.update({
-  id: '/bodas',
-  path: '/bodas',
+const BodasEventosSocialesRoute = BodasEventosSocialesRouteImport.update({
+  id: '/bodas-eventos-sociales',
+  path: '/bodas-eventos-sociales',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EventosCorporativosRoute = EventosCorporativosRouteImport.update({
@@ -56,7 +56,7 @@ const TablasDePicadaRoute = TablasDePicadaRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
-  '/bodas': typeof BodasRoute
+  '/bodas-eventos-sociales': typeof BodasEventosSocialesRoute
   '/eventos-corporativos': typeof EventosCorporativosRoute
   '/menu': typeof MenuRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
@@ -65,7 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
-  '/bodas': typeof BodasRoute
+  '/bodas-eventos-sociales': typeof BodasEventosSocialesRoute
   '/eventos-corporativos': typeof EventosCorporativosRoute
   '/menu': typeof MenuRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
@@ -75,7 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aviso-de-privacidad': typeof AvisoDePrivacidadRoute
-  '/bodas': typeof BodasRoute
+  '/bodas-eventos-sociales': typeof BodasEventosSocialesRoute
   '/eventos-corporativos': typeof EventosCorporativosRoute
   '/menu': typeof MenuRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
@@ -86,7 +86,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aviso-de-privacidad'
-    | '/bodas'
+    | '/bodas-eventos-sociales'
     | '/eventos-corporativos'
     | '/menu'
     | '/sobre-nosotros'
@@ -95,7 +95,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/aviso-de-privacidad'
-    | '/bodas'
+    | '/bodas-eventos-sociales'
     | '/eventos-corporativos'
     | '/menu'
     | '/sobre-nosotros'
@@ -104,7 +104,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/aviso-de-privacidad'
-    | '/bodas'
+    | '/bodas-eventos-sociales'
     | '/eventos-corporativos'
     | '/menu'
     | '/sobre-nosotros'
@@ -114,7 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AvisoDePrivacidadRoute: typeof AvisoDePrivacidadRoute
-  BodasRoute: typeof BodasRoute
+  BodasEventosSocialesRoute: typeof BodasEventosSocialesRoute
   EventosCorporativosRoute: typeof EventosCorporativosRoute
   MenuRoute: typeof MenuRoute
   SobreNosotrosRoute: typeof SobreNosotrosRoute
@@ -137,11 +137,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AvisoDePrivacidadRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/bodas': {
-      id: '/bodas'
-      path: '/bodas'
-      fullPath: '/bodas'
-      preLoaderRoute: typeof BodasRouteImport
+    '/bodas-eventos-sociales': {
+      id: '/bodas-eventos-sociales'
+      path: '/bodas-eventos-sociales'
+      fullPath: '/bodas-eventos-sociales'
+      preLoaderRoute: typeof BodasEventosSocialesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/eventos-corporativos': {
@@ -178,7 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AvisoDePrivacidadRoute: AvisoDePrivacidadRoute,
-  BodasRoute: BodasRoute,
+  BodasEventosSocialesRoute: BodasEventosSocialesRoute,
   EventosCorporativosRoute: EventosCorporativosRoute,
   MenuRoute: MenuRoute,
   SobreNosotrosRoute: SobreNosotrosRoute,
