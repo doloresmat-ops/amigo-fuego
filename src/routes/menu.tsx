@@ -53,7 +53,7 @@ const SERVICIOS: Servicio[] = [
     body: (
       <>
         Mini pizzas de masa madre a la parrilla, directo de los hornos de nuestro restaurante hermano,{" "}
-        <a href="https://lunfardopizzeria.com" target="_blank" rel="noopener noreferrer" className="font-medium text-tierra underline underline-offset-4">Lunfardo Pizzería</a>. Incluye ensalada y pastas.
+        <a href="https://maps.app.goo.gl/4KYRewDagdMvzozz9" target="_blank" rel="noopener noreferrer" className="font-medium text-tierra underline underline-offset-4">Lunfardo Pizzería</a>. Incluye ensalada y pastas.
       </>
     ),
     items: ["Mini pizzas de masa madre", "Ensalada fresca", "Pastas"],
