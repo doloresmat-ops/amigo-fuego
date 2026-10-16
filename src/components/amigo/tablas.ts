@@ -4,7 +4,7 @@ const tCasa = `${CDN}/tabla-quesos-embutidos-amigo-fuego.webp`;
 /** Foto de la tabla sobre el mantel de cuadros: se muestra en "Lo que lleva tu tabla". */
 export const FOTO_INGREDIENTES = {
   img: `${CDN}/tabla-charcuteria-higos-amigo-fuego.webp`,
-  alt: "Tabla de picada con quesos, embutidos e higos sobre mantel de cuadros rojos",
+  alt: "Tabla de picada Amigo Fuego con quesos, embutidos e higos sobre mantel de cuadros rojos, para llevar en CDMX",
 };
 
 /** Foto de charcutería que sirve de fondo en la sección de precios. */
@@ -31,10 +31,10 @@ export const INGREDIENTES = [
   { nombre: "Pan", items: ["2 baguettes de masa madre"] },
 ] as const;
 
-/** Aviso de tiempo de preparación: se muestra en /tablas. */
+/** Aviso de tiempo de preparación: se muestra en /tablas-de-picada-de-picada. */
 export const NOTA_ANTICIPACION = "Nota: Las tablas se piden con un día de anticipación";
 
-/** Nota de venta cruzada de bebidas: se muestra bajo los precios en /tablas. */
+/** Nota de venta cruzada de bebidas: se muestra bajo los precios en /tablas-de-picada-de-picada. */
 export const NOTA_MARIDAJE = {
   inicio: "El maridaje perfecto:",
   cuerpo: "Pregunta por nuestra selección de vinos, fernet y cerveza Hércules al enviar tu mensaje.",

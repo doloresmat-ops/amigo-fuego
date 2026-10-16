@@ -42,7 +42,7 @@ function Bodas() {
                 conversación nunca termina.
               </p>
               <div className="mt-8">
-                <CtaLink to="/historia">Conoce nuestro legado parrillero</CtaLink>
+                <CtaLink to="/sobre-nosotros">Conoce nuestro legado parrillero</CtaLink>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ function Bodas() {
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
           <div className="mb-10 grid gap-10 overflow-hidden rounded-2xl bg-carbon p-8 text-crema shadow-xl md:grid-cols-2 md:items-center md:p-16 md:mb-16">
             <div className="image-zoom overflow-hidden rounded-xl">
-              <img src={gChoripan} alt="Choripanes en la parrilla de madrugada" loading="lazy" className="aspect-[4/5] w-full object-cover" />
+              <img src={gChoripan} alt="Choripanes en la parrilla argentina de Amigo Fuego durante una tornafiesta de madrugada" loading="lazy" className="aspect-[4/5] w-full object-cover" />
             </div>
             <div>
               <p className="eyebrow text-tierra">Sección estelar</p>

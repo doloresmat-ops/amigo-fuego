@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://pixel-perfect-render-34682.lovable.app/sitemap.xml

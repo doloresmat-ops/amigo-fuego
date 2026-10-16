@@ -4,12 +4,14 @@ import { PageHero, Section, pageHead, waLink } from "@/components/amigo/site";
 import { Button } from "@/components/ui/button";
 import { TABLA, TAMANOS, INGREDIENTES, NOTA_ANTICIPACION, NOTA_MARIDAJE, FOTO_INGREDIENTES, FONDO_PRECIOS } from "@/components/amigo/tablas";
 
-export const Route = createFileRoute("/tablas")({
+export const Route = createFileRoute("/tablas-de-picada")({
   head: () =>
     pageHead(
-      "/tablas",
+      "/tablas-de-picada",
       "Tablas de Picada para llevar | Amigo Fuego",
       "Tabla de picada para llevar con embutidos, milanesas, quesos y pan de masa madre. Cuatro tamaños desde $750 MXN: comen 6 a 12, pican 12 a 24. Pide por WhatsApp.",
+      "Tablas de Picada",
+      TABLA.img,
     ),
   component: TablasPage,
 });

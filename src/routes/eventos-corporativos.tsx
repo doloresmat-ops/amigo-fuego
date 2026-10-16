@@ -6,13 +6,14 @@ const HERO_EMPRESAS = `${CDN}/evento-terraza-amigo-fuego-servicio.webp`;
 const EMPANADAS_TENT = `${CDN}/evento-amigo-fuego-empanadas-tent.webp`;
 const PARRILLA_NOCTURNA = `${CDN}/parrilla-nocturna-brochetas-costillar.webp`;
 
-export const Route = createFileRoute("/eventos-empresas")({
+export const Route = createFileRoute("/eventos-corporativos")({
   head: () =>
     pageHead(
-      "/eventos-empresas",
+      "/eventos-corporativos",
       "Catering Corporativo y Asado Argentino para Producciones y Empresas | Amigo Fuego",
       "Asado argentino con maestro parrillero para cenas de fin de año, producciones, juntas de despacho y clientes VIP. Desde 10 personas hasta eventos masivos.",
-      "Eventos para Empresas"
+      "Eventos para Empresas",
+      HERO_EMPRESAS,
     ),
   component: EventosEmpresas,
 });
@@ -82,7 +83,7 @@ function EventosEmpresas() {
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
              <div className="image-zoom overflow-hidden rounded-lg"><img
               src={EMPANADAS_TENT}
-              alt="Empanadas y antojitos de Amigo Fuego servidos bajo carpa en un evento"
+              alt="Empanadas argentinas de Amigo Fuego servidas bajo carpa en un evento corporativo en CDMX"
                className="aspect-[4/3] w-full object-cover"
              /></div>
             <div>
@@ -142,13 +143,13 @@ function EventosEmpresas() {
               </h2>
                <div className="image-zoom mt-8 overflow-hidden rounded-lg md:hidden"><img
                 src={PARRILLA_NOCTURNA}
-                alt="Parrilla nocturna con brochetas y costillar durante un evento"
+                alt="Parrilla argentina nocturna de Amigo Fuego con brochetas y costillar en un evento corporativo"
                  className="aspect-[4/3] w-full object-cover"
                /></div>
             </div>
              <div className="image-zoom hidden overflow-hidden rounded-lg md:block"><img
               src={PARRILLA_NOCTURNA}
-              alt="Parrilla nocturna con brochetas y costillar durante un evento"
+              alt="Parrilla argentina nocturna de Amigo Fuego con brochetas y costillar en un evento corporativo"
                className="aspect-[4/3] w-full object-cover"
              /></div>
           </div>
