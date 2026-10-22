@@ -38,6 +38,8 @@ export function QuoteForm({
   const [sending, setSending] = useState(false);
   const [submitError, setSubmitError] = useState(false);
   const enviarFn = useServerFn(enviarCotizacion);
+  void tone;
+  const dark = false; // la sección del formulario siempre es crema
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
