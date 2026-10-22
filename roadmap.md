@@ -37,3 +37,4 @@
 - [x] Corregir la foto de "Eventos Corporativos": el archivo del repositorio tiene un espacio en el nombre y el CDN servía una copia vieja; la tarjeta ahora usa la foto oficial subida por la usuaria.
 - [x] Enviar los dos enlaces de "Lunfardo Pizzería" (Menú y Sobre Nosotros) a la ficha de Google Maps maps.app.goo.gl/4KYRewDagdMvzozz9, en pestaña nueva.
 - [x] Configurar el formulario de cotización para enviar los datos por POST JSON al webhook de Make (secreto MAKE_WEBHOOK_URL), con estado de carga en el botón, mensaje de error con alternativa por WhatsApp y el mensaje de éxito al confirmar el envío (probado con un envío de prueba).
+- [x] Hacer obligatorios nombre, teléfono y correo en el formulario de cotización: asterisco en la etiqueta, avisos en español bajo cada campo pendiente y resaltado naranja; el envío solo ocurre cuando todo está completo (probado en Menú).
