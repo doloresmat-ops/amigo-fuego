@@ -35,20 +35,43 @@ export function QuoteForm({
   tone?: "crema" | "carbon";
 }) {
   const [sent, setSent] = useState(false);
-  const [servicios, setServicios] = useState<string[]>([]);
-  const [serviciosError, setServiciosError] = useState(false);
-  void tone;
-  const dark = false; // la sección del formulario siempre es crema
+  const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+  const enviarFn = useServerFn(enviarCotizacion);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (!e.currentTarget.checkValidity()) return;
+    const form = e.currentTarget;
+    if (!form.checkValidity()) return;
     if (servicios.length === 0) {
       setServiciosError(true);
       return;
     }
-    setServiciosError(false);
-    setSent(true);
+    if (sending) return;
+    const datos = new FormData(form);
+    setSending(true);
+    setSubmitError(false);
+    try {
+      const res = await enviarFn({
+        data: {
+          nombre: String(datos.get("nombre") ?? ""),
+          email: String(datos.get("email") ?? ""),
+          telefono: String(datos.get("telefono") ?? ""),
+          empresa: String(datos.get("empresa") ?? ""),
+          tipo: String(datos.get("tipo") ?? ""),
+          servicios,
+          personas: String(datos.get("personas") ?? ""),
+          fecha: String(datos.get("fecha") ?? ""),
+          origen: typeof window !== "undefined" ? window.location.pathname : "",
+        },
+      });
+      if (res.ok) setSent(true);
+      else setSubmitError(true);
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   function toggleServicio(s: string) {
