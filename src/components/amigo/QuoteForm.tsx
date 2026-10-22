@@ -53,7 +53,8 @@ function validar(datos: FormData): Errores {
 }
 
 function campoCls(error?: string) {
-  return `${field}${error ? " ring-2 ring-fuego" : ""}`;
+  if (!error) return field;
+  return "w-full rounded-md border-0 bg-blanco px-4 py-3 text-carbon placeholder:text-carbon/50 focus:outline-none focus:ring-2 focus:ring-fuego ring-2 ring-fuego";
 }
 
 export function QuoteForm({
@@ -256,7 +257,9 @@ export function QuoteForm({
                       className={`flex min-h-12 cursor-pointer items-center gap-3 rounded-md border px-4 py-2.5 text-sm transition-colors ${
                         servicios.includes(s)
                           ? "border-fuego/70 bg-crema/10 text-crema"
-                          : "border-crema/25 bg-crema/5 text-crema/85 hover:border-crema/50"
+                          : serviciosError
+                            ? "border-fuego/60 bg-crema/5 text-crema/85 hover:border-crema/50"
+                            : "border-crema/25 bg-crema/5 text-crema/85 hover:border-crema/50"
                       }`}
                     >
                       <input
