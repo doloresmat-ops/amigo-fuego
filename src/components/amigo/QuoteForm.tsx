@@ -173,9 +173,34 @@ export function QuoteForm({
                 variant="conversion"
                 size="conversion"
                 className="mt-2 sm:col-span-2"
+                disabled={sending}
               >
-                Quiero mi cotización
+                {sending ? (
+                  <span className="inline-flex items-center gap-2">
+                    <span
+                      aria-hidden="true"
+                      className="size-4 animate-spin rounded-full border-2 border-crema/40 border-t-crema"
+                    />
+                    Enviando…
+                  </span>
+                ) : (
+                  "Quiero mi cotización"
+                )}
               </Button>
+              {submitError && (
+                <p role="alert" className="text-sm text-fuego sm:col-span-2">
+                  No pudimos enviar tu solicitud. Intenta de nuevo o{" "}
+                  <a
+                    href={waLink("Hola, quiero cotizar un evento con Amigo Fuego.")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-2"
+                  >
+                    escríbenos por WhatsApp
+                  </a>
+                  .
+                </p>
+              )}
             </form>
           )}
         </div>
