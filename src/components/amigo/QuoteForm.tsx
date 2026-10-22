@@ -258,7 +258,7 @@ export function QuoteForm({
                         servicios.includes(s)
                           ? "border-fuego/70 bg-crema/10 text-crema"
                           : serviciosError
-                            ? "border-fuego/60 bg-crema/5 text-crema/85 hover:border-crema/50"
+                            ? "border-fuego bg-crema/5 text-crema/85 hover:border-crema/50"
                             : "border-crema/25 bg-crema/5 text-crema/85 hover:border-crema/50"
                       }`}
                     >
