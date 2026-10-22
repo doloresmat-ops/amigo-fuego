@@ -20,3 +20,4 @@
 - Keep the site-wide campaign strip in the shared header module, rendered once above the sticky header, so every page shows the same announcement and points to the same destination without per-page copies.
 - Serve brand marks and the Menu/Tablas photography from jsDelivr (`https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/...`) now that the source repository is public; the `@main` branch segment is required because the repo has no tags.
 
+- Quote form submissions go through `src/lib/quote-form.functions.ts` (createServerFn), which POSTs validated JSON to the Make.com webhook stored in the `MAKE_WEBHOOK_URL` secret; never put the webhook URL in client code or replace the secret with a literal.
