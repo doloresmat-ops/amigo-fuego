@@ -53,7 +53,7 @@ function validar(datos: FormData): Errores {
 }
 
 function campoCls(error?: string) {
-  return `${field}${error ? " ring-2 ring-oxido" : ""}`;
+  return `${field}${error ? " ring-2 ring-fuego" : ""}`;
 }
 
 export function QuoteForm({
@@ -152,7 +152,7 @@ export function QuoteForm({
             </div>
           ) : (
             <form onSubmit={onSubmit} noValidate className="grid gap-4 sm:grid-cols-2">
-              <p className="text-xs text-crema/60 sm:col-span-2">
+              <p className="text-xs text-crema/80 sm:col-span-2">
                 Los campos marcados con <span aria-hidden="true" className="text-tierra">*</span> son
                 obligatorios.
               </p>
