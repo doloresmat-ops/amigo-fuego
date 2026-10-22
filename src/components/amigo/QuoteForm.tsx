@@ -37,6 +37,8 @@ export function QuoteForm({
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const [servicios, setServicios] = useState<string[]>([]);
+  const [serviciosError, setServiciosError] = useState(false);
   const enviarFn = useServerFn(enviarCotizacion);
   void tone;
   const dark = false; // la sección del formulario siempre es crema
