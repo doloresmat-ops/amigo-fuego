@@ -425,7 +425,7 @@ export function TrustStrip() {
 }
 
 export function pageHead(path: string, title: string, description: string, crumb?: string, image?: string) {
-  const url = new URL(path, "https://pixel-perfect-render-34682.lovable.app").href;
+  const url = new URL(path, "https://amigofuego.lovable.app").href;
   return {
     scripts: crumb
       ? [{
