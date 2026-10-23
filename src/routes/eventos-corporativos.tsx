@@ -70,6 +70,8 @@ function EventosEmpresas() {
         title="Catering Corporativo y Asado Argentino para Producciones y Empresas"
         subtitle="La tradición que transforma una comida en un gran momento de negocios."
         image={HERO_EMPRESAS}
+        width={1600}
+        height={900}
         alt="Servicio de catering Amigo Fuego en terraza corporativa al atardecer"
         overlay="suave"
       >
@@ -85,6 +87,8 @@ function EventosEmpresas() {
              <div className="image-zoom overflow-hidden rounded-lg"><img
               src={EMPANADAS_TENT}
               alt="Empanadas argentinas de Amigo Fuego servidas bajo carpa en un evento corporativo en CDMX"
+              width={1600}
+              height={900}
                className="aspect-[4/3] w-full object-cover"
              /></div>
             <div>
