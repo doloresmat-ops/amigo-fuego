@@ -338,6 +338,8 @@ export function PageHero({
   crumb,
   overlay = false,
   cinematic = false,
+  width,
+  height,
 }: {
   cinematic?: boolean;
   overlay?: boolean | "fuerte" | "suave";
@@ -348,10 +350,12 @@ export function PageHero({
   alt: string;
   children?: ReactNode;
   crumb?: string;
+  width?: number;
+  height?: number;
 }) {
   return (
     <section data-parallax-hero className="relative isolate overflow-hidden bg-carbon">
-      <img data-hero-image src={image} alt={alt} loading="eager" fetchPriority="high" decoding="async" className="hero-parallax-image absolute inset-0 -z-20 h-full w-full object-cover" />
+      <img data-hero-image src={image} alt={alt} loading="eager" fetchPriority="high" decoding="async" width={width} height={height} className="hero-parallax-image absolute inset-0 -z-20 h-full w-full object-cover" />
       <div className={overlay ? `absolute inset-0 -z-10 ${overlay === "fuerte" ? "bg-carbon/80" : overlay === "suave" ? "bg-carbon/60" : "bg-carbon/70"}` : "golden absolute inset-0 -z-10"} />
       {overlay === "fuerte" && !cinematic && <div className="absolute inset-0 -z-10 bg-gradient-to-t from-carbon via-carbon/45 to-transparent" />}
       <div className={cinematic ? "mx-auto flex min-h-[min(620px,65svh)] max-w-7xl flex-col items-center justify-center px-5 py-16 text-center md:px-10 md:py-20" : "mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:px-10 md:pb-24"}>
@@ -393,16 +397,16 @@ export function Section({
 
 export function TrustStrip() {
   const logos = [
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/fifa.webp", alt: "FIFA" },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/furia.webp", alt: "Furia", invert: true },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/gato.webp", alt: "Gato" },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/landia.webp", alt: "Landia", invert: true },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/oruga.webp", alt: "Oruga", invert: true },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/space.webp", alt: "Space", invert: true },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/wtf.webp", alt: "WTF" },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/amazon.webp", alt: "Amazon" },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/castingclub.webp", alt: "Casting Club", invert: true },
-    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/chingon.webp", alt: "Chingón", invert: true },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/fifa.webp", alt: "FIFA", w: 1000, h: 328 },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/furia.webp", alt: "Furia", invert: true, w: 208, h: 184 },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/gato.webp", alt: "Gato", w: 932, h: 927 },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/landia.webp", alt: "Landia", invert: true, w: 1000, h: 128 },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/oruga.webp", alt: "Oruga", invert: true, w: 1000, h: 564 },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/space.webp", alt: "Space", invert: true, w: 1000, h: 325 },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/wtf.webp", alt: "WTF", w: 1000, h: 867 },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/amazon.webp", alt: "Amazon", w: 1000, h: 302 },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/castingclub.webp", alt: "Casting Club", invert: true, w: 394, h: 394 },
+    { src: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public/chingon.webp", alt: "Chingón", invert: true, w: 1000, h: 788 },
   ];
   return (
     <section className="border-y border-carbon/15 bg-crema py-14 text-carbon">
@@ -417,6 +421,8 @@ export function TrustStrip() {
               src={logo.src}
               alt={i < logos.length ? logo.alt : ""}
               loading="lazy"
+              width={logo.w}
+              height={logo.h}
               className={`client-logo h-9 w-auto max-w-[140px] shrink-0 object-contain md:h-12 ${logo.invert ? "client-logo-invert" : ""}`}
             />
           ))}
