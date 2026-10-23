@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://amigofuego.lovable.app/sitemap.xml
+Sitemap: https://amigofuego.com/sitemap.xml
