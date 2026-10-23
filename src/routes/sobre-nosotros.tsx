@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
-import gJardin from "@/assets/galeria-jardin.jpg";
-import gEquipo from "@/assets/galeria-equipo.jpg";
+import gJardin from "@/assets/galeria-jardin.webp";
+import gEquipo from "@/assets/galeria-equipo.webp";
 const CDN = "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public";
 const gParrillero = `${CDN}/gabriel-y-lolita-historia-amigo-fuego.webp`;
 
@@ -33,6 +33,7 @@ function Historia() {
         title="El Legado del Fuego: Quiénes Somos"
         subtitle="Una familia, una pizzería en Entre Ríos y 25 años de fuego en México."
         image={gEquipo}
+        alt="El equipo de Amigo Fuego alrededor de la parrilla argentina"
       />
       <section className="bg-crema text-carbon">
        <Section>

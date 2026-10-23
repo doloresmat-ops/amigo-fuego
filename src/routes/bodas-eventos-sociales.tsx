@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaLink, PageHero, Section, pageHead } from "@/components/amigo/site";
 import { QuoteForm } from "@/components/amigo/QuoteForm";
-import gJardin from "@/assets/galeria-jardin.jpg";
+import gJardin from "@/assets/galeria-jardin.webp";
 import gChoripan from "@/assets/galeria-choripan.jpg";
 
 export const Route = createFileRoute("/bodas-eventos-sociales")({
@@ -23,6 +23,7 @@ function Bodas() {
         title="Eventos Sociales Inolvidables"
         subtitle="Para parejas que se preocupan menos por impresionar y más por emocionar, con una mesa infinita y cercana."
         image={gJardin}
+        alt="Jardín con mesa larga de celebración e invitados alrededor del asado argentino Amigo Fuego"
         overlay
       >
         <CtaLink>Cotizar mi evento</CtaLink>
