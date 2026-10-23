@@ -1,6 +1,10 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+/* Self-hosted fonts (latin subset only, font-display: swap) */
+@import "@fontsource/young-serif/latin-400.css";
+@import "@fontsource/averia-serif-libre/latin-400.css";
+@import "@fontsource/averia-serif-libre/latin-700.css";
 
 @custom-variant dark (&:is(.dark *));
 
