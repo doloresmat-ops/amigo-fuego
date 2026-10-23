@@ -31,6 +31,8 @@ type Servicio = {
   alt: string;
   cta: string;
   ratio: string;
+  w: number;
+  h: number;
   pdf?: string;
 };
 
@@ -45,6 +47,8 @@ const SERVICIOS: Servicio[] = [
     alt: "Gabriel Bourdin, maestro parrillero de Amigo Fuego, cortando carne en la parrilla argentina en CDMX",
     cta: "Cotizar servicio",
     ratio: "aspect-[3/4]",
+    w: 1600,
+    h: 2133,
   },
   {
     id: "pizza",
@@ -61,6 +65,8 @@ const SERVICIOS: Servicio[] = [
     alt: "Barra de pizzas de masa madre de Amigo Fuego y Lunfardo Pizzería en un evento en CDMX",
     cta: "Cotizar barra",
     ratio: "aspect-[2/1]",
+    w: 1600,
+    h: 592,
     pdf: "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego/public/ensalada-pasta-pizza.pdf",
   },
   {
@@ -73,6 +79,8 @@ const SERVICIOS: Servicio[] = [
     alt: "Barra de bebidas de Amigo Fuego: brindis con Malbec, vermut y fernet",
     cta: "Cotizar barra",
     ratio: "aspect-[4/3]",
+    w: 1600,
+    h: 893,
   },
   {
     id: "choripaneada",
@@ -84,6 +92,8 @@ const SERVICIOS: Servicio[] = [
     alt: "Choripanes de parrilla argentina con chimichurri, servidos por Amigo Fuego en CDMX",
     cta: "Cotizar servicio",
     ratio: "aspect-[3/4]",
+    w: 1600,
+    h: 2133,
   },
 ];
 
@@ -97,6 +107,8 @@ function Menu() {
         title="Nuestro Menú: Cuatro Formas de Vivir la Parrilla Argentina"
         subtitle="Parrilla, pizza, bebidas y choripaneada. Elige uno o combínalos para tu evento."
         image={gHero}
+        width={1600}
+        height={893}
         alt="Parrilla argentina encendida con brasas y cortes, la base del menú de Amigo Fuego"
       >
         <CtaLink>Cotizar mi menú</CtaLink>
@@ -108,7 +120,7 @@ function Menu() {
           <section key={s.id} id={s.id} className={dark ? "bg-carbon text-crema" : "bg-crema text-carbon"}>
             <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-2 md:items-center md:px-10 md:py-28">
               <div className={`image-zoom overflow-hidden rounded-xl ${dark ? "md:order-2" : ""}`}>
-                <img src={s.img} alt={s.alt} loading="lazy" className={`${s.ratio} w-full object-cover`} />
+                <img src={s.img} alt={s.alt} loading="lazy" width={s.w} height={s.h} className={`${s.ratio} w-full object-cover`} />
               </div>
               <div>
                 <p className="eyebrow text-tierra">{s.eyebrow}</p>

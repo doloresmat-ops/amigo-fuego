@@ -23,9 +23,9 @@ export const Route = createFileRoute("/")({
 
 const CDN = "https://cdn.jsdelivr.net/gh/doloresmat-ops/amigo-fuego@main/public";
 const BLOQUES = [
-  { to: "/eventos-corporativos", img: corpAsset.url, label: "Eventos Corporativos", text: "Cenas de fin de año, reuniones de despachos y networking." },
-  { to: "/eventos-corporativos", img: `${CDN}/producciones-cines-catering-amigo-fuego.webp`, label: "Producciones y Cines", text: "Catering premium para cierres de rodaje, directores e invitados internacionales." },
-  { to: "/bodas-eventos-sociales", img: `${CDN}/eventos-sociales-parrilla-amigo-fuego-noche.webp`, label: "Eventos Sociales", text: "Bodas, tornabodas, cumpleaños y celebraciones de vida alrededor del fuego." },
+  { to: "/eventos-corporativos", img: corpAsset.url, w: 1600, h: 900, label: "Eventos Corporativos", text: "Cenas de fin de año, reuniones de despachos y networking." },
+  { to: "/eventos-corporativos", img: `${CDN}/producciones-cines-catering-amigo-fuego.webp`, w: 1600, h: 900, label: "Producciones y Cines", text: "Catering premium para cierres de rodaje, directores e invitados internacionales." },
+  { to: "/bodas-eventos-sociales", img: `${CDN}/eventos-sociales-parrilla-amigo-fuego-noche.webp`, w: 1600, h: 900, label: "Eventos Sociales", text: "Bodas, tornabodas, cumpleaños y celebraciones de vida alrededor del fuego." },
 ] as const;
 
 
@@ -37,6 +37,8 @@ function Home() {
         title="Catering de Parrilla Argentina"
         subtitle="No vendemos carne, vendemos un ritual. Llevamos el fuego, el maestro parrillero y la experiencia completa a tu mesa."
         image={hero}
+        width={1920}
+        height={1088}
         alt="Parrilla argentina Amigo Fuego de noche con brasas, brochetas y costillar listos para servir"
       >
         <CtaLink>Cotizar mi evento</CtaLink>
@@ -63,7 +65,7 @@ function Home() {
            <div data-stagger className="mt-12 grid gap-6 md:grid-cols-3">
             {BLOQUES.map((b) => (
                <Link key={b.label} to={b.to} className="image-zoom group relative isolate block aspect-[4/5] overflow-hidden rounded-xl">
-                 <img src={b.img} alt={`${b.label} con parrilla argentina Amigo Fuego en CDMX`} loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />
+                 <img src={b.img} alt={`${b.label} con parrilla argentina Amigo Fuego en CDMX`} loading="lazy" width={b.w} height={b.h} className="absolute inset-0 -z-20 h-full w-full object-cover" />
                 <div className="golden absolute inset-0 -z-10" />
                 <div className="flex h-full flex-col justify-end p-6">
                   <h3 className="text-3xl text-crema">{b.label}</h3>
@@ -76,7 +78,7 @@ function Home() {
         </Section>
       </section>
       <section data-parallax-hero className="relative isolate overflow-hidden">
-        <img data-hero-image src={ritual} alt="Parrillero de Amigo Fuego atendiendo la parrilla entre brasas y humo" loading="lazy" className="hero-parallax-image absolute inset-0 -z-20 h-full w-full object-cover" />
+        <img data-hero-image src={ritual} alt="Parrillero de Amigo Fuego atendiendo la parrilla entre brasas y humo" loading="lazy" width={1920} height={1024} className="hero-parallax-image absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-carbon/75" />
         <div className="mx-auto flex max-w-4xl flex-col items-center px-5 py-20 text-center md:px-10 md:py-28">
           <h2 className="max-w-2xl text-4xl text-crema md:text-5xl">El Ritual: Conoce lo que llevamos a tu mesa</h2>

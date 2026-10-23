@@ -9,8 +9,8 @@ export function TablaCard() {
           src={TABLA.img}
           alt="Tabla de picada con embutidos, quesos y acompañamientos"
           loading="lazy"
-          width={800}
-          height={1008}
+          width={1600}
+          height={1194}
           className="h-full w-full object-cover"
         />
       </div>

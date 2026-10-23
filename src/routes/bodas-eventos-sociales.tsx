@@ -23,6 +23,8 @@ function Bodas() {
         title="Eventos Sociales Inolvidables"
         subtitle="Para parejas que se preocupan menos por impresionar y más por emocionar, con una mesa infinita y cercana."
         image={gJardin}
+        width={1024}
+        height={768}
         alt="Jardín con mesa larga de celebración e invitados alrededor del asado argentino Amigo Fuego"
         overlay
       >
@@ -77,7 +79,7 @@ function Bodas() {
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
           <div className="mb-10 grid gap-10 overflow-hidden rounded-2xl bg-carbon p-8 text-crema shadow-xl md:grid-cols-2 md:items-center md:p-16 md:mb-16">
             <div className="image-zoom overflow-hidden rounded-xl">
-              <img src={gChoripan} alt="Choripanes en la parrilla argentina de Amigo Fuego durante una tornafiesta de madrugada" loading="lazy" className="aspect-[4/5] w-full object-cover" />
+              <img src={gChoripan} alt="Choripanes en la parrilla argentina de Amigo Fuego durante una tornafiesta de madrugada" loading="lazy" width={1024} height={768} className="aspect-[4/5] w-full object-cover" />
             </div>
             <div>
               <p className="eyebrow text-tierra">Sección estelar</p>

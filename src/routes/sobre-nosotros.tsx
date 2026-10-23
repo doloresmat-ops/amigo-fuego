@@ -33,12 +33,14 @@ function Historia() {
         title="El Legado del Fuego: Quiénes Somos"
         subtitle="Una familia, una pizzería en Entre Ríos y 25 años de fuego en México."
         image={gEquipo}
+        width={1280}
+        height={864}
         alt="El equipo de Amigo Fuego alrededor de la parrilla argentina"
       />
       <section className="bg-crema text-carbon">
        <Section>
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
-           <div className="image-zoom overflow-hidden rounded-xl"><img src={gParrillero} alt="Gabriel y Lolita, fundadores de Amigo Fuego, parrilla argentina a domicilio en CDMX" loading="lazy" className="aspect-[4/5] w-full object-cover" /></div>
+           <div className="image-zoom overflow-hidden rounded-xl"><img src={gParrillero} alt="Gabriel y Lolita, fundadores de Amigo Fuego, parrilla argentina a domicilio en CDMX" loading="lazy" width={1200} height={1600} className="aspect-[4/5] w-full object-cover" /></div>
           <div className="space-y-5 text-lg text-carbon/80">
             <h2 className="text-4xl text-carbon md:text-5xl">Gabriel y el Fuego: 25 años de oficio.</h2>
             <p>
@@ -78,7 +80,7 @@ function Historia() {
       </section>
       <section className="bg-crema text-carbon">
         <div className="grid md:grid-cols-2">
-           <div className="image-zoom min-h-[320px] overflow-hidden"><img src={gJardin} alt="Mesa larga de asado argentino Amigo Fuego compartida con invitados y vino en CDMX" loading="lazy" className="h-full min-h-[320px] w-full object-cover" /></div>
+           <div className="image-zoom min-h-[320px] overflow-hidden"><img src={gJardin} alt="Mesa larga de asado argentino Amigo Fuego compartida con invitados y vino en CDMX" loading="lazy" width={1024} height={768} className="h-full min-h-[320px] w-full object-cover" /></div>
           <div className="px-5 py-20 md:px-14 md:py-28">
              <p className="eyebrow text-tierra">Catering de Asado a Domicilio</p>
             <h2 className="mt-4 text-4xl md:text-5xl">La Mesa Infinita.</h2>
