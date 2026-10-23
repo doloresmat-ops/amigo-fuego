@@ -70,6 +70,7 @@ function EventosEmpresas() {
         title="Catering Corporativo y Asado Argentino para Producciones y Empresas"
         subtitle="La tradición que transforma una comida en un gran momento de negocios."
         image={HERO_EMPRESAS}
+        alt="Servicio de catering Amigo Fuego en terraza corporativa al atardecer"
         overlay="suave"
       >
         <CtaLink>Cotizar evento corporativo</CtaLink>

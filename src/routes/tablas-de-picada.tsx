@@ -25,6 +25,7 @@ function TablasPage() {
         title="Tablas Amigo Fuego"
         subtitle={TABLA.apoyo}
         image={TABLA.img}
+        alt="Tabla de charcutería, quesos e higos Amigo Fuego lista para llevar"
         cinematic
         overlay="fuerte"
       >

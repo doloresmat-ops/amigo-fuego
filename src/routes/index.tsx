@@ -4,7 +4,7 @@ import { CtaLink, PageHero, Section, TrustStrip, pageHead } from "@/components/a
 import { QuoteForm } from "@/components/amigo/QuoteForm";
 import { TablaCard } from "@/components/amigo/TablaCard";
 import { TABLA } from "@/components/amigo/tablas";
-import hero from "@/assets/hero-parrilla-noche.jpg";
+import hero from "@/assets/hero-parrilla-noche.webp";
 import ritualBanner from "@/assets/ritual-banner.jpg";
 import corpAsset from "@/assets/eventos-corporativos-parrilla-amigo-fuego.webp.asset.json";
 const ritual = ritualBanner;
@@ -37,6 +37,7 @@ function Home() {
         title="Catering de Parrilla Argentina"
         subtitle="No vendemos carne, vendemos un ritual. Llevamos el fuego, el maestro parrillero y la experiencia completa a tu mesa."
         image={hero}
+        alt="Parrilla argentina Amigo Fuego de noche con brasas, brochetas y costillar listos para servir"
       >
         <CtaLink>Cotizar mi evento</CtaLink>
         <CtaLink to="/menu" secondary>Ver el menú</CtaLink>
@@ -75,7 +76,7 @@ function Home() {
         </Section>
       </section>
       <section data-parallax-hero className="relative isolate overflow-hidden">
-        <img data-hero-image src={ritual} alt="" loading="lazy" className="hero-parallax-image absolute inset-0 -z-20 h-full w-full object-cover" />
+        <img data-hero-image src={ritual} alt="Parrillero de Amigo Fuego atendiendo la parrilla entre brasas y humo" loading="lazy" className="hero-parallax-image absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-carbon/75" />
         <div className="mx-auto flex max-w-4xl flex-col items-center px-5 py-20 text-center md:px-10 md:py-28">
           <h2 className="max-w-2xl text-4xl text-crema md:text-5xl">El Ritual: Conoce lo que llevamos a tu mesa</h2>

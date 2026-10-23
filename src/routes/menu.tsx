@@ -97,6 +97,7 @@ function Menu() {
         title="Nuestro Menú: Cuatro Formas de Vivir la Parrilla Argentina"
         subtitle="Parrilla, pizza, bebidas y choripaneada. Elige uno o combínalos para tu evento."
         image={gHero}
+        alt="Parrilla argentina encendida con brasas y cortes, la base del menú de Amigo Fuego"
       >
         <CtaLink>Cotizar mi menú</CtaLink>
       </PageHero>
