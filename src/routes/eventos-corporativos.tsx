@@ -149,12 +149,16 @@ function EventosEmpresas() {
                <div className="image-zoom mt-8 overflow-hidden rounded-lg md:hidden"><img
                 src={PARRILLA_NOCTURNA}
                 alt="Parrilla argentina nocturna de Amigo Fuego con brochetas y costillar en un evento corporativo"
+                width={1600}
+                height={900}
                  className="aspect-[4/3] w-full object-cover"
                /></div>
             </div>
              <div className="image-zoom hidden overflow-hidden rounded-lg md:block"><img
               src={PARRILLA_NOCTURNA}
               alt="Parrilla argentina nocturna de Amigo Fuego con brochetas y costillar en un evento corporativo"
+              width={1600}
+              height={900}
                className="aspect-[4/3] w-full object-cover"
              /></div>
           </div>

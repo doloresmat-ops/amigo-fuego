@@ -25,6 +25,8 @@ function TablasPage() {
         title="Tablas Amigo Fuego"
         subtitle={TABLA.apoyo}
         image={TABLA.img}
+        width={1600}
+        height={1192}
         alt="Tabla de charcutería, quesos e higos Amigo Fuego lista para llevar"
         cinematic
         overlay="fuerte"
@@ -59,7 +61,7 @@ function TablasPage() {
         </Section>
       </section>
       <section className="relative isolate overflow-hidden bg-carbon text-crema">
-        <img src={FONDO_PRECIOS} alt="" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />
+        <img src={FONDO_PRECIOS} alt="" loading="lazy" width={1600} height={1192} className="absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-carbon/92" />
         <Section>
           <p className="eyebrow text-tierra">A tu medida</p>
