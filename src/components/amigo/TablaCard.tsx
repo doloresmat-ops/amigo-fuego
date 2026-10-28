@@ -1,5 +1,5 @@
 import { CtaLink } from "./site";
-import { TABLA } from "./tablas";
+import { FOTO_INGREDIENTES } from "./tablas";
 
 export function TablaCard() {
   return (
