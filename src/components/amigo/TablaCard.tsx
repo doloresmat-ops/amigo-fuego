@@ -1,16 +1,16 @@
 import { CtaLink } from "./site";
-import { TABLA } from "./tablas";
+import { TABLA, FOTO_INGREDIENTES } from "./tablas";
 
 export function TablaCard() {
   return (
     <article className="grid overflow-hidden rounded-lg border border-carbon/15 bg-crema text-carbon shadow-xl md:grid-cols-2">
       <div className="image-zoom relative aspect-[4/3] overflow-hidden md:aspect-auto">
         <img
-          src={TABLA.img}
-          alt="Tabla de picada con embutidos, quesos y acompañamientos"
+          src={FOTO_INGREDIENTES.img}
+          alt={FOTO_INGREDIENTES.alt}
           loading="lazy"
           width={1600}
-          height={1194}
+          height={1192}
           className="h-full w-full object-cover"
         />
       </div>
